@@ -17,7 +17,7 @@
     <Project Path="src/LTC.NotificationService.EntityFrameworkCore/LTC.NotificationService.EntityFrameworkCore.csproj" />
     <Project Path="src/LTC.NotificationService.HttpApi.Client/LTC.NotificationService.HttpApi.Client.csproj" />
     
-    <Project Path="src/LTC.NotificationService.HttpApi.Host/LTC.NotificationService.HttpApi.Host.csproj" />
+    <Project Path="LTC.NotificationService.HttpApi.Host/LTC.NotificationService.HttpApi.Host.csproj" />
     <Project Path="src/LTC.NotificationService.HttpApi/LTC.NotificationService.HttpApi.csproj" />
     
     

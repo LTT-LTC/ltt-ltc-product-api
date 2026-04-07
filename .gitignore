@@ -255,8 +255,7 @@ paket-files/
 src/LTC.NotificationService.Web/Logs/*
 src/LTC.NotificationService.Web.Host/Logs/*
 src/LTC.NotificationService.AuthServer/Logs/*
-src/LTC.NotificationService.HttpApi.Host/Logs/*
-src/LTC.NotificationService.HttpApi.Host/Logs/*
+LTC.NotificationService.HttpApi.Host/Logs/*
 src/LTC.NotificationService.DbMigrator/Logs/*
 src/LTC.NotificationService.Blazor.Server/Logs/*
 src/LTC.NotificationService.Blazor.Server.Tiered/Logs/*

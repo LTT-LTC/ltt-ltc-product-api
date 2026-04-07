@@ -10,6 +10,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using LTC.NotificationService.EntityFrameworkCore;
 using LTC.NotificationService.MultiTenancy;
+using LTC.Shared.Hosting.Microservices;
 using Volo.Abp.AspNetCore.Mvc.UI.Theme.LeptonXLite;
 using Volo.Abp.AspNetCore.Mvc.UI.Theme.LeptonXLite.Bundling;
 using Microsoft.OpenApi;
@@ -41,7 +42,8 @@ namespace LTC.NotificationService;
     typeof(AbpAspNetCoreMvcUiLeptonXLiteThemeModule),
     typeof(AbpAccountWebOpenIddictModule),
     typeof(AbpAspNetCoreSerilogModule),
-    typeof(AbpSwashbuckleModule)
+    typeof(AbpSwashbuckleModule),
+    typeof(LTCSharedHostingMicroservicesModule)
 )]
 public class NotificationServiceHttpApiHostModule : AbpModule
 {
@@ -117,16 +119,16 @@ public class NotificationServiceHttpApiHostModule : AbpModule
             {
                 options.FileSets.ReplaceEmbeddedByPhysical<NotificationServiceDomainSharedModule>(
                     Path.Combine(hostingEnvironment.ContentRootPath,
-                        $"..{Path.DirectorySeparatorChar}LTC.NotificationService.Domain.Shared"));
+                        string.Format("..{0}src{0}LTC.NotificationService.Domain.Shared", Path.DirectorySeparatorChar)));
                 options.FileSets.ReplaceEmbeddedByPhysical<NotificationServiceDomainModule>(
                     Path.Combine(hostingEnvironment.ContentRootPath,
-                        $"..{Path.DirectorySeparatorChar}LTC.NotificationService.Domain"));
+                        string.Format("..{0}src{0}LTC.NotificationService.Domain", Path.DirectorySeparatorChar)));
                 options.FileSets.ReplaceEmbeddedByPhysical<NotificationServiceApplicationContractsModule>(
                     Path.Combine(hostingEnvironment.ContentRootPath,
-                        $"..{Path.DirectorySeparatorChar}LTC.NotificationService.Application.Contracts"));
+                        string.Format("..{0}src{0}LTC.NotificationService.Application.Contracts", Path.DirectorySeparatorChar)));
                 options.FileSets.ReplaceEmbeddedByPhysical<NotificationServiceApplicationModule>(
                     Path.Combine(hostingEnvironment.ContentRootPath,
-                        $"..{Path.DirectorySeparatorChar}LTC.NotificationService.Application"));
+                        string.Format("..{0}src{0}LTC.NotificationService.Application", Path.DirectorySeparatorChar)));
             });
         }
     }
@@ -192,6 +194,7 @@ public class NotificationServiceHttpApiHostModule : AbpModule
             app.UseErrorPage();
         }
 
+        app.UsePathBase("/ltc/notification-service");
         app.UseCorrelationId();
         app.MapAbpStaticAssets();
         app.UseRouting();
@@ -210,7 +213,7 @@ public class NotificationServiceHttpApiHostModule : AbpModule
         app.UseSwagger();
         app.UseAbpSwaggerUI(c =>
         {
-            c.SwaggerEndpoint("/swagger/v1/swagger.json", "NotificationService API");
+            c.SwaggerEndpoint("/ltc/notification-service/swagger/v1/swagger.json", "NotificationService API");
 
             var configuration = context.ServiceProvider.GetRequiredService<IConfiguration>();
             c.OAuthClientId(configuration["AuthServer:SwaggerClientId"]);
