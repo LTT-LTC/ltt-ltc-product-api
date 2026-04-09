@@ -16,8 +16,6 @@
     <Project Path="src/LTC.NotificationService.Domain/LTC.NotificationService.Domain.csproj" />
     <Project Path="src/LTC.NotificationService.EntityFrameworkCore/LTC.NotificationService.EntityFrameworkCore.csproj" />
     <Project Path="src/LTC.NotificationService.HttpApi.Client/LTC.NotificationService.HttpApi.Client.csproj" />
-    
-    <Project Path="LTC.NotificationService.HttpApi.Host/LTC.NotificationService.HttpApi.Host.csproj" />
     <Project Path="src/LTC.NotificationService.HttpApi/LTC.NotificationService.HttpApi.csproj" />
     
     
@@ -32,4 +30,5 @@
     <Project Path="test/LTC.NotificationService.TestBase/LTC.NotificationService.TestBase.csproj" />
     
   </Folder>
+  <Project Path="LTC.NotificationService.HttpApi.Host/LTC.NotificationService.HttpApi.Host.csproj" />
 </Solution>
