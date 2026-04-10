@@ -1,4 +1,9 @@
 <Solution>
+  <Folder Name="/shared/">
+    <Project Path="shared/LTC.Shared.CrossCuttingConcerns/LTC.Shared.CrossCuttingConcerns.csproj" />
+    <Project Path="shared/LTC.Shared.Hosting.AspNetCore/LTC.Shared.Hosting.AspNetCore.csproj" />
+    <Project Path="shared/LTC.Shared.Hosting.Microservices/LTC.Shared.Hosting.Microservices.csproj" />
+  </Folder>
   <Folder Name="/src/">
     <Project Path="src/LTC.NotificationService.Application.Contracts/LTC.NotificationService.Application.Contracts.csproj" />
     <Project Path="src/LTC.NotificationService.Application/LTC.NotificationService.Application.csproj" />

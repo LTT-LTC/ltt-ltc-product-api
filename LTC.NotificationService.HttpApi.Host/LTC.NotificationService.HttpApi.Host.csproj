@@ -29,7 +29,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\shared\LTC.Shared.CrossCuttingConcerns\LTC.Shared.CrossCuttingConcerns.csproj" />
+    <ProjectReference Include="..\shared\LTC.Shared.Hosting.AspNetCore\LTC.Shared.Hosting.AspNetCore.csproj" />
     <ProjectReference Include="..\shared\LTC.Shared.Hosting.Microservices\LTC.Shared.Hosting.Microservices.csproj" />
     <ProjectReference Include="..\src\LTC.NotificationService.Application\LTC.NotificationService.Application.csproj" />
     <ProjectReference Include="..\src\LTC.NotificationService.EntityFrameworkCore\LTC.NotificationService.EntityFrameworkCore.csproj" />
