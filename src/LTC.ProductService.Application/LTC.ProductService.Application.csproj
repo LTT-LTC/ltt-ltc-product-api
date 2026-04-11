@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <RootNamespace>LTC.ProductService</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\shared\LTC.Shared.CrossCuttingConcerns\LTC.Shared.CrossCuttingConcerns.csproj" />
+    <ProjectReference Include="..\..\shared\LTC.Shared.Hosting.Microservices\LTC.Shared.Hosting.Microservices.csproj" />
+    <ProjectReference Include="..\LTC.ProductService.Domain\LTC.ProductService.Domain.csproj" />
+    <ProjectReference Include="..\LTC.ProductService.Application.Contracts\LTC.ProductService.Application.Contracts.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.Account.Application" Version="10.1.1" />
+    <PackageReference Include="Volo.Abp.Identity.Application" Version="10.1.1" />
+    <PackageReference Include="Volo.Abp.PermissionManagement.Application" Version="10.1.1" />
+    <PackageReference Include="Volo.Abp.TenantManagement.Application" Version="10.1.1" />
+    <PackageReference Include="Volo.Abp.FeatureManagement.Application" Version="10.1.1" />
+    <PackageReference Include="Volo.Abp.SettingManagement.Application" Version="10.1.1" />
+  </ItemGroup>
+
+</Project>

@@ -1,4 +1,4 @@
-﻿using LTC.Shared.CrossCuttingConcerns.Dtos.BaseModel;
+using LTC.Shared.CrossCuttingConcerns.Dtos.BaseModel;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;

@@ -1,4 +1,4 @@
-name: Deploy Dev - Notification API
+name: Deploy Dev - Product API
 
 on:
   push:
@@ -10,8 +10,8 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      IMAGE_NAME: dranov220805/ltt-ltc-notification-api
-      SERVICE_NAME: ltt-ltc-notification-api
+      IMAGE_NAME: dranov220805/ltt-ltc-product-api
+      SERVICE_NAME: ltt-ltc-product-api
 
     steps:
       - name: Checkout code
@@ -25,7 +25,7 @@ jobs:
 
       - name: Build and Push Docker Image
         run: |
-          docker build -f LTC.NotificationService.HttpApi.Host/Dockerfile -t $IMAGE_NAME:latest .
+          docker build -f LTC.ProductService.HttpApi.Host/Dockerfile -t $IMAGE_NAME:latest .
           docker push $IMAGE_NAME:latest
 
       - name: Connect to Tailscale
@@ -50,7 +50,7 @@ jobs:
           ssh -o StrictHostKeyChecking=no dranov@100.109.240.84 << 'EOF'
             cd /home/dranov/Desktop/ltt-ltc
 
-            docker compose pull ltt-ltc-notification-api
-            docker compose up -d --no-deps ltt-ltc-notification-api
+            docker compose pull ltt-ltc-product-api
+            docker compose up -d --no-deps ltt-ltc-product-api
           EOF
 

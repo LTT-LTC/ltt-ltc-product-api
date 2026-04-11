@@ -1,0 +1,39 @@
+<Solution>
+  <Folder Name="/shared/">
+    <Project Path="shared/LTC.Shared.CrossCuttingConcerns/LTC.Shared.CrossCuttingConcerns.csproj" />
+    <Project Path="shared/LTC.Shared.Hosting.AspNetCore/LTC.Shared.Hosting.AspNetCore.csproj" />
+    <Project Path="shared/LTC.Shared.Hosting.Microservices/LTC.Shared.Hosting.Microservices.csproj" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/LTC.ProductService.Application.Contracts/LTC.ProductService.Application.Contracts.csproj" />
+    <Project Path="src/LTC.ProductService.Application/LTC.ProductService.Application.csproj" />
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <Project Path="src/LTC.ProductService.DbMigrator/LTC.ProductService.DbMigrator.csproj" />
+    <Project Path="src/LTC.ProductService.Domain.Shared/LTC.ProductService.Domain.Shared.csproj" />
+    <Project Path="src/LTC.ProductService.Domain/LTC.ProductService.Domain.csproj" />
+    <Project Path="src/LTC.ProductService.EntityFrameworkCore/LTC.ProductService.EntityFrameworkCore.csproj" />
+    <Project Path="src/LTC.ProductService.HttpApi.Client/LTC.ProductService.HttpApi.Client.csproj" />
+    <Project Path="src/LTC.ProductService.HttpApi/LTC.ProductService.HttpApi.csproj" />
+    
+    
+    
+  </Folder>
+  <Folder Name="/test/">
+    <Project Path="test/LTC.ProductService.Application.Tests/LTC.ProductService.Application.Tests.csproj" />
+    <Project Path="test/LTC.ProductService.Domain.Tests/LTC.ProductService.Domain.Tests.csproj" />
+    <Project Path="test/LTC.ProductService.EntityFrameworkCore.Tests/LTC.ProductService.EntityFrameworkCore.Tests.csproj" />
+    <Project Path="test/LTC.ProductService.HttpApi.Client.ConsoleTestApp/LTC.ProductService.HttpApi.Client.ConsoleTestApp.csproj" />
+    
+    <Project Path="test/LTC.ProductService.TestBase/LTC.ProductService.TestBase.csproj" />
+    
+  </Folder>
+  <Project Path="LTC.ProductService.HttpApi.Host/LTC.ProductService.HttpApi.Host.csproj" />
+</Solution>

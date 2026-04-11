@@ -1,4 +1,4 @@
-# LTC.NotificationService
+# LTC.ProductService
 
 ## About this solution
 
@@ -46,13 +46,13 @@ abp install-libs
 
 #### Create the Database
 
-Run `LTC.NotificationService.DbMigrator` to create the initial database. This should be done in the first run. It is also needed if a new database migration is added to the solution later.
+Run `LTC.ProductService.DbMigrator` to create the initial database. This should be done in the first run. It is also needed if a new database migration is added to the solution later.
 
 ### Solution structure
 
 This is a layered monolith application that consists of the following applications:
 
-* `LTC.NotificationService.DbMigrator`: A console application which applies the migrations and also seeds the initial data. It is useful on development as well as on production environment.
+* `LTC.ProductService.DbMigrator`: A console application which applies the migrations and also seeds the initial data. It is useful on development as well as on production environment.
 
 ### Deploying the application
 
