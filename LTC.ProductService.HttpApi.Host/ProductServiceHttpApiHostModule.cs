@@ -85,7 +85,7 @@ public class ProductServiceHttpApiHostModule : AbpModule
             options =>
             {
                 options.SwaggerDoc("v1", new OpenApiInfo {Title = "LTC Product Service API Endpoint", Version = "v1"});
-                options.DocInclusionPredicate((docName, description) => true);
+                options.DocInclusionPredicate((docName, description) => description.RelativePath != null && description.RelativePath.StartsWith("ltc/product-service", StringComparison.OrdinalIgnoreCase));
                 options.CustomSchemaIds(type => type.FullName);
             });
 
