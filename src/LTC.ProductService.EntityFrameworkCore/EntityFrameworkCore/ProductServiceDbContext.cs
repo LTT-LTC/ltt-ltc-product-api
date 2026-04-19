@@ -1,8 +1,9 @@
+using LTC.ProductService.Entities;
+using LTC.ProductService.MultiTenancy;
 using Microsoft.EntityFrameworkCore;
 using Volo.Abp.Data;
 using Volo.Abp.EntityFrameworkCore;
 using Volo.Abp.EntityFrameworkCore.Modeling;
-using LTC.ProductService.Entities;
 
 namespace LTC.ProductService.EntityFrameworkCore;
 
@@ -15,15 +16,24 @@ public class ProductServiceDbContext : AbpDbContext<ProductServiceDbContext>
     public DbSet<Combo> Combos { get; set; }
     public DbSet<ComboItem> ComboItems { get; set; }
 
-    public ProductServiceDbContext(DbContextOptions<ProductServiceDbContext> options)
+    private readonly ITenantSchemaResolver _tenantSchemaResolver;
+
+    public ProductServiceDbContext(
+        DbContextOptions<ProductServiceDbContext> options,
+        ITenantSchemaResolver tenantSchemaResolver)
         : base(options)
     {
-
+        _tenantSchemaResolver = tenantSchemaResolver;
     }
+
+    public string GetCurrentSchema() => _tenantSchemaResolver.GetSchemaName();
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);
+
+        var schema = GetCurrentSchema();
+        builder.HasDefaultSchema(schema);
 
         builder.Entity<ProductCategory>(b =>
         {

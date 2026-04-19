@@ -10,7 +10,9 @@ namespace LTC.ProductService;
 
 [DependsOn(
     typeof(ProductServiceDomainSharedModule),
-    typeof(AbpEmailingModule)
+    typeof(AbpEmailingModule),
+    typeof(Volo.Abp.TenantManagement.AbpTenantManagementDomainModule),
+    typeof(Volo.Abp.Identity.AbpIdentityDomainModule)
 )]
 public class ProductServiceDomainModule : AbpModule
 {

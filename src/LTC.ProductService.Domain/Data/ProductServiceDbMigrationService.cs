@@ -56,25 +56,11 @@ public class ProductServiceDbMigrationService : ITransientDependency
 
         var tenants = await _tenantRepository.GetListAsync(includeDetails: true);
 
-        var migratedDatabaseSchemas = new HashSet<string>();
         foreach (var tenant in tenants)
         {
             using (_currentTenant.Change(tenant.Id))
             {
-                if (tenant.ConnectionStrings.Any())
-                {
-                    var tenantConnectionStrings = tenant.ConnectionStrings
-                        .Select(x => x.Value)
-                        .ToList();
-
-                    if (!migratedDatabaseSchemas.IsSupersetOf(tenantConnectionStrings))
-                    {
-                        await MigrateDatabaseSchemaAsync(tenant);
-
-                        migratedDatabaseSchemas.AddIfNotContains(tenantConnectionStrings);
-                    }
-                }
-
+                await MigrateDatabaseSchemaAsync(tenant);
                 await SeedDataAsync(tenant);
             }
 

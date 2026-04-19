@@ -20,15 +20,16 @@ public class EntityFrameworkCoreProductServiceDbSchemaMigrator
 
     public async Task MigrateAsync()
     {
-        /* We intentionally resolve the ProductServiceDbContext
-         * from IServiceProvider (instead of directly injecting it)
-         * to properly get the connection string of the current tenant in the
-         * current scope.
-         */
+        var dbContext = _serviceProvider.GetRequiredService<ProductServiceDbContext>();
+        var schema = dbContext.GetCurrentSchema();
 
-        await _serviceProvider
-            .GetRequiredService<ProductServiceDbContext>()
-            .Database
-            .MigrateAsync();
+        if (!string.IsNullOrEmpty(schema) && schema != "dbo")
+        {
+            // Ensure the schema exists before migrating
+            var sql = $"IF NOT EXISTS (SELECT * FROM sys.schemas WHERE name = N'{schema}') EXEC('CREATE SCHEMA [{schema}]')";
+            await dbContext.Database.ExecuteSqlRawAsync(sql);
+        }
+
+        await dbContext.Database.MigrateAsync();
     }
 }

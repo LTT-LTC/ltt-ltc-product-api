@@ -18,6 +18,7 @@ namespace LTC.ProductService.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
+                .HasDefaultSchema("dbo")
                 .HasAnnotation("_Abp_DatabaseProvider", EfCoreDatabaseProvider.SqlServer)
                 .HasAnnotation("ProductVersion", "10.0.5")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
@@ -98,7 +99,7 @@ namespace LTC.ProductService.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Combos", (string)null);
+                    b.ToTable("Combos", "dbo");
                 });
 
             modelBuilder.Entity("LTC.ProductService.Entities.ComboItem", b =>
@@ -115,13 +116,17 @@ namespace LTC.ProductService.Migrations
                     b.Property<int>("Quantity")
                         .HasColumnType("int");
 
+                    b.Property<Guid?>("TenantId")
+                        .HasColumnType("uniqueidentifier")
+                        .HasColumnName("TenantId");
+
                     b.HasKey("Id");
 
                     b.HasIndex("ComboId");
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("ComboItems", (string)null);
+                    b.ToTable("ComboItems", "dbo");
                 });
 
             modelBuilder.Entity("LTC.ProductService.Entities.Product", b =>
@@ -211,7 +216,7 @@ namespace LTC.ProductService.Migrations
 
                     b.HasIndex("ProductCategoryId");
 
-                    b.ToTable("Products", (string)null);
+                    b.ToTable("Products", "dbo");
                 });
 
             modelBuilder.Entity("LTC.ProductService.Entities.ProductCategory", b =>
@@ -279,7 +284,7 @@ namespace LTC.ProductService.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("ProductCategories", (string)null);
+                    b.ToTable("ProductCategories", "dbo");
                 });
 
             modelBuilder.Entity("LTC.ProductService.Entities.ProductVariant", b =>
@@ -301,11 +306,15 @@ namespace LTC.ProductService.Migrations
                     b.Property<Guid>("ProductId")
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<Guid?>("TenantId")
+                        .HasColumnType("uniqueidentifier")
+                        .HasColumnName("TenantId");
+
                     b.HasKey("Id");
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("ProductVariants", (string)null);
+                    b.ToTable("ProductVariants", "dbo");
                 });
 
             modelBuilder.Entity("LTC.ProductService.Entities.ComboItem", b =>

@@ -72,11 +72,16 @@ public class ProductServiceEntityFrameworkCoreTestModule : AbpModule
             .UseSqlite(connection)
             .Options;
 
-        using (var context = new ProductServiceDbContext(options))
+        using (var context = new ProductServiceDbContext(options, new DummyTenantSchemaResolver()))
         {
             context.GetService<IRelationalDatabaseCreator>().CreateTables();
         }
 
         return connection;
     }
+}
+
+public class DummyTenantSchemaResolver : LTC.ProductService.MultiTenancy.ITenantSchemaResolver
+{
+    public string GetSchemaName() => "dbo";
 }

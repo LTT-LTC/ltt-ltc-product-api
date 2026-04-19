@@ -1,5 +1,5 @@
-using System;
 using System.IO;
+using LTC.ProductService.MultiTenancy;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;
@@ -18,8 +18,13 @@ public class ProductServiceDbContextFactory : IDesignTimeDbContextFactory<Produc
 
         var builder = new DbContextOptionsBuilder<ProductServiceDbContext>()
             .UseSqlServer(configuration.GetConnectionString("Default"));
+        
+        return new ProductServiceDbContext(builder.Options, new DesignTimeSchemaResolver());
+    }
 
-        return new ProductServiceDbContext(builder.Options);
+    private class DesignTimeSchemaResolver : ITenantSchemaResolver
+    {
+        public string GetSchemaName() => "dbo"; 
     }
 
     private static IConfigurationRoot BuildConfiguration()
