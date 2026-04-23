@@ -10,6 +10,7 @@ using LTC.ProductService.Dtos.Output;
 namespace LTC.ProductService.Controllers
 {
     [Route(ProductServiceSettingNames.DefaultRoute)]
+    [Obsolete("Use role-specific endpoints under /admin or /manager. This route remains for compatibility.")]
     public class ComboController : AbpControllerBase
     {
         private readonly IComboAppService _appService;
