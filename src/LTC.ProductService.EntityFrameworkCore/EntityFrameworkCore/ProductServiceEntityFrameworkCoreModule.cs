@@ -1,5 +1,6 @@
-using System;
+using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 using Volo.Abp.Uow;
 using Volo.Abp.AuditLogging.EntityFrameworkCore;
 using Volo.Abp.BackgroundJobs.EntityFrameworkCore;
@@ -42,6 +43,8 @@ public class ProductServiceEntityFrameworkCoreModule : AbpModule
                  * default repositories only for aggregate roots */
             options.AddDefaultRepositories(includeAllEntities: true);
         });
+
+        context.Services.Replace(ServiceDescriptor.Singleton<IModelCacheKeyFactory, TenantModelCacheKeyFactory>());
 
         Configure<AbpDbContextOptions>(options =>
         {
