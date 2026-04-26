@@ -28,25 +28,25 @@ namespace LTC.ProductService.Controllers
         public async Task<ProductDetailOutputDto> GetAsync(Guid id) { return await _appService.GetAsync(id); }
 
         [HttpPost("product")]
-        [Authorize(Roles = "Admin,Manager")]
+        [Authorize(Roles = "Admin,admin,Manager,manager")]
         public async Task<ProductOutputDto> CreateAsync([FromBody] CreateProductInputDto input) { return await _appService.CreateAsync(input); }
 
         [HttpPut("product/{id}")]
-        [Authorize(Roles = "Admin,Manager")]
+        [Authorize(Roles = "Admin,admin,Manager,manager")]
         public async Task<ProductOutputDto> UpdateAsync(Guid id, [FromBody] UpdateProductInputDto input) { return await _appService.UpdateAsync(id, input); }
 
         [HttpDelete("product/{id}")]
-        [Authorize(Roles = "Admin,Manager")]
+        [Authorize(Roles = "Admin,admin,Manager,manager")]
         public async Task DeleteAsync(Guid id) { await _appService.DeleteAsync(id); }
 
         [HttpDelete("product")]
-        [Authorize(Roles = "Admin,Manager")]
+        [Authorize(Roles = "Admin,admin,Manager,manager")]
         public async Task DeleteBulkAsync([FromBody] List<Guid> ids) { await _appService.DeleteBulkAsync(ids); }
 
         #region Product Variants
 
         [HttpPost("product/{id}/variant")]
-        [Authorize(Roles = "Admin,Manager")]
+        [Authorize(Roles = "Admin,admin,Manager,manager")]
         public async Task<ProductVariantOutputDto> CreateVariantAsync(Guid id, [FromBody] CreateProductVariantInputDto input)
         {
             /// <summary>
@@ -56,7 +56,7 @@ namespace LTC.ProductService.Controllers
         }
 
         [HttpPut("product/{id}/variant/{variantId}")]
-        [Authorize(Roles = "Admin,Manager")]
+        [Authorize(Roles = "Admin,admin,Manager,manager")]
         public async Task<ProductVariantOutputDto> UpdateVariantAsync(Guid id, Guid variantId, [FromBody] UpdateProductVariantInputDto input)
         {
             /// <summary>
@@ -66,7 +66,7 @@ namespace LTC.ProductService.Controllers
         }
 
         [HttpDelete("product/{id}/variant/{variantId}")]
-        [Authorize(Roles = "Admin,Manager")]
+        [Authorize(Roles = "Admin,admin,Manager,manager")]
         public async Task DeleteVariantAsync(Guid id, Guid variantId)
         {
             /// <summary>
