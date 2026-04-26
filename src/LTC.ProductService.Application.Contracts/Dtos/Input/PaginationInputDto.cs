@@ -8,7 +8,7 @@ namespace LTC.ProductService.Dtos.Input
         public int Page { get; set; } = 1;
         public string OrderBy { get; set; } = "CreatedAt";
         public bool IsSortDesc { get; set; } = true;
-        public string Keyword { get; set; }
+        public string? Keyword { get; set; } = string.Empty;
 
         public override int MaxResultCount { get => Fetch; set => Fetch = value; }
         public override int SkipCount { get => (Page - 1) * Fetch; set { } }

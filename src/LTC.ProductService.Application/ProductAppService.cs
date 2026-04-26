@@ -43,7 +43,7 @@ namespace LTC.ProductService
 
             return new PagedResultDto<ProductOutputDto>(
                 totalCount,
-                ObjectMapper.Map<List<Product>, List<ProductOutputDto>>(items)
+                items.Select(MapProduct).ToList()
             );
         }
 
@@ -57,7 +57,7 @@ namespace LTC.ProductService
                 throw new Volo.Abp.UserFriendlyException("Product not found");
             }
             
-            return ObjectMapper.Map<Product, ProductDetailOutputDto>(entity);
+            return MapProductDetail(entity);
         }
 
         public async Task<ProductOutputDto> CreateAsync(CreateProductInputDto input)
@@ -74,7 +74,7 @@ namespace LTC.ProductService
             };
 
             await _repository.InsertAsync(entity);
-            return ObjectMapper.Map<Product, ProductOutputDto>(entity);
+            return MapProduct(entity);
         }
 
         public async Task<ProductOutputDto> UpdateAsync(Guid id, UpdateProductInputDto input)
@@ -90,7 +90,7 @@ namespace LTC.ProductService
             entity.ProductType = input.ProductType;
 
             await _repository.UpdateAsync(entity);
-            return ObjectMapper.Map<Product, ProductOutputDto>(entity);
+            return MapProduct(entity);
         }
 
         public async Task DeleteAsync(Guid id)
@@ -114,7 +114,7 @@ namespace LTC.ProductService
             };
 
             await _variantRepository.InsertAsync(variant);
-            return ObjectMapper.Map<ProductVariant, ProductVariantOutputDto>(variant);
+            return MapVariant(variant);
         }
 
         public async Task<ProductVariantOutputDto> UpdateVariantAsync(Guid id, Guid variantId, UpdateProductVariantInputDto input)
@@ -131,7 +131,7 @@ namespace LTC.ProductService
             variant.IsActive = input.IsActive;
 
             await _variantRepository.UpdateAsync(variant);
-            return ObjectMapper.Map<ProductVariant, ProductVariantOutputDto>(variant);
+            return MapVariant(variant);
         }
 
         public async Task DeleteVariantAsync(Guid id, Guid variantId)
@@ -141,6 +141,63 @@ namespace LTC.ProductService
             {
                 await _variantRepository.DeleteAsync(variantId);
             }
+        }
+
+        private static ProductOutputDto MapProduct(Product source)
+        {
+            return new ProductOutputDto
+            {
+                Id = source.Id,
+                ProductCategoryId = source.ProductCategoryId,
+                Name = source.Name,
+                Description = source.Description,
+                BasePrice = source.BasePrice,
+                ImageUrl = source.ImageUrl,
+                IsActive = source.IsActive,
+                ProductType = source.ProductType,
+                CreationTime = source.CreationTime,
+                CreatorId = source.CreatorId,
+                LastModificationTime = source.LastModificationTime,
+                LastModifierId = source.LastModifierId,
+                IsDeleted = source.IsDeleted,
+                DeleterId = source.DeleterId,
+                DeletionTime = source.DeletionTime
+            };
+        }
+
+        private static ProductVariantOutputDto MapVariant(ProductVariant source)
+        {
+            return new ProductVariantOutputDto
+            {
+                Id = source.Id,
+                ProductId = source.ProductId,
+                Name = source.Name,
+                AdditionalPrice = source.AdditionalPrice,
+                IsActive = source.IsActive
+            };
+        }
+
+        private static ProductDetailOutputDto MapProductDetail(Product source)
+        {
+            return new ProductDetailOutputDto
+            {
+                Id = source.Id,
+                ProductCategoryId = source.ProductCategoryId,
+                Name = source.Name,
+                Description = source.Description,
+                BasePrice = source.BasePrice,
+                ImageUrl = source.ImageUrl,
+                IsActive = source.IsActive,
+                ProductType = source.ProductType,
+                CreationTime = source.CreationTime,
+                CreatorId = source.CreatorId,
+                LastModificationTime = source.LastModificationTime,
+                LastModifierId = source.LastModifierId,
+                IsDeleted = source.IsDeleted,
+                DeleterId = source.DeleterId,
+                DeletionTime = source.DeletionTime,
+                ProductVariants = source.ProductVariants?.Select(MapVariant).ToList() ?? new List<ProductVariantOutputDto>()
+            };
         }
     }
 }
