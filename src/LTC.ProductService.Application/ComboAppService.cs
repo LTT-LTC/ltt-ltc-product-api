@@ -38,7 +38,7 @@ namespace LTC.ProductService
 
             return new PagedResultDto<ComboOutputDto>(
                 totalCount,
-                ObjectMapper.Map<List<Combo>, List<ComboOutputDto>>(items)
+                items.Select(item => ObjectMapper.Map<Combo, ComboOutputDto>(item)).ToList()
             );
         }
 

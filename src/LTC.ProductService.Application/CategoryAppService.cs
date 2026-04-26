@@ -33,14 +33,14 @@ namespace LTC.ProductService
 
             return new PagedResultDto<CategoryOutputDto>(
                 totalCount,
-                ObjectMapper.Map<List<ProductCategory>, List<CategoryOutputDto>>(items)
+                items.Select(MapCategory).ToList()
             );
         }
 
         public async Task<CategoryOutputDto> GetAsync(Guid id)
         {
             var entity = await _repository.GetAsync(id);
-            return ObjectMapper.Map<ProductCategory, CategoryOutputDto>(entity);
+            return MapCategory(entity);
         }
 
         public async Task<CategoryOutputDto> CreateAsync(CreateCategoryInputDto input)
@@ -53,7 +53,7 @@ namespace LTC.ProductService
             };
             
             await _repository.InsertAsync(entity);
-            return ObjectMapper.Map<ProductCategory, CategoryOutputDto>(entity);
+            return MapCategory(entity);
         }
 
         public async Task<CategoryOutputDto> UpdateAsync(Guid id, UpdateCategoryInputDto input)
@@ -65,12 +65,30 @@ namespace LTC.ProductService
             entity.IsActive = input.IsActive;
             
             await _repository.UpdateAsync(entity);
-            return ObjectMapper.Map<ProductCategory, CategoryOutputDto>(entity);
+            return MapCategory(entity);
         }
 
         public async Task DeleteAsync(Guid id)
         {
             await _repository.DeleteAsync(id);
+        }
+
+        private static CategoryOutputDto MapCategory(ProductCategory source)
+        {
+            return new CategoryOutputDto
+            {
+                Id = source.Id,
+                Name = source.Name,
+                Description = source.Description,
+                IsActive = source.IsActive,
+                CreationTime = source.CreationTime,
+                CreatorId = source.CreatorId,
+                LastModificationTime = source.LastModificationTime,
+                LastModifierId = source.LastModifierId,
+                IsDeleted = source.IsDeleted,
+                DeleterId = source.DeleterId,
+                DeletionTime = source.DeletionTime
+            };
         }
     }
 }
