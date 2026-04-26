@@ -39,7 +39,7 @@ namespace LTC.ProductService.Controllers
         }
 
         [HttpPost("combo")]
-        [Authorize(Roles = "Admin,Manager")]
+        [Authorize(Roles = "Admin,admin,Manager,manager")]
         public async Task<ComboOutputDto> CreateAsync([FromBody] CreateComboInputDto input)
         {
             /// <summary>
@@ -49,7 +49,7 @@ namespace LTC.ProductService.Controllers
         }
 
         [HttpPut("combo/{id}")]
-        [Authorize(Roles = "Admin,Manager")]
+        [Authorize(Roles = "Admin,admin,Manager,manager")]
         public async Task<ComboOutputDto> UpdateAsync(Guid id, [FromBody] UpdateComboInputDto input)
         {
             /// <summary>
@@ -59,7 +59,7 @@ namespace LTC.ProductService.Controllers
         }
 
         [HttpDelete("combo/{id}")]
-        [Authorize(Roles = "Admin,Manager")]
+        [Authorize(Roles = "Admin,admin,Manager,manager")]
         public async Task DeleteAsync(Guid id)
         {
             /// <summary>
@@ -69,7 +69,7 @@ namespace LTC.ProductService.Controllers
         }
 
         [HttpPost("combo/{id}/item")]
-        [Authorize(Roles = "Admin,Manager")]
+        [Authorize(Roles = "Admin,admin,Manager,manager")]
         public async Task<ComboItemOutputDto> AddItemAsync(Guid id, [FromBody] CreateComboItemInputDto input)
         {
             /// <summary>
@@ -79,7 +79,7 @@ namespace LTC.ProductService.Controllers
         }
 
         [HttpDelete("combo/{id}/item/{comboItemId}")]
-        [Authorize(Roles = "Admin,Manager")]
+        [Authorize(Roles = "Admin,admin,Manager,manager")]
         public async Task DeleteItemAsync(Guid id, Guid comboItemId)
         {
             /// <summary>

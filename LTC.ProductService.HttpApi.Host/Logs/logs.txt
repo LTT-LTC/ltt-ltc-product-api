@@ -30419,3 +30419,687 @@ aud: ZS
 2026-04-27 00:04:53.186 +07:00 [INF] Executed endpoint 'LTC.ProductService.Controllers.Manager.CategoryManagerController.GetAllAsync (LTC.ProductService.HttpApi)'
 2026-04-27 00:04:53.187 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44367/ltc/product-service/manager/product/product-all?page=1&fetch=10&keyword= - 200 null application/json; charset=utf-8 427.7684ms
 2026-04-27 00:04:53.187 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44367/ltc/product-service/manager/category/category-all?page=1&fetch=10 - 200 null application/json; charset=utf-8 427.7684ms
+2026-04-27 00:07:17.634 +07:00 [INF] Application is shutting down...
+2026-04-27 00:07:33.238 +07:00 [INF] Starting LTC.ProductService.HttpApi.Host.
+2026-04-27 00:07:35.542 +07:00 [DBG] Loaded ABP modules:
+2026-04-27 00:07:35.543 +07:00 [DBG] - LTC.ProductService.ProductServiceHttpApiHostModule
+2026-04-27 00:07:35.543 +07:00 [DBG]   - LTC.ProductService.ProductServiceHttpApiModule
+2026-04-27 00:07:35.543 +07:00 [DBG]     - LTC.ProductService.ProductServiceApplicationContractsModule
+2026-04-27 00:07:35.543 +07:00 [DBG]       - LTC.ProductService.ProductServiceDomainSharedModule
+2026-04-27 00:07:35.543 +07:00 [DBG]       - Volo.Abp.ObjectExtending.AbpObjectExtendingModule
+2026-04-27 00:07:35.543 +07:00 [DBG]         - Volo.Abp.Localization.AbpLocalizationAbstractionsModule
+2026-04-27 00:07:35.543 +07:00 [DBG]         - Volo.Abp.Validation.AbpValidationAbstractionsModule
+2026-04-27 00:07:35.543 +07:00 [DBG]   - Volo.Abp.Autofac.AbpAutofacModule
+2026-04-27 00:07:35.543 +07:00 [DBG]     - Volo.Abp.Castle.AbpCastleCoreModule
+2026-04-27 00:07:35.543 +07:00 [DBG]   - Volo.Abp.AspNetCore.MultiTenancy.AbpAspNetCoreMultiTenancyModule
+2026-04-27 00:07:35.543 +07:00 [DBG]     - Volo.Abp.MultiTenancy.AbpMultiTenancyModule
+2026-04-27 00:07:35.543 +07:00 [DBG]       - Volo.Abp.Data.AbpDataModule
+2026-04-27 00:07:35.543 +07:00 [DBG]         - Volo.Abp.Uow.AbpUnitOfWorkModule
+2026-04-27 00:07:35.543 +07:00 [DBG]         - Volo.Abp.EventBus.Abstractions.AbpEventBusAbstractionsModule
+2026-04-27 00:07:35.543 +07:00 [DBG]       - Volo.Abp.Security.AbpSecurityModule
+2026-04-27 00:07:35.543 +07:00 [DBG]       - Volo.Abp.Settings.AbpSettingsModule
+2026-04-27 00:07:35.543 +07:00 [DBG]       - Volo.Abp.MultiTenancy.AbpMultiTenancyAbstractionsModule
+2026-04-27 00:07:35.543 +07:00 [DBG]         - Volo.Abp.VirtualFileSystem.AbpVirtualFileSystemModule
+2026-04-27 00:07:35.543 +07:00 [DBG]         - Volo.Abp.Localization.AbpLocalizationModule
+2026-04-27 00:07:35.543 +07:00 [DBG]           - Volo.Abp.Threading.AbpThreadingModule
+2026-04-27 00:07:35.543 +07:00 [DBG]     - Volo.Abp.AspNetCore.AbpAspNetCoreModule
+2026-04-27 00:07:35.543 +07:00 [DBG]       - Volo.Abp.Auditing.AbpAuditingModule
+2026-04-27 00:07:35.543 +07:00 [DBG]         - Volo.Abp.Json.AbpJsonModule
+2026-04-27 00:07:35.543 +07:00 [DBG]           - Volo.Abp.Json.SystemTextJson.AbpJsonSystemTextJsonModule
+2026-04-27 00:07:35.543 +07:00 [DBG]             - Volo.Abp.Json.AbpJsonAbstractionsModule
+2026-04-27 00:07:35.543 +07:00 [DBG]             - Volo.Abp.Timing.AbpTimingModule
+2026-04-27 00:07:35.543 +07:00 [DBG]         - Volo.Abp.Auditing.AbpAuditingContractsModule
+2026-04-27 00:07:35.543 +07:00 [DBG]       - Volo.Abp.Http.AbpHttpModule
+2026-04-27 00:07:35.543 +07:00 [DBG]         - Volo.Abp.Http.AbpHttpAbstractionsModule
+2026-04-27 00:07:35.543 +07:00 [DBG]         - Volo.Abp.Minify.AbpMinifyModule
+2026-04-27 00:07:35.543 +07:00 [DBG]       - Volo.Abp.Authorization.AbpAuthorizationModule
+2026-04-27 00:07:35.543 +07:00 [DBG]         - Volo.Abp.Authorization.AbpAuthorizationAbstractionsModule
+2026-04-27 00:07:35.543 +07:00 [DBG]       - Volo.Abp.Validation.AbpValidationModule
+2026-04-27 00:07:35.543 +07:00 [DBG]       - Volo.Abp.ExceptionHandling.AbpExceptionHandlingModule
+2026-04-27 00:07:35.543 +07:00 [DBG]       - Volo.Abp.AspNetCore.AbpAspNetCoreAbstractionsModule
+2026-04-27 00:07:35.543 +07:00 [DBG]   - LTC.ProductService.ProductServiceApplicationModule
+2026-04-27 00:07:35.543 +07:00 [DBG]     - LTC.ProductService.ProductServiceDomainModule
+2026-04-27 00:07:35.543 +07:00 [DBG]       - Volo.Abp.Emailing.AbpEmailingModule
+2026-04-27 00:07:35.543 +07:00 [DBG]         - Volo.Abp.BackgroundJobs.AbpBackgroundJobsAbstractionsModule
+2026-04-27 00:07:35.543 +07:00 [DBG]         - Volo.Abp.TextTemplating.AbpTextTemplatingModule
+2026-04-27 00:07:35.543 +07:00 [DBG]           - Volo.Abp.TextTemplating.Scriban.AbpTextTemplatingScribanModule
+2026-04-27 00:07:35.543 +07:00 [DBG]             - Volo.Abp.TextTemplating.AbpTextTemplatingCoreModule
+2026-04-27 00:07:35.543 +07:00 [DBG]       - Volo.Abp.TenantManagement.AbpTenantManagementDomainModule
+2026-04-27 00:07:35.543 +07:00 [DBG]         - Volo.Abp.TenantManagement.AbpTenantManagementDomainSharedModule
+2026-04-27 00:07:35.543 +07:00 [DBG]         - Volo.Abp.Domain.AbpDddDomainModule
+2026-04-27 00:07:35.543 +07:00 [DBG]           - Volo.Abp.EventBus.AbpEventBusModule
+2026-04-27 00:07:35.543 +07:00 [DBG]             - Volo.Abp.Guids.AbpGuidsModule
+2026-04-27 00:07:35.543 +07:00 [DBG]             - Volo.Abp.BackgroundWorkers.AbpBackgroundWorkersModule
+2026-04-27 00:07:35.543 +07:00 [DBG]             - Volo.Abp.DistributedLocking.AbpDistributedLockingAbstractionsModule
+2026-04-27 00:07:35.543 +07:00 [DBG]           - Volo.Abp.ObjectMapping.AbpObjectMappingModule
+2026-04-27 00:07:35.543 +07:00 [DBG]           - Volo.Abp.Specifications.AbpSpecificationsModule
+2026-04-27 00:07:35.543 +07:00 [DBG]           - Volo.Abp.Caching.AbpCachingModule
+2026-04-27 00:07:35.543 +07:00 [DBG]             - Volo.Abp.Serialization.AbpSerializationModule
+2026-04-27 00:07:35.543 +07:00 [DBG]           - Volo.Abp.Domain.AbpDddDomainSharedModule
+2026-04-27 00:07:35.543 +07:00 [DBG]         - Volo.Abp.Mapperly.AbpMapperlyModule
+2026-04-27 00:07:35.543 +07:00 [DBG]       - Volo.Abp.Identity.AbpIdentityDomainModule
+2026-04-27 00:07:35.543 +07:00 [DBG]         - Volo.Abp.Identity.AbpIdentityDomainSharedModule
+2026-04-27 00:07:35.543 +07:00 [DBG]           - Volo.Abp.Users.AbpUsersDomainSharedModule
+2026-04-27 00:07:35.543 +07:00 [DBG]           - Volo.Abp.Features.AbpFeaturesModule
+2026-04-27 00:07:35.543 +07:00 [DBG]         - Volo.Abp.Users.AbpUsersDomainModule
+2026-04-27 00:07:35.543 +07:00 [DBG]           - Volo.Abp.Users.AbpUsersAbstractionModule
+2026-04-27 00:07:35.543 +07:00 [DBG]   - LTC.ProductService.EntityFrameworkCore.ProductServiceEntityFrameworkCoreModule
+2026-04-27 00:07:35.543 +07:00 [DBG]     - Volo.Abp.EntityFrameworkCore.SqlServer.AbpEntityFrameworkCoreSqlServerModule
+2026-04-27 00:07:35.543 +07:00 [DBG]       - Volo.Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule
+2026-04-27 00:07:35.543 +07:00 [DBG]     - Volo.Abp.TenantManagement.EntityFrameworkCore.AbpTenantManagementEntityFrameworkCoreModule
+2026-04-27 00:07:35.543 +07:00 [DBG]   - Volo.Abp.Swashbuckle.AbpSwashbuckleModule
+2026-04-27 00:07:35.543 +07:00 [DBG]     - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcModule
+2026-04-27 00:07:35.543 +07:00 [DBG]       - Volo.Abp.ApiVersioning.AbpApiVersioningAbstractionsModule
+2026-04-27 00:07:35.543 +07:00 [DBG]       - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcContractsModule
+2026-04-27 00:07:35.543 +07:00 [DBG]         - Volo.Abp.Application.AbpDddApplicationContractsModule
+2026-04-27 00:07:35.543 +07:00 [DBG]       - Volo.Abp.UI.Navigation.AbpUiNavigationModule
+2026-04-27 00:07:35.543 +07:00 [DBG]         - Volo.Abp.UI.AbpUiModule
+2026-04-27 00:07:35.543 +07:00 [DBG]       - Volo.Abp.GlobalFeatures.AbpGlobalFeaturesModule
+2026-04-27 00:07:35.543 +07:00 [DBG]       - Volo.Abp.Application.AbpDddApplicationModule
+2026-04-27 00:07:35.543 +07:00 [DBG]   - Volo.Abp.AspNetCore.Serilog.AbpAspNetCoreSerilogModule
+2026-04-27 00:07:35.543 +07:00 [DBG]   - LTC.Shared.Hosting.Microservices.LTCSharedHostingMicroservicesModule
+2026-04-27 00:07:35.543 +07:00 [DBG]     - Volo.Abp.AspNetCore.Authentication.JwtBearer.AbpAspNetCoreAuthenticationJwtBearerModule
+2026-04-27 00:07:35.543 +07:00 [DBG]     - Volo.Abp.Caching.StackExchangeRedis.AbpCachingStackExchangeRedisModule
+2026-04-27 00:07:35.543 +07:00 [DBG]     - Volo.Abp.DistributedLocking.AbpDistributedLockingModule
+2026-04-27 00:07:35.962 +07:00 [INF] Initialized all ABP modules.
+2026-04-27 00:07:36.237 +07:00 [INF] Now listening on: https://localhost:44367
+2026-04-27 00:07:36.237 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-04-27 00:07:36.237 +07:00 [INF] Hosting environment: Development
+2026-04-27 00:07:36.237 +07:00 [INF] Content root path: D:\LTT\ltc\BE\ltt-ltc-product-api\LTC.ProductService.HttpApi.Host
+2026-04-27 00:07:38.469 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44367/ltc/product-service/manager/product/product-all?page=1&fetch=10&keyword= - null null
+2026-04-27 00:07:38.662 +07:00 [INF] CORS policy execution successful.
+2026-04-27 00:07:38.667 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44367/ltc/product-service/manager/product/product-all?page=1&fetch=10&keyword= - 204 null null 198.527ms
+2026-04-27 00:07:38.673 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44367/ltc/product-service/manager/product/product-all?page=1&fetch=10&keyword= - null null
+2026-04-27 00:07:38.681 +07:00 [INF] CORS policy execution successful.
+2026-04-27 00:07:38.734 +07:00 [INF] [JWT DEBUG] Token Validated Successfully for 1338f0a7-2268-43e6-89f5-0fd388e63010
+2026-04-27 00:07:38.735 +07:00 [INF] [JWT DEBUG] All Claims Found: 
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier: 1338f0a7-2268-43e6-89f5-0fd388e63010
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name: manager
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress: manager@ltt.com
+AspNet.Identity.SecurityStamp: 26BC05DA-2691-4529-B793-632CB2949FA1
+tenantid: 5b44b9ed-8fcf-4689-8694-1dee07259757
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname: System
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname: Manager
+phone_number_verified: False
+email_verified: True
+http://schemas.microsoft.com/ws/2008/06/identity/claims/role: manager
+cinemaId: 800d72f4-0e3d-e957-bea3-3a20b8bf1873
+sessionId: 019dcaa5-7ad2-7b66-9381-88f2de28eb3c
+nbf: 1777221335
+exp: 1777224935
+iss: ZS
+aud: ZS
+2026-04-27 00:07:38.735 +07:00 [INF] [JWT DEBUG] Authorization Check - IsInRole('Admin'): false, HasAdminRoleClaim: false
+2026-04-27 00:07:38.816 +07:00 [DBG] Starting resolving tenant...
+2026-04-27 00:07:38.817 +07:00 [DBG] Trying to resolve tenant through 'CurrentUser'...
+2026-04-27 00:07:38.819 +07:00 [DBG] Tenant resolved by 'CurrentUser' as '5b44b9ed-8fcf-4689-8694-1dee07259757'.
+2026-04-27 00:07:44.492 +07:00 [INF] Executing endpoint 'LTC.ProductService.Controllers.Manager.ProductManagerController.GetAllAsync (LTC.ProductService.HttpApi)'
+2026-04-27 00:07:44.542 +07:00 [INF] Route matched with {action = "GetAll", controller = "ProductManager", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Volo.Abp.Application.Dtos.PagedResultDto`1[LTC.ProductService.Dtos.Output.ProductOutputDto]] GetAllAsync(LTC.ProductService.Dtos.Input.GetProductListInputDto) on controller LTC.ProductService.Controllers.Manager.ProductManagerController (LTC.ProductService.HttpApi).
+2026-04-27 00:07:49.685 +07:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-04-27 00:07:49.685 +07:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-04-27 00:07:49.882 +07:00 [INF] Executing ObjectResult, writing value of type 'Volo.Abp.Application.Dtos.PagedResultDto`1[[LTC.ProductService.Dtos.Output.ProductOutputDto, LTC.ProductService.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-04-27 00:07:49.898 +07:00 [INF] Executed action LTC.ProductService.Controllers.Manager.ProductManagerController.GetAllAsync (LTC.ProductService.HttpApi) in 5352.9845ms
+2026-04-27 00:07:49.898 +07:00 [INF] Executed endpoint 'LTC.ProductService.Controllers.Manager.ProductManagerController.GetAllAsync (LTC.ProductService.HttpApi)'
+2026-04-27 00:07:49.903 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44367/ltc/product-service/manager/product/product-all?page=1&fetch=10&keyword= - 200 null application/json; charset=utf-8 11230.4894ms
+2026-04-27 00:07:53.027 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44367/ltc/product-service/manager/category/category-all?page=1&fetch=10 - null null
+2026-04-27 00:07:53.027 +07:00 [INF] CORS policy execution successful.
+2026-04-27 00:07:53.027 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44367/ltc/product-service/manager/category/category-all?page=1&fetch=10 - 204 null null 0.4152ms
+2026-04-27 00:07:53.031 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44367/ltc/product-service/manager/category/category-all?page=1&fetch=10 - null null
+2026-04-27 00:07:53.033 +07:00 [INF] CORS policy execution successful.
+2026-04-27 00:07:53.035 +07:00 [INF] [JWT DEBUG] Token Validated Successfully for 1338f0a7-2268-43e6-89f5-0fd388e63010
+2026-04-27 00:07:53.035 +07:00 [INF] [JWT DEBUG] All Claims Found: 
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier: 1338f0a7-2268-43e6-89f5-0fd388e63010
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name: manager
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress: manager@ltt.com
+AspNet.Identity.SecurityStamp: 26BC05DA-2691-4529-B793-632CB2949FA1
+tenantid: 5b44b9ed-8fcf-4689-8694-1dee07259757
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname: System
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname: Manager
+phone_number_verified: False
+email_verified: True
+http://schemas.microsoft.com/ws/2008/06/identity/claims/role: manager
+cinemaId: 800d72f4-0e3d-e957-bea3-3a20b8bf1873
+sessionId: 019dcaa5-7ad2-7b66-9381-88f2de28eb3c
+nbf: 1777221335
+exp: 1777224935
+iss: ZS
+aud: ZS
+2026-04-27 00:07:53.035 +07:00 [INF] [JWT DEBUG] Authorization Check - IsInRole('Admin'): false, HasAdminRoleClaim: false
+2026-04-27 00:07:53.036 +07:00 [DBG] Starting resolving tenant...
+2026-04-27 00:07:53.036 +07:00 [DBG] Trying to resolve tenant through 'CurrentUser'...
+2026-04-27 00:07:53.036 +07:00 [DBG] Tenant resolved by 'CurrentUser' as '5b44b9ed-8fcf-4689-8694-1dee07259757'.
+2026-04-27 00:07:53.113 +07:00 [INF] Executing endpoint 'LTC.ProductService.Controllers.Manager.CategoryManagerController.GetAllAsync (LTC.ProductService.HttpApi)'
+2026-04-27 00:07:53.119 +07:00 [INF] Route matched with {action = "GetAll", controller = "CategoryManager", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Volo.Abp.Application.Dtos.PagedResultDto`1[LTC.ProductService.Dtos.Output.CategoryOutputDto]] GetAllAsync(LTC.ProductService.Dtos.Input.PaginationInputDto) on controller LTC.ProductService.Controllers.Manager.CategoryManagerController (LTC.ProductService.HttpApi).
+2026-04-27 00:07:53.656 +07:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-04-27 00:07:53.656 +07:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-04-27 00:07:53.757 +07:00 [INF] Executing ObjectResult, writing value of type 'Volo.Abp.Application.Dtos.PagedResultDto`1[[LTC.ProductService.Dtos.Output.CategoryOutputDto, LTC.ProductService.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-04-27 00:07:53.759 +07:00 [INF] Executed action LTC.ProductService.Controllers.Manager.CategoryManagerController.GetAllAsync (LTC.ProductService.HttpApi) in 640.6042ms
+2026-04-27 00:07:53.759 +07:00 [INF] Executed endpoint 'LTC.ProductService.Controllers.Manager.CategoryManagerController.GetAllAsync (LTC.ProductService.HttpApi)'
+2026-04-27 00:07:53.760 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44367/ltc/product-service/manager/category/category-all?page=1&fetch=10 - 200 null application/json; charset=utf-8 728.6053ms
+2026-04-27 00:07:57.291 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44367/ltc/product-service/manager/product/product-all?page=1&fetch=10&keyword= - null null
+2026-04-27 00:07:57.291 +07:00 [INF] CORS policy execution successful.
+2026-04-27 00:07:57.291 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44367/ltc/product-service/manager/product/product-all?page=1&fetch=10&keyword= - 204 null null 0.4455ms
+2026-04-27 00:07:57.297 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44367/ltc/product-service/manager/product/product-all?page=1&fetch=10&keyword= - null null
+2026-04-27 00:07:57.297 +07:00 [INF] CORS policy execution successful.
+2026-04-27 00:07:57.297 +07:00 [INF] [JWT DEBUG] Token Validated Successfully for 1338f0a7-2268-43e6-89f5-0fd388e63010
+2026-04-27 00:07:57.298 +07:00 [INF] [JWT DEBUG] All Claims Found: 
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier: 1338f0a7-2268-43e6-89f5-0fd388e63010
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name: manager
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress: manager@ltt.com
+AspNet.Identity.SecurityStamp: 26BC05DA-2691-4529-B793-632CB2949FA1
+tenantid: 5b44b9ed-8fcf-4689-8694-1dee07259757
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname: System
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname: Manager
+phone_number_verified: False
+email_verified: True
+http://schemas.microsoft.com/ws/2008/06/identity/claims/role: manager
+cinemaId: 800d72f4-0e3d-e957-bea3-3a20b8bf1873
+sessionId: 019dcaa5-7ad2-7b66-9381-88f2de28eb3c
+nbf: 1777221335
+exp: 1777224935
+iss: ZS
+aud: ZS
+2026-04-27 00:07:57.298 +07:00 [INF] [JWT DEBUG] Authorization Check - IsInRole('Admin'): false, HasAdminRoleClaim: false
+2026-04-27 00:07:57.298 +07:00 [DBG] Starting resolving tenant...
+2026-04-27 00:07:57.298 +07:00 [DBG] Trying to resolve tenant through 'CurrentUser'...
+2026-04-27 00:07:57.298 +07:00 [DBG] Tenant resolved by 'CurrentUser' as '5b44b9ed-8fcf-4689-8694-1dee07259757'.
+2026-04-27 00:07:57.396 +07:00 [INF] Executing endpoint 'LTC.ProductService.Controllers.Manager.ProductManagerController.GetAllAsync (LTC.ProductService.HttpApi)'
+2026-04-27 00:07:57.396 +07:00 [INF] Route matched with {action = "GetAll", controller = "ProductManager", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Volo.Abp.Application.Dtos.PagedResultDto`1[LTC.ProductService.Dtos.Output.ProductOutputDto]] GetAllAsync(LTC.ProductService.Dtos.Input.GetProductListInputDto) on controller LTC.ProductService.Controllers.Manager.ProductManagerController (LTC.ProductService.HttpApi).
+2026-04-27 00:07:57.768 +07:00 [INF] Executing ObjectResult, writing value of type 'Volo.Abp.Application.Dtos.PagedResultDto`1[[LTC.ProductService.Dtos.Output.ProductOutputDto, LTC.ProductService.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-04-27 00:07:57.769 +07:00 [INF] Executed action LTC.ProductService.Controllers.Manager.ProductManagerController.GetAllAsync (LTC.ProductService.HttpApi) in 372.7653ms
+2026-04-27 00:07:57.769 +07:00 [INF] Executed endpoint 'LTC.ProductService.Controllers.Manager.ProductManagerController.GetAllAsync (LTC.ProductService.HttpApi)'
+2026-04-27 00:07:57.769 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44367/ltc/product-service/manager/product/product-all?page=1&fetch=10&keyword= - 200 null application/json; charset=utf-8 472.5059ms
+2026-04-27 00:07:58.187 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44367/ltc/product-service/manager/category/category-all?page=1&fetch=10 - null null
+2026-04-27 00:07:58.187 +07:00 [INF] CORS policy execution successful.
+2026-04-27 00:07:58.187 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44367/ltc/product-service/manager/category/category-all?page=1&fetch=10 - 204 null null 0.3761ms
+2026-04-27 00:07:58.191 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44367/ltc/product-service/manager/category/category-all?page=1&fetch=10 - null null
+2026-04-27 00:07:58.192 +07:00 [INF] CORS policy execution successful.
+2026-04-27 00:07:58.192 +07:00 [INF] [JWT DEBUG] Token Validated Successfully for 1338f0a7-2268-43e6-89f5-0fd388e63010
+2026-04-27 00:07:58.192 +07:00 [INF] [JWT DEBUG] All Claims Found: 
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier: 1338f0a7-2268-43e6-89f5-0fd388e63010
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name: manager
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress: manager@ltt.com
+AspNet.Identity.SecurityStamp: 26BC05DA-2691-4529-B793-632CB2949FA1
+tenantid: 5b44b9ed-8fcf-4689-8694-1dee07259757
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname: System
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname: Manager
+phone_number_verified: False
+email_verified: True
+http://schemas.microsoft.com/ws/2008/06/identity/claims/role: manager
+cinemaId: 800d72f4-0e3d-e957-bea3-3a20b8bf1873
+sessionId: 019dcaa5-7ad2-7b66-9381-88f2de28eb3c
+nbf: 1777221335
+exp: 1777224935
+iss: ZS
+aud: ZS
+2026-04-27 00:07:58.192 +07:00 [INF] [JWT DEBUG] Authorization Check - IsInRole('Admin'): false, HasAdminRoleClaim: false
+2026-04-27 00:07:58.193 +07:00 [DBG] Starting resolving tenant...
+2026-04-27 00:07:58.193 +07:00 [DBG] Trying to resolve tenant through 'CurrentUser'...
+2026-04-27 00:07:58.193 +07:00 [DBG] Tenant resolved by 'CurrentUser' as '5b44b9ed-8fcf-4689-8694-1dee07259757'.
+2026-04-27 00:07:58.330 +07:00 [INF] Executing endpoint 'LTC.ProductService.Controllers.Manager.CategoryManagerController.GetAllAsync (LTC.ProductService.HttpApi)'
+2026-04-27 00:07:58.330 +07:00 [INF] Route matched with {action = "GetAll", controller = "CategoryManager", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Volo.Abp.Application.Dtos.PagedResultDto`1[LTC.ProductService.Dtos.Output.CategoryOutputDto]] GetAllAsync(LTC.ProductService.Dtos.Input.PaginationInputDto) on controller LTC.ProductService.Controllers.Manager.CategoryManagerController (LTC.ProductService.HttpApi).
+2026-04-27 00:07:58.539 +07:00 [INF] Executing ObjectResult, writing value of type 'Volo.Abp.Application.Dtos.PagedResultDto`1[[LTC.ProductService.Dtos.Output.CategoryOutputDto, LTC.ProductService.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-04-27 00:07:58.540 +07:00 [INF] Executed action LTC.ProductService.Controllers.Manager.CategoryManagerController.GetAllAsync (LTC.ProductService.HttpApi) in 209.1614ms
+2026-04-27 00:07:58.540 +07:00 [INF] Executed endpoint 'LTC.ProductService.Controllers.Manager.CategoryManagerController.GetAllAsync (LTC.ProductService.HttpApi)'
+2026-04-27 00:07:58.540 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44367/ltc/product-service/manager/category/category-all?page=1&fetch=10 - 200 null application/json; charset=utf-8 348.3521ms
+2026-04-27 00:08:00.144 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44367/ltc/product-service/manager/combo/combo-all?page=1&fetch=10&keyword= - null null
+2026-04-27 00:08:00.144 +07:00 [INF] CORS policy execution successful.
+2026-04-27 00:08:00.144 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44367/ltc/product-service/manager/combo/combo-all?page=1&fetch=10&keyword= - 204 null null 0.8114ms
+2026-04-27 00:08:00.150 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44367/ltc/product-service/manager/combo/combo-all?page=1&fetch=10&keyword= - null null
+2026-04-27 00:08:00.151 +07:00 [INF] CORS policy execution successful.
+2026-04-27 00:08:00.151 +07:00 [INF] [JWT DEBUG] Token Validated Successfully for 1338f0a7-2268-43e6-89f5-0fd388e63010
+2026-04-27 00:08:00.152 +07:00 [INF] [JWT DEBUG] All Claims Found: 
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier: 1338f0a7-2268-43e6-89f5-0fd388e63010
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name: manager
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress: manager@ltt.com
+AspNet.Identity.SecurityStamp: 26BC05DA-2691-4529-B793-632CB2949FA1
+tenantid: 5b44b9ed-8fcf-4689-8694-1dee07259757
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname: System
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname: Manager
+phone_number_verified: False
+email_verified: True
+http://schemas.microsoft.com/ws/2008/06/identity/claims/role: manager
+cinemaId: 800d72f4-0e3d-e957-bea3-3a20b8bf1873
+sessionId: 019dcaa5-7ad2-7b66-9381-88f2de28eb3c
+nbf: 1777221335
+exp: 1777224935
+iss: ZS
+aud: ZS
+2026-04-27 00:08:00.152 +07:00 [INF] [JWT DEBUG] Authorization Check - IsInRole('Admin'): false, HasAdminRoleClaim: false
+2026-04-27 00:08:00.153 +07:00 [DBG] Starting resolving tenant...
+2026-04-27 00:08:00.153 +07:00 [DBG] Trying to resolve tenant through 'CurrentUser'...
+2026-04-27 00:08:00.153 +07:00 [DBG] Tenant resolved by 'CurrentUser' as '5b44b9ed-8fcf-4689-8694-1dee07259757'.
+2026-04-27 00:08:00.370 +07:00 [INF] Executing endpoint 'LTC.ProductService.Controllers.Manager.ComboManagerController.GetAllAsync (LTC.ProductService.HttpApi)'
+2026-04-27 00:08:00.374 +07:00 [INF] Route matched with {action = "GetAll", controller = "ComboManager", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Volo.Abp.Application.Dtos.PagedResultDto`1[LTC.ProductService.Dtos.Output.ComboOutputDto]] GetAllAsync(LTC.ProductService.Dtos.Input.PaginationInputDto) on controller LTC.ProductService.Controllers.Manager.ComboManagerController (LTC.ProductService.HttpApi).
+2026-04-27 00:08:00.749 +07:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-04-27 00:08:00.750 +07:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-04-27 00:08:00.856 +07:00 [INF] Executing ObjectResult, writing value of type 'Volo.Abp.Application.Dtos.PagedResultDto`1[[LTC.ProductService.Dtos.Output.ComboOutputDto, LTC.ProductService.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-04-27 00:08:00.858 +07:00 [INF] Executed action LTC.ProductService.Controllers.Manager.ComboManagerController.GetAllAsync (LTC.ProductService.HttpApi) in 483.9319ms
+2026-04-27 00:08:00.858 +07:00 [INF] Executed endpoint 'LTC.ProductService.Controllers.Manager.ComboManagerController.GetAllAsync (LTC.ProductService.HttpApi)'
+2026-04-27 00:08:00.858 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44367/ltc/product-service/manager/combo/combo-all?page=1&fetch=10&keyword= - 200 null application/json; charset=utf-8 708.842ms
+2026-04-27 00:08:03.868 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44367/ltc/product-service/manager/category/category-all?page=1&fetch=10 - null null
+2026-04-27 00:08:03.869 +07:00 [INF] CORS policy execution successful.
+2026-04-27 00:08:03.869 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44367/ltc/product-service/manager/category/category-all?page=1&fetch=10 - 204 null null 0.5814ms
+2026-04-27 00:08:03.875 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44367/ltc/product-service/manager/category/category-all?page=1&fetch=10 - null null
+2026-04-27 00:08:03.876 +07:00 [INF] CORS policy execution successful.
+2026-04-27 00:08:03.876 +07:00 [INF] [JWT DEBUG] Token Validated Successfully for 1338f0a7-2268-43e6-89f5-0fd388e63010
+2026-04-27 00:08:03.877 +07:00 [INF] [JWT DEBUG] All Claims Found: 
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier: 1338f0a7-2268-43e6-89f5-0fd388e63010
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name: manager
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress: manager@ltt.com
+AspNet.Identity.SecurityStamp: 26BC05DA-2691-4529-B793-632CB2949FA1
+tenantid: 5b44b9ed-8fcf-4689-8694-1dee07259757
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname: System
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname: Manager
+phone_number_verified: False
+email_verified: True
+http://schemas.microsoft.com/ws/2008/06/identity/claims/role: manager
+cinemaId: 800d72f4-0e3d-e957-bea3-3a20b8bf1873
+sessionId: 019dcaa5-7ad2-7b66-9381-88f2de28eb3c
+nbf: 1777221335
+exp: 1777224935
+iss: ZS
+aud: ZS
+2026-04-27 00:08:03.877 +07:00 [INF] [JWT DEBUG] Authorization Check - IsInRole('Admin'): false, HasAdminRoleClaim: false
+2026-04-27 00:08:03.878 +07:00 [DBG] Starting resolving tenant...
+2026-04-27 00:08:03.878 +07:00 [DBG] Trying to resolve tenant through 'CurrentUser'...
+2026-04-27 00:08:03.879 +07:00 [DBG] Tenant resolved by 'CurrentUser' as '5b44b9ed-8fcf-4689-8694-1dee07259757'.
+2026-04-27 00:08:03.980 +07:00 [INF] Executing endpoint 'LTC.ProductService.Controllers.Manager.CategoryManagerController.GetAllAsync (LTC.ProductService.HttpApi)'
+2026-04-27 00:08:03.980 +07:00 [INF] Route matched with {action = "GetAll", controller = "CategoryManager", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Volo.Abp.Application.Dtos.PagedResultDto`1[LTC.ProductService.Dtos.Output.CategoryOutputDto]] GetAllAsync(LTC.ProductService.Dtos.Input.PaginationInputDto) on controller LTC.ProductService.Controllers.Manager.CategoryManagerController (LTC.ProductService.HttpApi).
+2026-04-27 00:08:04.353 +07:00 [INF] Executing ObjectResult, writing value of type 'Volo.Abp.Application.Dtos.PagedResultDto`1[[LTC.ProductService.Dtos.Output.CategoryOutputDto, LTC.ProductService.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-04-27 00:08:04.354 +07:00 [INF] Executed action LTC.ProductService.Controllers.Manager.CategoryManagerController.GetAllAsync (LTC.ProductService.HttpApi) in 373.5571ms
+2026-04-27 00:08:04.354 +07:00 [INF] Executed endpoint 'LTC.ProductService.Controllers.Manager.CategoryManagerController.GetAllAsync (LTC.ProductService.HttpApi)'
+2026-04-27 00:08:04.354 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44367/ltc/product-service/manager/category/category-all?page=1&fetch=10 - 200 null application/json; charset=utf-8 479.2869ms
+2026-04-27 00:08:11.432 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44367/ltc/product-service/manager/category/category - null null
+2026-04-27 00:08:11.432 +07:00 [INF] CORS policy execution successful.
+2026-04-27 00:08:11.432 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44367/ltc/product-service/manager/category/category - 204 null null 0.4587ms
+2026-04-27 00:08:11.438 +07:00 [INF] Request starting HTTP/2 POST https://localhost:44367/ltc/product-service/manager/category/category - application/json 32
+2026-04-27 00:08:11.439 +07:00 [INF] CORS policy execution successful.
+2026-04-27 00:08:11.439 +07:00 [INF] [JWT DEBUG] Token Validated Successfully for 1338f0a7-2268-43e6-89f5-0fd388e63010
+2026-04-27 00:08:11.439 +07:00 [INF] [JWT DEBUG] All Claims Found: 
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier: 1338f0a7-2268-43e6-89f5-0fd388e63010
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name: manager
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress: manager@ltt.com
+AspNet.Identity.SecurityStamp: 26BC05DA-2691-4529-B793-632CB2949FA1
+tenantid: 5b44b9ed-8fcf-4689-8694-1dee07259757
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname: System
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname: Manager
+phone_number_verified: False
+email_verified: True
+http://schemas.microsoft.com/ws/2008/06/identity/claims/role: manager
+cinemaId: 800d72f4-0e3d-e957-bea3-3a20b8bf1873
+sessionId: 019dcaa5-7ad2-7b66-9381-88f2de28eb3c
+nbf: 1777221335
+exp: 1777224935
+iss: ZS
+aud: ZS
+2026-04-27 00:08:11.439 +07:00 [INF] [JWT DEBUG] Authorization Check - IsInRole('Admin'): false, HasAdminRoleClaim: false
+2026-04-27 00:08:11.440 +07:00 [DBG] Starting resolving tenant...
+2026-04-27 00:08:11.440 +07:00 [DBG] Trying to resolve tenant through 'CurrentUser'...
+2026-04-27 00:08:11.440 +07:00 [DBG] Tenant resolved by 'CurrentUser' as '5b44b9ed-8fcf-4689-8694-1dee07259757'.
+2026-04-27 00:08:11.563 +07:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin|Manager)
+2026-04-27 00:08:11.565 +07:00 [INF] AuthenticationScheme: Bearer was forbidden.
+2026-04-27 00:08:11.566 +07:00 [INF] Request finished HTTP/2 POST https://localhost:44367/ltc/product-service/manager/category/category - 403 0 null 127.2438ms
+2026-04-27 00:08:15.256 +07:00 [INF] Request starting HTTP/2 POST https://localhost:44367/ltc/product-service/manager/category/category - application/json 32
+2026-04-27 00:08:15.256 +07:00 [INF] CORS policy execution successful.
+2026-04-27 00:08:15.257 +07:00 [INF] [JWT DEBUG] Token Validated Successfully for 1338f0a7-2268-43e6-89f5-0fd388e63010
+2026-04-27 00:08:15.257 +07:00 [INF] [JWT DEBUG] All Claims Found: 
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier: 1338f0a7-2268-43e6-89f5-0fd388e63010
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name: manager
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress: manager@ltt.com
+AspNet.Identity.SecurityStamp: 26BC05DA-2691-4529-B793-632CB2949FA1
+tenantid: 5b44b9ed-8fcf-4689-8694-1dee07259757
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname: System
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname: Manager
+phone_number_verified: False
+email_verified: True
+http://schemas.microsoft.com/ws/2008/06/identity/claims/role: manager
+cinemaId: 800d72f4-0e3d-e957-bea3-3a20b8bf1873
+sessionId: 019dcac3-604c-7c2b-8eaa-a4829dad7594
+nbf: 1777223295
+exp: 1777226895
+iss: ZS
+aud: ZS
+2026-04-27 00:08:15.257 +07:00 [INF] [JWT DEBUG] Authorization Check - IsInRole('Admin'): false, HasAdminRoleClaim: false
+2026-04-27 00:08:15.258 +07:00 [DBG] Starting resolving tenant...
+2026-04-27 00:08:15.258 +07:00 [DBG] Trying to resolve tenant through 'CurrentUser'...
+2026-04-27 00:08:15.258 +07:00 [DBG] Tenant resolved by 'CurrentUser' as '5b44b9ed-8fcf-4689-8694-1dee07259757'.
+2026-04-27 00:08:15.454 +07:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin|Manager)
+2026-04-27 00:08:15.454 +07:00 [INF] AuthenticationScheme: Bearer was forbidden.
+2026-04-27 00:08:15.454 +07:00 [INF] Request finished HTTP/2 POST https://localhost:44367/ltc/product-service/manager/category/category - 403 0 null 197.9696ms
+2026-04-27 00:08:17.599 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44367/ltc/product-service/manager/category/category - null null
+2026-04-27 00:08:17.599 +07:00 [INF] CORS policy execution successful.
+2026-04-27 00:08:17.599 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44367/ltc/product-service/manager/category/category - 204 null null 0.4454ms
+2026-04-27 00:08:17.603 +07:00 [INF] Request starting HTTP/2 POST https://localhost:44367/ltc/product-service/manager/category/category - application/json 32
+2026-04-27 00:08:17.604 +07:00 [INF] CORS policy execution successful.
+2026-04-27 00:08:17.604 +07:00 [INF] [JWT DEBUG] Token Validated Successfully for 1338f0a7-2268-43e6-89f5-0fd388e63010
+2026-04-27 00:08:17.604 +07:00 [INF] [JWT DEBUG] All Claims Found: 
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier: 1338f0a7-2268-43e6-89f5-0fd388e63010
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name: manager
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress: manager@ltt.com
+AspNet.Identity.SecurityStamp: 26BC05DA-2691-4529-B793-632CB2949FA1
+tenantid: 5b44b9ed-8fcf-4689-8694-1dee07259757
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname: System
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname: Manager
+phone_number_verified: False
+email_verified: True
+http://schemas.microsoft.com/ws/2008/06/identity/claims/role: manager
+cinemaId: 800d72f4-0e3d-e957-bea3-3a20b8bf1873
+sessionId: 019dcac3-604c-7c2b-8eaa-a4829dad7594
+nbf: 1777223295
+exp: 1777226895
+iss: ZS
+aud: ZS
+2026-04-27 00:08:17.604 +07:00 [INF] [JWT DEBUG] Authorization Check - IsInRole('Admin'): false, HasAdminRoleClaim: false
+2026-04-27 00:08:17.605 +07:00 [DBG] Starting resolving tenant...
+2026-04-27 00:08:17.605 +07:00 [DBG] Trying to resolve tenant through 'CurrentUser'...
+2026-04-27 00:08:17.605 +07:00 [DBG] Tenant resolved by 'CurrentUser' as '5b44b9ed-8fcf-4689-8694-1dee07259757'.
+2026-04-27 00:08:17.687 +07:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin|Manager)
+2026-04-27 00:08:17.687 +07:00 [INF] AuthenticationScheme: Bearer was forbidden.
+2026-04-27 00:08:17.688 +07:00 [INF] Request finished HTTP/2 POST https://localhost:44367/ltc/product-service/manager/category/category - 403 0 null 84.0278ms
+2026-04-27 00:08:21.637 +07:00 [INF] Request starting HTTP/2 POST https://localhost:44367/ltc/product-service/manager/category/category - application/json 32
+2026-04-27 00:08:21.637 +07:00 [INF] CORS policy execution successful.
+2026-04-27 00:08:21.638 +07:00 [INF] [JWT DEBUG] Token Validated Successfully for 1338f0a7-2268-43e6-89f5-0fd388e63010
+2026-04-27 00:08:21.638 +07:00 [INF] [JWT DEBUG] All Claims Found: 
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier: 1338f0a7-2268-43e6-89f5-0fd388e63010
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name: manager
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress: manager@ltt.com
+AspNet.Identity.SecurityStamp: 26BC05DA-2691-4529-B793-632CB2949FA1
+tenantid: 5b44b9ed-8fcf-4689-8694-1dee07259757
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname: System
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname: Manager
+phone_number_verified: False
+email_verified: True
+http://schemas.microsoft.com/ws/2008/06/identity/claims/role: manager
+cinemaId: 800d72f4-0e3d-e957-bea3-3a20b8bf1873
+sessionId: 019dcac3-7992-70bd-8acc-27485d40c162
+nbf: 1777223301
+exp: 1777226901
+iss: ZS
+aud: ZS
+2026-04-27 00:08:21.638 +07:00 [INF] [JWT DEBUG] Authorization Check - IsInRole('Admin'): false, HasAdminRoleClaim: false
+2026-04-27 00:08:21.639 +07:00 [DBG] Starting resolving tenant...
+2026-04-27 00:08:21.639 +07:00 [DBG] Trying to resolve tenant through 'CurrentUser'...
+2026-04-27 00:08:21.639 +07:00 [DBG] Tenant resolved by 'CurrentUser' as '5b44b9ed-8fcf-4689-8694-1dee07259757'.
+2026-04-27 00:08:21.767 +07:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin|Manager)
+2026-04-27 00:08:21.767 +07:00 [INF] AuthenticationScheme: Bearer was forbidden.
+2026-04-27 00:08:21.767 +07:00 [INF] Request finished HTTP/2 POST https://localhost:44367/ltc/product-service/manager/category/category - 403 0 null 129.9964ms
+2026-04-27 00:11:03.598 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44367/ltc/product-service/manager/category/category-all?page=1&fetch=10 - null null
+2026-04-27 00:11:03.598 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44367/ltc/product-service/manager/product/product-all?page=1&fetch=10&keyword= - null null
+2026-04-27 00:11:03.599 +07:00 [INF] CORS policy execution successful.
+2026-04-27 00:11:03.599 +07:00 [INF] CORS policy execution successful.
+2026-04-27 00:11:03.599 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44367/ltc/product-service/manager/product/product-all?page=1&fetch=10&keyword= - 204 null null 0.4134ms
+2026-04-27 00:11:03.599 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44367/ltc/product-service/manager/category/category-all?page=1&fetch=10 - 204 null null 0.4134ms
+2026-04-27 00:11:03.604 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44367/ltc/product-service/manager/category/category-all?page=1&fetch=10 - null null
+2026-04-27 00:11:03.604 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44367/ltc/product-service/manager/product/product-all?page=1&fetch=10&keyword= - null null
+2026-04-27 00:11:03.605 +07:00 [INF] CORS policy execution successful.
+2026-04-27 00:11:03.605 +07:00 [INF] CORS policy execution successful.
+2026-04-27 00:11:03.605 +07:00 [INF] [JWT DEBUG] Token Validated Successfully for 1338f0a7-2268-43e6-89f5-0fd388e63010
+2026-04-27 00:11:03.605 +07:00 [INF] [JWT DEBUG] All Claims Found: 
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier: 1338f0a7-2268-43e6-89f5-0fd388e63010
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name: manager
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress: manager@ltt.com
+AspNet.Identity.SecurityStamp: 26BC05DA-2691-4529-B793-632CB2949FA1
+tenantid: 5b44b9ed-8fcf-4689-8694-1dee07259757
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname: System
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname: Manager
+phone_number_verified: False
+email_verified: True
+http://schemas.microsoft.com/ws/2008/06/identity/claims/role: manager
+cinemaId: 800d72f4-0e3d-e957-bea3-3a20b8bf1873
+sessionId: 019dcac5-cd41-7864-be8d-8999651c9281
+nbf: 1777223454
+exp: 1777227054
+iss: ZS
+aud: ZS
+2026-04-27 00:11:03.605 +07:00 [INF] [JWT DEBUG] Authorization Check - IsInRole('Admin'): false, HasAdminRoleClaim: false
+2026-04-27 00:11:03.605 +07:00 [INF] [JWT DEBUG] Token Validated Successfully for 1338f0a7-2268-43e6-89f5-0fd388e63010
+2026-04-27 00:11:03.605 +07:00 [INF] [JWT DEBUG] All Claims Found: 
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier: 1338f0a7-2268-43e6-89f5-0fd388e63010
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name: manager
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress: manager@ltt.com
+AspNet.Identity.SecurityStamp: 26BC05DA-2691-4529-B793-632CB2949FA1
+tenantid: 5b44b9ed-8fcf-4689-8694-1dee07259757
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname: System
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname: Manager
+phone_number_verified: False
+email_verified: True
+http://schemas.microsoft.com/ws/2008/06/identity/claims/role: manager
+cinemaId: 800d72f4-0e3d-e957-bea3-3a20b8bf1873
+sessionId: 019dcac5-cd41-7864-be8d-8999651c9281
+nbf: 1777223454
+exp: 1777227054
+iss: ZS
+aud: ZS
+2026-04-27 00:11:03.605 +07:00 [INF] [JWT DEBUG] Authorization Check - IsInRole('Admin'): false, HasAdminRoleClaim: false
+2026-04-27 00:11:03.606 +07:00 [DBG] Starting resolving tenant...
+2026-04-27 00:11:03.606 +07:00 [DBG] Starting resolving tenant...
+2026-04-27 00:11:03.606 +07:00 [DBG] Trying to resolve tenant through 'CurrentUser'...
+2026-04-27 00:11:03.606 +07:00 [DBG] Trying to resolve tenant through 'CurrentUser'...
+2026-04-27 00:11:03.606 +07:00 [DBG] Tenant resolved by 'CurrentUser' as '5b44b9ed-8fcf-4689-8694-1dee07259757'.
+2026-04-27 00:11:03.606 +07:00 [DBG] Tenant resolved by 'CurrentUser' as '5b44b9ed-8fcf-4689-8694-1dee07259757'.
+2026-04-27 00:11:03.800 +07:00 [INF] Executing endpoint 'LTC.ProductService.Controllers.Manager.CategoryManagerController.GetAllAsync (LTC.ProductService.HttpApi)'
+2026-04-27 00:11:03.800 +07:00 [INF] Executing endpoint 'LTC.ProductService.Controllers.Manager.ProductManagerController.GetAllAsync (LTC.ProductService.HttpApi)'
+2026-04-27 00:11:03.800 +07:00 [INF] Route matched with {action = "GetAll", controller = "CategoryManager", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Volo.Abp.Application.Dtos.PagedResultDto`1[LTC.ProductService.Dtos.Output.CategoryOutputDto]] GetAllAsync(LTC.ProductService.Dtos.Input.PaginationInputDto) on controller LTC.ProductService.Controllers.Manager.CategoryManagerController (LTC.ProductService.HttpApi).
+2026-04-27 00:11:03.800 +07:00 [INF] Route matched with {action = "GetAll", controller = "ProductManager", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Volo.Abp.Application.Dtos.PagedResultDto`1[LTC.ProductService.Dtos.Output.ProductOutputDto]] GetAllAsync(LTC.ProductService.Dtos.Input.GetProductListInputDto) on controller LTC.ProductService.Controllers.Manager.ProductManagerController (LTC.ProductService.HttpApi).
+2026-04-27 00:11:04.200 +07:00 [INF] Executing ObjectResult, writing value of type 'Volo.Abp.Application.Dtos.PagedResultDto`1[[LTC.ProductService.Dtos.Output.ProductOutputDto, LTC.ProductService.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-04-27 00:11:04.201 +07:00 [INF] Executed action LTC.ProductService.Controllers.Manager.ProductManagerController.GetAllAsync (LTC.ProductService.HttpApi) in 400.7796ms
+2026-04-27 00:11:04.201 +07:00 [INF] Executed endpoint 'LTC.ProductService.Controllers.Manager.ProductManagerController.GetAllAsync (LTC.ProductService.HttpApi)'
+2026-04-27 00:11:04.201 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44367/ltc/product-service/manager/product/product-all?page=1&fetch=10&keyword= - 200 null application/json; charset=utf-8 596.5929ms
+2026-04-27 00:11:04.714 +07:00 [INF] Executing ObjectResult, writing value of type 'Volo.Abp.Application.Dtos.PagedResultDto`1[[LTC.ProductService.Dtos.Output.CategoryOutputDto, LTC.ProductService.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-04-27 00:11:04.714 +07:00 [INF] Executed action LTC.ProductService.Controllers.Manager.CategoryManagerController.GetAllAsync (LTC.ProductService.HttpApi) in 913.9264ms
+2026-04-27 00:11:04.714 +07:00 [INF] Executed endpoint 'LTC.ProductService.Controllers.Manager.CategoryManagerController.GetAllAsync (LTC.ProductService.HttpApi)'
+2026-04-27 00:11:04.714 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44367/ltc/product-service/manager/category/category-all?page=1&fetch=10 - 200 null application/json; charset=utf-8 1109.7613ms
+2026-04-27 00:11:05.590 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44367/ltc/product-service/manager/combo/combo-all?page=1&fetch=10&keyword= - null null
+2026-04-27 00:11:05.591 +07:00 [INF] CORS policy execution successful.
+2026-04-27 00:11:05.609 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44367/ltc/product-service/manager/combo/combo-all?page=1&fetch=10&keyword= - 204 null null 18.9624ms
+2026-04-27 00:11:05.616 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44367/ltc/product-service/manager/combo/combo-all?page=1&fetch=10&keyword= - null null
+2026-04-27 00:11:05.617 +07:00 [INF] CORS policy execution successful.
+2026-04-27 00:11:05.618 +07:00 [INF] [JWT DEBUG] Token Validated Successfully for 1338f0a7-2268-43e6-89f5-0fd388e63010
+2026-04-27 00:11:05.618 +07:00 [INF] [JWT DEBUG] All Claims Found: 
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier: 1338f0a7-2268-43e6-89f5-0fd388e63010
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name: manager
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress: manager@ltt.com
+AspNet.Identity.SecurityStamp: 26BC05DA-2691-4529-B793-632CB2949FA1
+tenantid: 5b44b9ed-8fcf-4689-8694-1dee07259757
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname: System
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname: Manager
+phone_number_verified: False
+email_verified: True
+http://schemas.microsoft.com/ws/2008/06/identity/claims/role: manager
+cinemaId: 800d72f4-0e3d-e957-bea3-3a20b8bf1873
+sessionId: 019dcac5-cd41-7864-be8d-8999651c9281
+nbf: 1777223454
+exp: 1777227054
+iss: ZS
+aud: ZS
+2026-04-27 00:11:05.618 +07:00 [INF] [JWT DEBUG] Authorization Check - IsInRole('Admin'): false, HasAdminRoleClaim: false
+2026-04-27 00:11:05.619 +07:00 [DBG] Starting resolving tenant...
+2026-04-27 00:11:05.619 +07:00 [DBG] Trying to resolve tenant through 'CurrentUser'...
+2026-04-27 00:11:05.619 +07:00 [DBG] Tenant resolved by 'CurrentUser' as '5b44b9ed-8fcf-4689-8694-1dee07259757'.
+2026-04-27 00:11:05.742 +07:00 [INF] Executing endpoint 'LTC.ProductService.Controllers.Manager.ComboManagerController.GetAllAsync (LTC.ProductService.HttpApi)'
+2026-04-27 00:11:05.742 +07:00 [INF] Route matched with {action = "GetAll", controller = "ComboManager", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Volo.Abp.Application.Dtos.PagedResultDto`1[LTC.ProductService.Dtos.Output.ComboOutputDto]] GetAllAsync(LTC.ProductService.Dtos.Input.PaginationInputDto) on controller LTC.ProductService.Controllers.Manager.ComboManagerController (LTC.ProductService.HttpApi).
+2026-04-27 00:11:05.945 +07:00 [INF] Executing ObjectResult, writing value of type 'Volo.Abp.Application.Dtos.PagedResultDto`1[[LTC.ProductService.Dtos.Output.ComboOutputDto, LTC.ProductService.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-04-27 00:11:05.945 +07:00 [INF] Executed action LTC.ProductService.Controllers.Manager.ComboManagerController.GetAllAsync (LTC.ProductService.HttpApi) in 202.7772ms
+2026-04-27 00:11:05.945 +07:00 [INF] Executed endpoint 'LTC.ProductService.Controllers.Manager.ComboManagerController.GetAllAsync (LTC.ProductService.HttpApi)'
+2026-04-27 00:11:05.945 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44367/ltc/product-service/manager/combo/combo-all?page=1&fetch=10&keyword= - 200 null application/json; charset=utf-8 329.6617ms
+2026-04-27 00:11:06.391 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44367/ltc/product-service/manager/category/category-all?page=1&fetch=10 - null null
+2026-04-27 00:11:06.392 +07:00 [INF] CORS policy execution successful.
+2026-04-27 00:11:06.392 +07:00 [INF] [JWT DEBUG] Token Validated Successfully for 1338f0a7-2268-43e6-89f5-0fd388e63010
+2026-04-27 00:11:06.392 +07:00 [INF] [JWT DEBUG] All Claims Found: 
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier: 1338f0a7-2268-43e6-89f5-0fd388e63010
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name: manager
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress: manager@ltt.com
+AspNet.Identity.SecurityStamp: 26BC05DA-2691-4529-B793-632CB2949FA1
+tenantid: 5b44b9ed-8fcf-4689-8694-1dee07259757
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname: System
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname: Manager
+phone_number_verified: False
+email_verified: True
+http://schemas.microsoft.com/ws/2008/06/identity/claims/role: manager
+cinemaId: 800d72f4-0e3d-e957-bea3-3a20b8bf1873
+sessionId: 019dcac5-cd41-7864-be8d-8999651c9281
+nbf: 1777223454
+exp: 1777227054
+iss: ZS
+aud: ZS
+2026-04-27 00:11:06.392 +07:00 [INF] [JWT DEBUG] Authorization Check - IsInRole('Admin'): false, HasAdminRoleClaim: false
+2026-04-27 00:11:06.393 +07:00 [DBG] Starting resolving tenant...
+2026-04-27 00:11:06.393 +07:00 [DBG] Trying to resolve tenant through 'CurrentUser'...
+2026-04-27 00:11:06.393 +07:00 [DBG] Tenant resolved by 'CurrentUser' as '5b44b9ed-8fcf-4689-8694-1dee07259757'.
+2026-04-27 00:11:06.478 +07:00 [INF] Executing endpoint 'LTC.ProductService.Controllers.Manager.CategoryManagerController.GetAllAsync (LTC.ProductService.HttpApi)'
+2026-04-27 00:11:06.478 +07:00 [INF] Route matched with {action = "GetAll", controller = "CategoryManager", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Volo.Abp.Application.Dtos.PagedResultDto`1[LTC.ProductService.Dtos.Output.CategoryOutputDto]] GetAllAsync(LTC.ProductService.Dtos.Input.PaginationInputDto) on controller LTC.ProductService.Controllers.Manager.CategoryManagerController (LTC.ProductService.HttpApi).
+2026-04-27 00:11:06.664 +07:00 [INF] Executing ObjectResult, writing value of type 'Volo.Abp.Application.Dtos.PagedResultDto`1[[LTC.ProductService.Dtos.Output.CategoryOutputDto, LTC.ProductService.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-04-27 00:11:06.665 +07:00 [INF] Executed action LTC.ProductService.Controllers.Manager.CategoryManagerController.GetAllAsync (LTC.ProductService.HttpApi) in 186.597ms
+2026-04-27 00:11:06.665 +07:00 [INF] Executed endpoint 'LTC.ProductService.Controllers.Manager.CategoryManagerController.GetAllAsync (LTC.ProductService.HttpApi)'
+2026-04-27 00:11:06.665 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44367/ltc/product-service/manager/category/category-all?page=1&fetch=10 - 200 null application/json; charset=utf-8 273.8493ms
+2026-04-27 00:11:12.544 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44367/ltc/product-service/manager/category/category - null null
+2026-04-27 00:11:12.544 +07:00 [INF] CORS policy execution successful.
+2026-04-27 00:11:12.544 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44367/ltc/product-service/manager/category/category - 204 null null 0.4877ms
+2026-04-27 00:11:12.550 +07:00 [INF] Request starting HTTP/2 POST https://localhost:44367/ltc/product-service/manager/category/category - application/json 32
+2026-04-27 00:11:12.551 +07:00 [INF] CORS policy execution successful.
+2026-04-27 00:11:12.552 +07:00 [INF] [JWT DEBUG] Token Validated Successfully for 1338f0a7-2268-43e6-89f5-0fd388e63010
+2026-04-27 00:11:12.552 +07:00 [INF] [JWT DEBUG] All Claims Found: 
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier: 1338f0a7-2268-43e6-89f5-0fd388e63010
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name: manager
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress: manager@ltt.com
+AspNet.Identity.SecurityStamp: 26BC05DA-2691-4529-B793-632CB2949FA1
+tenantid: 5b44b9ed-8fcf-4689-8694-1dee07259757
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname: System
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname: Manager
+phone_number_verified: False
+email_verified: True
+http://schemas.microsoft.com/ws/2008/06/identity/claims/role: manager
+cinemaId: 800d72f4-0e3d-e957-bea3-3a20b8bf1873
+sessionId: 019dcac5-cd41-7864-be8d-8999651c9281
+nbf: 1777223454
+exp: 1777227054
+iss: ZS
+aud: ZS
+2026-04-27 00:11:12.552 +07:00 [INF] [JWT DEBUG] Authorization Check - IsInRole('Admin'): false, HasAdminRoleClaim: false
+2026-04-27 00:11:12.554 +07:00 [DBG] Starting resolving tenant...
+2026-04-27 00:11:12.554 +07:00 [DBG] Trying to resolve tenant through 'CurrentUser'...
+2026-04-27 00:11:12.554 +07:00 [DBG] Tenant resolved by 'CurrentUser' as '5b44b9ed-8fcf-4689-8694-1dee07259757'.
+2026-04-27 00:11:12.665 +07:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin|Manager)
+2026-04-27 00:11:12.665 +07:00 [INF] AuthenticationScheme: Bearer was forbidden.
+2026-04-27 00:11:12.665 +07:00 [INF] Request finished HTTP/2 POST https://localhost:44367/ltc/product-service/manager/category/category - 403 0 null 115.0225ms
+2026-04-27 00:11:14.728 +07:00 [INF] Request starting HTTP/2 POST https://localhost:44367/ltc/product-service/manager/category/category - application/json 32
+2026-04-27 00:11:14.728 +07:00 [INF] CORS policy execution successful.
+2026-04-27 00:11:14.729 +07:00 [INF] [JWT DEBUG] Token Validated Successfully for 1338f0a7-2268-43e6-89f5-0fd388e63010
+2026-04-27 00:11:14.729 +07:00 [INF] [JWT DEBUG] All Claims Found: 
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier: 1338f0a7-2268-43e6-89f5-0fd388e63010
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name: manager
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress: manager@ltt.com
+AspNet.Identity.SecurityStamp: 26BC05DA-2691-4529-B793-632CB2949FA1
+tenantid: 5b44b9ed-8fcf-4689-8694-1dee07259757
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname: System
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname: Manager
+phone_number_verified: False
+email_verified: True
+http://schemas.microsoft.com/ws/2008/06/identity/claims/role: manager
+cinemaId: 800d72f4-0e3d-e957-bea3-3a20b8bf1873
+sessionId: 019dcac6-1dc7-719d-9958-1a16852c7506
+nbf: 1777223474
+exp: 1777227074
+iss: ZS
+aud: ZS
+2026-04-27 00:11:14.729 +07:00 [INF] [JWT DEBUG] Authorization Check - IsInRole('Admin'): false, HasAdminRoleClaim: false
+2026-04-27 00:11:14.729 +07:00 [DBG] Starting resolving tenant...
+2026-04-27 00:11:14.729 +07:00 [DBG] Trying to resolve tenant through 'CurrentUser'...
+2026-04-27 00:11:14.730 +07:00 [DBG] Tenant resolved by 'CurrentUser' as '5b44b9ed-8fcf-4689-8694-1dee07259757'.
+2026-04-27 00:11:14.834 +07:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin|Manager)
+2026-04-27 00:11:14.834 +07:00 [INF] AuthenticationScheme: Bearer was forbidden.
+2026-04-27 00:11:14.834 +07:00 [INF] Request finished HTTP/2 POST https://localhost:44367/ltc/product-service/manager/category/category - 403 0 null 105.8867ms
+2026-04-27 00:15:15.217 +07:00 [INF] Application is shutting down...
+2026-04-27 00:15:27.852 +07:00 [INF] Starting LTC.ProductService.HttpApi.Host.
+2026-04-27 00:15:29.149 +07:00 [DBG] Loaded ABP modules:
+2026-04-27 00:15:29.150 +07:00 [DBG] - LTC.ProductService.ProductServiceHttpApiHostModule
+2026-04-27 00:15:29.150 +07:00 [DBG]   - LTC.ProductService.ProductServiceHttpApiModule
+2026-04-27 00:15:29.150 +07:00 [DBG]     - LTC.ProductService.ProductServiceApplicationContractsModule
+2026-04-27 00:15:29.150 +07:00 [DBG]       - LTC.ProductService.ProductServiceDomainSharedModule
+2026-04-27 00:15:29.150 +07:00 [DBG]       - Volo.Abp.ObjectExtending.AbpObjectExtendingModule
+2026-04-27 00:15:29.150 +07:00 [DBG]         - Volo.Abp.Localization.AbpLocalizationAbstractionsModule
+2026-04-27 00:15:29.150 +07:00 [DBG]         - Volo.Abp.Validation.AbpValidationAbstractionsModule
+2026-04-27 00:15:29.150 +07:00 [DBG]   - Volo.Abp.Autofac.AbpAutofacModule
+2026-04-27 00:15:29.150 +07:00 [DBG]     - Volo.Abp.Castle.AbpCastleCoreModule
+2026-04-27 00:15:29.150 +07:00 [DBG]   - Volo.Abp.AspNetCore.MultiTenancy.AbpAspNetCoreMultiTenancyModule
+2026-04-27 00:15:29.150 +07:00 [DBG]     - Volo.Abp.MultiTenancy.AbpMultiTenancyModule
+2026-04-27 00:15:29.150 +07:00 [DBG]       - Volo.Abp.Data.AbpDataModule
+2026-04-27 00:15:29.150 +07:00 [DBG]         - Volo.Abp.Uow.AbpUnitOfWorkModule
+2026-04-27 00:15:29.150 +07:00 [DBG]         - Volo.Abp.EventBus.Abstractions.AbpEventBusAbstractionsModule
+2026-04-27 00:15:29.150 +07:00 [DBG]       - Volo.Abp.Security.AbpSecurityModule
+2026-04-27 00:15:29.150 +07:00 [DBG]       - Volo.Abp.Settings.AbpSettingsModule
+2026-04-27 00:15:29.150 +07:00 [DBG]       - Volo.Abp.MultiTenancy.AbpMultiTenancyAbstractionsModule
+2026-04-27 00:15:29.150 +07:00 [DBG]         - Volo.Abp.VirtualFileSystem.AbpVirtualFileSystemModule
+2026-04-27 00:15:29.150 +07:00 [DBG]         - Volo.Abp.Localization.AbpLocalizationModule
+2026-04-27 00:15:29.150 +07:00 [DBG]           - Volo.Abp.Threading.AbpThreadingModule
+2026-04-27 00:15:29.150 +07:00 [DBG]     - Volo.Abp.AspNetCore.AbpAspNetCoreModule
+2026-04-27 00:15:29.150 +07:00 [DBG]       - Volo.Abp.Auditing.AbpAuditingModule
+2026-04-27 00:15:29.150 +07:00 [DBG]         - Volo.Abp.Json.AbpJsonModule
+2026-04-27 00:15:29.150 +07:00 [DBG]           - Volo.Abp.Json.SystemTextJson.AbpJsonSystemTextJsonModule
+2026-04-27 00:15:29.150 +07:00 [DBG]             - Volo.Abp.Json.AbpJsonAbstractionsModule
+2026-04-27 00:15:29.150 +07:00 [DBG]             - Volo.Abp.Timing.AbpTimingModule
+2026-04-27 00:15:29.150 +07:00 [DBG]         - Volo.Abp.Auditing.AbpAuditingContractsModule
+2026-04-27 00:15:29.150 +07:00 [DBG]       - Volo.Abp.Http.AbpHttpModule
+2026-04-27 00:15:29.150 +07:00 [DBG]         - Volo.Abp.Http.AbpHttpAbstractionsModule
+2026-04-27 00:15:29.150 +07:00 [DBG]         - Volo.Abp.Minify.AbpMinifyModule
+2026-04-27 00:15:29.150 +07:00 [DBG]       - Volo.Abp.Authorization.AbpAuthorizationModule
+2026-04-27 00:15:29.150 +07:00 [DBG]         - Volo.Abp.Authorization.AbpAuthorizationAbstractionsModule
+2026-04-27 00:15:29.150 +07:00 [DBG]       - Volo.Abp.Validation.AbpValidationModule
+2026-04-27 00:15:29.150 +07:00 [DBG]       - Volo.Abp.ExceptionHandling.AbpExceptionHandlingModule
+2026-04-27 00:15:29.150 +07:00 [DBG]       - Volo.Abp.AspNetCore.AbpAspNetCoreAbstractionsModule
+2026-04-27 00:15:29.150 +07:00 [DBG]   - LTC.ProductService.ProductServiceApplicationModule
+2026-04-27 00:15:29.150 +07:00 [DBG]     - LTC.ProductService.ProductServiceDomainModule
+2026-04-27 00:15:29.150 +07:00 [DBG]       - Volo.Abp.Emailing.AbpEmailingModule
+2026-04-27 00:15:29.150 +07:00 [DBG]         - Volo.Abp.BackgroundJobs.AbpBackgroundJobsAbstractionsModule
+2026-04-27 00:15:29.150 +07:00 [DBG]         - Volo.Abp.TextTemplating.AbpTextTemplatingModule
+2026-04-27 00:15:29.150 +07:00 [DBG]           - Volo.Abp.TextTemplating.Scriban.AbpTextTemplatingScribanModule
+2026-04-27 00:15:29.150 +07:00 [DBG]             - Volo.Abp.TextTemplating.AbpTextTemplatingCoreModule
+2026-04-27 00:15:29.150 +07:00 [DBG]       - Volo.Abp.TenantManagement.AbpTenantManagementDomainModule
+2026-04-27 00:15:29.150 +07:00 [DBG]         - Volo.Abp.TenantManagement.AbpTenantManagementDomainSharedModule
+2026-04-27 00:15:29.150 +07:00 [DBG]         - Volo.Abp.Domain.AbpDddDomainModule
+2026-04-27 00:15:29.150 +07:00 [DBG]           - Volo.Abp.EventBus.AbpEventBusModule
+2026-04-27 00:15:29.150 +07:00 [DBG]             - Volo.Abp.Guids.AbpGuidsModule
+2026-04-27 00:15:29.150 +07:00 [DBG]             - Volo.Abp.BackgroundWorkers.AbpBackgroundWorkersModule
+2026-04-27 00:15:29.150 +07:00 [DBG]             - Volo.Abp.DistributedLocking.AbpDistributedLockingAbstractionsModule
+2026-04-27 00:15:29.150 +07:00 [DBG]           - Volo.Abp.ObjectMapping.AbpObjectMappingModule
+2026-04-27 00:15:29.150 +07:00 [DBG]           - Volo.Abp.Specifications.AbpSpecificationsModule
+2026-04-27 00:15:29.150 +07:00 [DBG]           - Volo.Abp.Caching.AbpCachingModule
+2026-04-27 00:15:29.150 +07:00 [DBG]             - Volo.Abp.Serialization.AbpSerializationModule
+2026-04-27 00:15:29.150 +07:00 [DBG]           - Volo.Abp.Domain.AbpDddDomainSharedModule
+2026-04-27 00:15:29.150 +07:00 [DBG]         - Volo.Abp.Mapperly.AbpMapperlyModule
+2026-04-27 00:15:29.150 +07:00 [DBG]       - Volo.Abp.Identity.AbpIdentityDomainModule
+2026-04-27 00:15:29.150 +07:00 [DBG]         - Volo.Abp.Identity.AbpIdentityDomainSharedModule
+2026-04-27 00:15:29.150 +07:00 [DBG]           - Volo.Abp.Users.AbpUsersDomainSharedModule
+2026-04-27 00:15:29.150 +07:00 [DBG]           - Volo.Abp.Features.AbpFeaturesModule
+2026-04-27 00:15:29.150 +07:00 [DBG]         - Volo.Abp.Users.AbpUsersDomainModule
+2026-04-27 00:15:29.150 +07:00 [DBG]           - Volo.Abp.Users.AbpUsersAbstractionModule
+2026-04-27 00:15:29.150 +07:00 [DBG]   - LTC.ProductService.EntityFrameworkCore.ProductServiceEntityFrameworkCoreModule
+2026-04-27 00:15:29.150 +07:00 [DBG]     - Volo.Abp.EntityFrameworkCore.SqlServer.AbpEntityFrameworkCoreSqlServerModule
+2026-04-27 00:15:29.150 +07:00 [DBG]       - Volo.Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule
+2026-04-27 00:15:29.150 +07:00 [DBG]     - Volo.Abp.TenantManagement.EntityFrameworkCore.AbpTenantManagementEntityFrameworkCoreModule
+2026-04-27 00:15:29.150 +07:00 [DBG]   - Volo.Abp.Swashbuckle.AbpSwashbuckleModule
+2026-04-27 00:15:29.150 +07:00 [DBG]     - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcModule
+2026-04-27 00:15:29.150 +07:00 [DBG]       - Volo.Abp.ApiVersioning.AbpApiVersioningAbstractionsModule
+2026-04-27 00:15:29.150 +07:00 [DBG]       - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcContractsModule
+2026-04-27 00:15:29.150 +07:00 [DBG]         - Volo.Abp.Application.AbpDddApplicationContractsModule
+2026-04-27 00:15:29.150 +07:00 [DBG]       - Volo.Abp.UI.Navigation.AbpUiNavigationModule
+2026-04-27 00:15:29.150 +07:00 [DBG]         - Volo.Abp.UI.AbpUiModule
+2026-04-27 00:15:29.150 +07:00 [DBG]       - Volo.Abp.GlobalFeatures.AbpGlobalFeaturesModule
+2026-04-27 00:15:29.150 +07:00 [DBG]       - Volo.Abp.Application.AbpDddApplicationModule
+2026-04-27 00:15:29.150 +07:00 [DBG]   - Volo.Abp.AspNetCore.Serilog.AbpAspNetCoreSerilogModule
+2026-04-27 00:15:29.150 +07:00 [DBG]   - LTC.Shared.Hosting.Microservices.LTCSharedHostingMicroservicesModule
+2026-04-27 00:15:29.150 +07:00 [DBG]     - Volo.Abp.AspNetCore.Authentication.JwtBearer.AbpAspNetCoreAuthenticationJwtBearerModule
+2026-04-27 00:15:29.150 +07:00 [DBG]     - Volo.Abp.Caching.StackExchangeRedis.AbpCachingStackExchangeRedisModule
+2026-04-27 00:15:29.150 +07:00 [DBG]     - Volo.Abp.DistributedLocking.AbpDistributedLockingModule
+2026-04-27 00:15:29.544 +07:00 [INF] Initialized all ABP modules.
+2026-04-27 00:15:29.752 +07:00 [INF] Now listening on: https://localhost:44367
+2026-04-27 00:15:29.753 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-04-27 00:15:29.753 +07:00 [INF] Hosting environment: Development
+2026-04-27 00:15:29.753 +07:00 [INF] Content root path: D:\LTT\ltc\BE\ltt-ltc-product-api\LTC.ProductService.HttpApi.Host

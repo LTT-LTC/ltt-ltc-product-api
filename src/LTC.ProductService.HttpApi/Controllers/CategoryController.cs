@@ -30,7 +30,7 @@ namespace LTC.ProductService.Controllers
         }
 
         [HttpPost("category")]
-        [Authorize(Roles = "Admin,Manager")]
+        [Authorize(Roles = "Admin,admin,Manager,manager")]
         public async Task<CategoryOutputDto> CreateAsync([FromBody] CreateCategoryInputDto input)
         {
             /// <summary>
@@ -40,7 +40,7 @@ namespace LTC.ProductService.Controllers
         }
 
         [HttpPut("category/{id}")]
-        [Authorize(Roles = "Admin,Manager")]
+        [Authorize(Roles = "Admin,admin,Manager,manager")]
         public async Task<CategoryOutputDto> UpdateAsync(Guid id, [FromBody] UpdateCategoryInputDto input)
         {
             /// <summary>
@@ -50,7 +50,7 @@ namespace LTC.ProductService.Controllers
         }
 
         [HttpDelete("category/{id}")]
-        [Authorize(Roles = "Admin,Manager")]
+        [Authorize(Roles = "Admin,admin,Manager,manager")]
         public async Task DeleteAsync(Guid id)
         {
             /// <summary>
