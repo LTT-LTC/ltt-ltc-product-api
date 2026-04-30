@@ -19,7 +19,7 @@ namespace LTC.ProductService
             _repository = repository;
         }
 
-        public async Task<PagedResultDto<CategoryOutputDto>> GetAllAsync(PaginationInputDto input)
+        public async Task<PagedResultDto<CategoryOutputDto>> GetCategoryListAsync(PaginationInputDto input)
         {
             var query = await _repository.GetQueryableAsync();
 
@@ -37,13 +37,13 @@ namespace LTC.ProductService
             );
         }
 
-        public async Task<CategoryOutputDto> GetAsync(Guid id)
+        public async Task<CategoryOutputDto> GetCategoryAsync(Guid id)
         {
             var entity = await _repository.GetAsync(id);
             return MapCategory(entity);
         }
 
-        public async Task<CategoryOutputDto> CreateAsync(CreateCategoryInputDto input)
+        public async Task<CategoryOutputDto> CreateCategoryAsync(CreateCategoryInputDto input)
         {
             var entity = new ProductCategory 
             {
@@ -56,7 +56,7 @@ namespace LTC.ProductService
             return MapCategory(entity);
         }
 
-        public async Task<CategoryOutputDto> UpdateAsync(Guid id, UpdateCategoryInputDto input)
+        public async Task<CategoryOutputDto> UpdateCategoryAsync(Guid id, UpdateCategoryInputDto input)
         {
             var entity = await _repository.GetAsync(id);
             
@@ -68,7 +68,7 @@ namespace LTC.ProductService
             return MapCategory(entity);
         }
 
-        public async Task DeleteAsync(Guid id)
+        public async Task DeleteCategoryAsync(Guid id)
         {
             await _repository.DeleteAsync(id);
         }

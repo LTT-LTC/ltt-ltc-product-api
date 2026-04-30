@@ -1,6 +1,5 @@
 using System;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Volo.Abp.AspNetCore.Mvc;
 using Volo.Abp.Application.Dtos;
@@ -9,9 +8,7 @@ using LTC.ProductService.Dtos.Output;
 
 namespace LTC.ProductService.Controllers
 {
-    [Route(ProductServiceSettingNames.DefaultRoute)]
-    [Obsolete("Use role-specific endpoints under /admin or /manager. This route remains for compatibility.")]
-    public class ComboController : AbpControllerBase
+    public abstract class ComboController : AbpControllerBase
     {
         private readonly IComboAppService _appService;
 
@@ -21,71 +18,22 @@ namespace LTC.ProductService.Controllers
         }
 
         [HttpGet("combo-all")]
-        public async Task<PagedResultDto<ComboOutputDto>> GetAllAsync([FromQuery] PaginationInputDto input)
+        public async Task<PagedResultDto<ComboOutputDto>> GetComboListAsync([FromQuery] PaginationInputDto input)
         {
             /// <summary>
             /// Get all combos.
             /// </summary>
-            return await _appService.GetAllAsync(input);
+            return await _appService.GetComboListAsync(input);
         }
 
         [HttpGet("combo/{id}")]
-        public async Task<ComboDetailOutputDto> GetAsync(Guid id)
+        public async Task<ComboDetailOutputDto> GetComboAsync(Guid id)
         {
             /// <summary>
             /// Get combo details by id.
             /// </summary>
-            return await _appService.GetAsync(id);
+            return await _appService.GetComboAsync(id);
         }
 
-        [HttpPost("combo")]
-        [Authorize(Roles = "Admin,admin,Manager,manager")]
-        public async Task<ComboOutputDto> CreateAsync([FromBody] CreateComboInputDto input)
-        {
-            /// <summary>
-            /// Create a new combo (Admin/Manager only).
-            /// </summary>
-            return await _appService.CreateAsync(input);
-        }
-
-        [HttpPut("combo/{id}")]
-        [Authorize(Roles = "Admin,admin,Manager,manager")]
-        public async Task<ComboOutputDto> UpdateAsync(Guid id, [FromBody] UpdateComboInputDto input)
-        {
-            /// <summary>
-            /// Update a combo (Admin/Manager only).
-            /// </summary>
-            return await _appService.UpdateAsync(id, input);
-        }
-
-        [HttpDelete("combo/{id}")]
-        [Authorize(Roles = "Admin,admin,Manager,manager")]
-        public async Task DeleteAsync(Guid id)
-        {
-            /// <summary>
-            /// Delete a combo (Admin/Manager only).
-            /// </summary>
-            await _appService.DeleteAsync(id);
-        }
-
-        [HttpPost("combo/{id}/item")]
-        [Authorize(Roles = "Admin,admin,Manager,manager")]
-        public async Task<ComboItemOutputDto> AddItemAsync(Guid id, [FromBody] CreateComboItemInputDto input)
-        {
-            /// <summary>
-            /// Add item to combo (Admin/Manager only).
-            /// </summary>
-            return await _appService.AddItemAsync(id, input);
-        }
-
-        [HttpDelete("combo/{id}/item/{comboItemId}")]
-        [Authorize(Roles = "Admin,admin,Manager,manager")]
-        public async Task DeleteItemAsync(Guid id, Guid comboItemId)
-        {
-            /// <summary>
-            /// Delete item from combo (Admin/Manager only).
-            /// </summary>
-            await _appService.DeleteItemAsync(id, comboItemId);
-        }
     }
 }

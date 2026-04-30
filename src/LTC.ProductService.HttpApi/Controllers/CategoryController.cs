@@ -1,6 +1,5 @@
 using System;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Volo.Abp.AspNetCore.Mvc;
 using Volo.Abp.Application.Dtos;
@@ -9,9 +8,7 @@ using LTC.ProductService.Dtos.Output;
 
 namespace LTC.ProductService.Controllers
 {
-    [Route(ProductServiceSettingNames.DefaultRoute)]
-    [Obsolete("Use role-specific endpoints under /admin or /manager. This route remains for compatibility.")]
-    public class CategoryController : AbpControllerBase
+    public abstract class CategoryController : AbpControllerBase
     {
         private readonly ICategoryAppService _appService;
 
@@ -21,42 +18,13 @@ namespace LTC.ProductService.Controllers
         }
 
         [HttpGet("category-all")]
-        public async Task<PagedResultDto<CategoryOutputDto>> GetAllAsync([FromQuery] PaginationInputDto input)
+        public async Task<PagedResultDto<CategoryOutputDto>> GetCategoryListAsync([FromQuery] PaginationInputDto input)
         {
             /// <summary>
             /// Get all product categories.
             /// </summary>
-            return await _appService.GetAllAsync(input);
+            return await _appService.GetCategoryListAsync(input);
         }
 
-        [HttpPost("category")]
-        [Authorize(Roles = "Admin,admin,Manager,manager")]
-        public async Task<CategoryOutputDto> CreateAsync([FromBody] CreateCategoryInputDto input)
-        {
-            /// <summary>
-            /// Create a new category (Admin/Manager only).
-            /// </summary>
-            return await _appService.CreateAsync(input);
-        }
-
-        [HttpPut("category/{id}")]
-        [Authorize(Roles = "Admin,admin,Manager,manager")]
-        public async Task<CategoryOutputDto> UpdateAsync(Guid id, [FromBody] UpdateCategoryInputDto input)
-        {
-            /// <summary>
-            /// Update a category (Admin/Manager only).
-            /// </summary>
-            return await _appService.UpdateAsync(id, input);
-        }
-
-        [HttpDelete("category/{id}")]
-        [Authorize(Roles = "Admin,admin,Manager,manager")]
-        public async Task DeleteAsync(Guid id)
-        {
-            /// <summary>
-            /// Delete a category (Admin/Manager only).
-            /// </summary>
-            await _appService.DeleteAsync(id);
-        }
     }
 }

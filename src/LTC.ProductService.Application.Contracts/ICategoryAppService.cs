@@ -9,10 +9,10 @@ namespace LTC.ProductService
 {
     public interface ICategoryAppService : IApplicationService
     {
-        Task<PagedResultDto<CategoryOutputDto>> GetAllAsync(PaginationInputDto input);
-        Task<CategoryOutputDto> GetAsync(Guid id);
-        Task<CategoryOutputDto> CreateAsync(CreateCategoryInputDto input);
-        Task<CategoryOutputDto> UpdateAsync(Guid id, UpdateCategoryInputDto input);
-        Task DeleteAsync(Guid id);
+        Task<PagedResultDto<CategoryOutputDto>> GetCategoryListAsync(PaginationInputDto input);
+        Task<CategoryOutputDto> GetCategoryAsync(Guid id);
+        Task<CategoryOutputDto> CreateCategoryAsync(CreateCategoryInputDto input);
+        Task<CategoryOutputDto> UpdateCategoryAsync(Guid id, UpdateCategoryInputDto input);
+        Task DeleteCategoryAsync(Guid id);
     }
 }

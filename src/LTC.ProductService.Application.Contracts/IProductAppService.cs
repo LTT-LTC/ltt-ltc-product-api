@@ -10,11 +10,11 @@ namespace LTC.ProductService
 {
     public interface IProductAppService : IApplicationService
     {
-        Task<PagedResultDto<ProductOutputDto>> GetAllAsync(GetProductListInputDto input);
-        Task<ProductDetailOutputDto> GetAsync(Guid id);
-        Task<ProductOutputDto> CreateAsync(CreateProductInputDto input);
-        Task<ProductOutputDto> UpdateAsync(Guid id, UpdateProductInputDto input);
-        Task DeleteAsync(Guid id);
+        Task<PagedResultDto<ProductOutputDto>> GetProductListAsync(GetProductListInputDto input);
+        Task<ProductDetailOutputDto> GetProductAsync(Guid id);
+        Task<ProductOutputDto> CreateProductAsync(CreateProductInputDto input);
+        Task<ProductOutputDto> UpdateProductAsync(Guid id, UpdateProductInputDto input);
+        Task DeleteProductAsync(Guid id);
         Task DeleteBulkAsync(List<Guid> ids);
         
         // Variants

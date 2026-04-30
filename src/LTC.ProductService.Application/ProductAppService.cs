@@ -24,7 +24,7 @@ namespace LTC.ProductService
             _variantRepository = variantRepository;
         }
 
-        public async Task<PagedResultDto<ProductOutputDto>> GetAllAsync(GetProductListInputDto input)
+        public async Task<PagedResultDto<ProductOutputDto>> GetProductListAsync(GetProductListInputDto input)
         {
             var query = await _repository.GetQueryableAsync();
 
@@ -47,7 +47,7 @@ namespace LTC.ProductService
             );
         }
 
-        public async Task<ProductDetailOutputDto> GetAsync(Guid id)
+        public async Task<ProductDetailOutputDto> GetProductAsync(Guid id)
         {
             var query = await _repository.WithDetailsAsync(x => x.ProductVariants);
             var entity = await AsyncExecuter.FirstOrDefaultAsync(query.Where(x => x.Id == id));
@@ -60,7 +60,7 @@ namespace LTC.ProductService
             return MapProductDetail(entity);
         }
 
-        public async Task<ProductOutputDto> CreateAsync(CreateProductInputDto input)
+        public async Task<ProductOutputDto> CreateProductAsync(CreateProductInputDto input)
         {
             var entity = new Product
             {
@@ -77,7 +77,7 @@ namespace LTC.ProductService
             return MapProduct(entity);
         }
 
-        public async Task<ProductOutputDto> UpdateAsync(Guid id, UpdateProductInputDto input)
+        public async Task<ProductOutputDto> UpdateProductAsync(Guid id, UpdateProductInputDto input)
         {
             var entity = await _repository.GetAsync(id);
 
@@ -93,7 +93,7 @@ namespace LTC.ProductService
             return MapProduct(entity);
         }
 
-        public async Task DeleteAsync(Guid id)
+        public async Task DeleteProductAsync(Guid id)
         {
             await _repository.DeleteAsync(id);
         }

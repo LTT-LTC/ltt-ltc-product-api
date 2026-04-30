@@ -24,7 +24,7 @@ namespace LTC.ProductService
             _itemRepository = itemRepository;
         }
 
-        public async Task<PagedResultDto<ComboOutputDto>> GetAllAsync(PaginationInputDto input)
+        public async Task<PagedResultDto<ComboOutputDto>> GetComboListAsync(PaginationInputDto input)
         {
             var query = await _repository.GetQueryableAsync();
 
@@ -42,7 +42,7 @@ namespace LTC.ProductService
             );
         }
 
-        public async Task<ComboDetailOutputDto> GetAsync(Guid id)
+        public async Task<ComboDetailOutputDto> GetComboAsync(Guid id)
         {
             var query = await _repository.WithDetailsAsync(x => x.ComboItems);
             var entity = await AsyncExecuter.FirstOrDefaultAsync(query.Where(x => x.Id == id));
@@ -55,7 +55,7 @@ namespace LTC.ProductService
             return ObjectMapper.Map<Combo, ComboDetailOutputDto>(entity);
         }
 
-        public async Task<ComboOutputDto> CreateAsync(CreateComboInputDto input)
+        public async Task<ComboOutputDto> CreateComboAsync(CreateComboInputDto input)
         {
             var entity = new Combo
             {
@@ -74,7 +74,7 @@ namespace LTC.ProductService
             return ObjectMapper.Map<Combo, ComboOutputDto>(entity);
         }
 
-        public async Task<ComboOutputDto> UpdateAsync(Guid id, UpdateComboInputDto input)
+        public async Task<ComboOutputDto> UpdateComboAsync(Guid id, UpdateComboInputDto input)
         {
             var entity = await _repository.GetAsync(id);
 
@@ -87,7 +87,7 @@ namespace LTC.ProductService
             return ObjectMapper.Map<Combo, ComboOutputDto>(entity);
         }
 
-        public async Task DeleteAsync(Guid id)
+        public async Task DeleteComboAsync(Guid id)
         {
             await _repository.DeleteAsync(id);
         }
