@@ -9,11 +9,11 @@ namespace LTC.ProductService
 {
     public interface IComboAppService : IApplicationService
     {
-        Task<PagedResultDto<ComboOutputDto>> GetAllAsync(PaginationInputDto input);
-        Task<ComboDetailOutputDto> GetAsync(Guid id);
-        Task<ComboOutputDto> CreateAsync(CreateComboInputDto input);
-        Task<ComboOutputDto> UpdateAsync(Guid id, UpdateComboInputDto input);
-        Task DeleteAsync(Guid id);
+        Task<PagedResultDto<ComboOutputDto>> GetComboListAsync(PaginationInputDto input);
+        Task<ComboDetailOutputDto> GetComboAsync(Guid id);
+        Task<ComboOutputDto> CreateComboAsync(CreateComboInputDto input);
+        Task<ComboOutputDto> UpdateComboAsync(Guid id, UpdateComboInputDto input);
+        Task DeleteComboAsync(Guid id);
         
         // Items
         Task<ComboItemOutputDto> AddItemAsync(Guid id, CreateComboItemInputDto input);
