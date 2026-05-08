@@ -12,9 +12,7 @@ public class ProductServiceDbContext : AbpDbContext<ProductServiceDbContext>
 {
     public DbSet<ProductCategory> ProductCategories { get; set; }
     public DbSet<Product> Products { get; set; }
-    public DbSet<ProductVariant> ProductVariants { get; set; }
     public DbSet<Combo> Combos { get; set; }
-    public DbSet<ComboItem> ComboItems { get; set; }
 
     private readonly ITenantSchemaResolver _tenantSchemaResolver;
 
@@ -48,16 +46,8 @@ public class ProductServiceDbContext : AbpDbContext<ProductServiceDbContext>
             b.ConfigureByConvention();
             b.Property(x => x.Name).IsRequired().HasMaxLength(256);
             b.Property(x => x.BasePrice).HasColumnType("decimal(18,2)");
+            b.Property(x => x.ImageUrl).HasColumnType("nvarchar(max)");
             b.HasOne(x => x.ProductCategory).WithMany().HasForeignKey(x => x.ProductCategoryId);
-        });
-
-        builder.Entity<ProductVariant>(b =>
-        {
-            b.ToTable("ProductVariants");
-            b.ConfigureByConvention();
-            b.Property(x => x.Name).IsRequired().HasMaxLength(256);
-            b.Property(x => x.AdditionalPrice).HasColumnType("decimal(18,2)");
-            b.HasOne(x => x.Product).WithMany(x => x.ProductVariants).HasForeignKey(x => x.ProductId);
         });
 
         builder.Entity<Combo>(b =>
@@ -66,14 +56,8 @@ public class ProductServiceDbContext : AbpDbContext<ProductServiceDbContext>
             b.ConfigureByConvention();
             b.Property(x => x.Name).IsRequired().HasMaxLength(256);
             b.Property(x => x.TotalPrice).HasColumnType("decimal(18,2)");
-        });
-
-        builder.Entity<ComboItem>(b =>
-        {
-            b.ToTable("ComboItems");
-            b.ConfigureByConvention();
-            b.HasOne(x => x.Combo).WithMany(x => x.ComboItems).HasForeignKey(x => x.ComboId);
-            b.HasOne(x => x.Product).WithMany().HasForeignKey(x => x.ProductId);
+            b.Property(x => x.ImageUrl).HasColumnType("nvarchar(max)");
+            b.Property(x => x.ProductIds).HasColumnType("nvarchar(max)");
         });
     }
 }

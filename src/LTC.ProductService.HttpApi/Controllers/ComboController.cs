@@ -20,20 +20,13 @@ namespace LTC.ProductService.Controllers
         [HttpGet("combo-all")]
         public async Task<PagedResultDto<ComboOutputDto>> GetComboListAsync([FromQuery] PaginationInputDto input)
         {
-            /// <summary>
-            /// Get all combos.
-            /// </summary>
             return await _appService.GetComboListAsync(input);
         }
 
         [HttpGet("combo/{id}")]
-        public async Task<ComboDetailOutputDto> GetComboAsync(Guid id)
+        public async Task<ComboOutputDto> GetComboAsync(Guid id)
         {
-            /// <summary>
-            /// Get combo details by id.
-            /// </summary>
             return await _appService.GetComboAsync(id);
         }
-
     }
 }

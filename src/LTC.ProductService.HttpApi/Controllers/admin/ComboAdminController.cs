@@ -19,18 +19,14 @@ namespace LTC.ProductService.Controllers.Admin
         }
 
         [HttpPost("combo")]
-        public Task<ComboOutputDto> CreateComboAsync([FromBody] CreateComboInputDto input) => _appService.CreateComboAsync(input);
+        [Consumes("multipart/form-data")]
+        public Task<ComboOutputDto> CreateComboAsync([FromForm] CreateComboInputDto input) => _appService.CreateComboAsync(input);
 
         [HttpPut("combo/{id}")]
-        public Task<ComboOutputDto> UpdateComboAsync(Guid id, [FromBody] UpdateComboInputDto input) => _appService.UpdateComboAsync(id, input);
+        [Consumes("multipart/form-data")]
+        public Task<ComboOutputDto> UpdateComboAsync(Guid id, [FromForm] UpdateComboInputDto input) => _appService.UpdateComboAsync(id, input);
 
         [HttpDelete("combo/{id}")]
         public Task DeleteComboAsync(Guid id) => _appService.DeleteComboAsync(id);
-
-        [HttpPost("combo/{id}/item")]
-        public Task<ComboItemOutputDto> AddItemAsync(Guid id, [FromBody] CreateComboItemInputDto input) => _appService.AddItemAsync(id, input);
-
-        [HttpDelete("combo/{id}/item/{comboItemId}")]
-        public Task DeleteItemAsync(Guid id, Guid comboItemId) => _appService.DeleteItemAsync(id, comboItemId);
     }
 }

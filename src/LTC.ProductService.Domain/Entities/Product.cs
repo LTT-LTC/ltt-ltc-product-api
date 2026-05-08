@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using Volo.Abp.Domain.Entities.Auditing;
 using Volo.Abp.MultiTenancy;
 
@@ -14,11 +13,9 @@ namespace LTC.ProductService.Entities
         public decimal BasePrice { get; set; }
         public string ImageUrl { get; set; }
         public bool IsActive { get; set; }
-        public string ProductType { get; set; }
         public DateTime? CreatedAt { get; set; }
         public DateTime? UpdatedAt { get; set; }
-        
+
         public ProductCategory ProductCategory { get; set; }
-        public ICollection<ProductVariant> ProductVariants { get; set; }
     }
 }

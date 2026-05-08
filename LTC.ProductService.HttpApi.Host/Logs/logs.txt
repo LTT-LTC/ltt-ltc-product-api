@@ -32675,3 +32675,89 @@ StackExchange.Redis.RedisConnectionException: The message timed out in the backl
 2026-04-30 23:10:51.554 +07:00 [DBG] Trying to resolve tenant through 'Cookie'...
 2026-04-30 23:10:51.556 +07:00 [DBG] Tenant resolved by 'Cookie' as '5b44b9ed-8fcf-4689-8694-1dee07259757'.
 2026-04-30 23:10:55.289 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44367/ltc/product-service/swagger/v1/swagger.json?urls.primaryName=customer-service - 200 null application/json;charset=utf-8 5408.8121ms
+2026-05-02 09:17:29.192 +07:00 [INF] Starting LTC.ProductService.HttpApi.Host.
+2026-05-02 09:17:42.871 +07:00 [DBG] Loaded ABP modules:
+2026-05-02 09:17:42.871 +07:00 [DBG] - LTC.ProductService.ProductServiceHttpApiHostModule
+2026-05-02 09:17:42.871 +07:00 [DBG]   - LTC.ProductService.ProductServiceHttpApiModule
+2026-05-02 09:17:42.871 +07:00 [DBG]     - LTC.ProductService.ProductServiceApplicationContractsModule
+2026-05-02 09:17:42.871 +07:00 [DBG]       - LTC.ProductService.ProductServiceDomainSharedModule
+2026-05-02 09:17:42.871 +07:00 [DBG]       - Volo.Abp.ObjectExtending.AbpObjectExtendingModule
+2026-05-02 09:17:42.871 +07:00 [DBG]         - Volo.Abp.Localization.AbpLocalizationAbstractionsModule
+2026-05-02 09:17:42.871 +07:00 [DBG]         - Volo.Abp.Validation.AbpValidationAbstractionsModule
+2026-05-02 09:17:42.871 +07:00 [DBG]   - Volo.Abp.Autofac.AbpAutofacModule
+2026-05-02 09:17:42.871 +07:00 [DBG]     - Volo.Abp.Castle.AbpCastleCoreModule
+2026-05-02 09:17:42.871 +07:00 [DBG]   - Volo.Abp.AspNetCore.MultiTenancy.AbpAspNetCoreMultiTenancyModule
+2026-05-02 09:17:42.871 +07:00 [DBG]     - Volo.Abp.MultiTenancy.AbpMultiTenancyModule
+2026-05-02 09:17:42.871 +07:00 [DBG]       - Volo.Abp.Data.AbpDataModule
+2026-05-02 09:17:42.871 +07:00 [DBG]         - Volo.Abp.Uow.AbpUnitOfWorkModule
+2026-05-02 09:17:42.871 +07:00 [DBG]         - Volo.Abp.EventBus.Abstractions.AbpEventBusAbstractionsModule
+2026-05-02 09:17:42.871 +07:00 [DBG]       - Volo.Abp.Security.AbpSecurityModule
+2026-05-02 09:17:42.871 +07:00 [DBG]       - Volo.Abp.Settings.AbpSettingsModule
+2026-05-02 09:17:42.871 +07:00 [DBG]       - Volo.Abp.MultiTenancy.AbpMultiTenancyAbstractionsModule
+2026-05-02 09:17:42.871 +07:00 [DBG]         - Volo.Abp.VirtualFileSystem.AbpVirtualFileSystemModule
+2026-05-02 09:17:42.871 +07:00 [DBG]         - Volo.Abp.Localization.AbpLocalizationModule
+2026-05-02 09:17:42.871 +07:00 [DBG]           - Volo.Abp.Threading.AbpThreadingModule
+2026-05-02 09:17:42.871 +07:00 [DBG]     - Volo.Abp.AspNetCore.AbpAspNetCoreModule
+2026-05-02 09:17:42.871 +07:00 [DBG]       - Volo.Abp.Auditing.AbpAuditingModule
+2026-05-02 09:17:42.871 +07:00 [DBG]         - Volo.Abp.Json.AbpJsonModule
+2026-05-02 09:17:42.871 +07:00 [DBG]           - Volo.Abp.Json.SystemTextJson.AbpJsonSystemTextJsonModule
+2026-05-02 09:17:42.871 +07:00 [DBG]             - Volo.Abp.Json.AbpJsonAbstractionsModule
+2026-05-02 09:17:42.871 +07:00 [DBG]             - Volo.Abp.Timing.AbpTimingModule
+2026-05-02 09:17:42.871 +07:00 [DBG]         - Volo.Abp.Auditing.AbpAuditingContractsModule
+2026-05-02 09:17:42.871 +07:00 [DBG]       - Volo.Abp.Http.AbpHttpModule
+2026-05-02 09:17:42.871 +07:00 [DBG]         - Volo.Abp.Http.AbpHttpAbstractionsModule
+2026-05-02 09:17:42.871 +07:00 [DBG]         - Volo.Abp.Minify.AbpMinifyModule
+2026-05-02 09:17:42.871 +07:00 [DBG]       - Volo.Abp.Authorization.AbpAuthorizationModule
+2026-05-02 09:17:42.871 +07:00 [DBG]         - Volo.Abp.Authorization.AbpAuthorizationAbstractionsModule
+2026-05-02 09:17:42.871 +07:00 [DBG]       - Volo.Abp.Validation.AbpValidationModule
+2026-05-02 09:17:42.871 +07:00 [DBG]       - Volo.Abp.ExceptionHandling.AbpExceptionHandlingModule
+2026-05-02 09:17:42.871 +07:00 [DBG]       - Volo.Abp.AspNetCore.AbpAspNetCoreAbstractionsModule
+2026-05-02 09:17:42.871 +07:00 [DBG]   - LTC.ProductService.ProductServiceApplicationModule
+2026-05-02 09:17:42.871 +07:00 [DBG]     - LTC.ProductService.ProductServiceDomainModule
+2026-05-02 09:17:42.871 +07:00 [DBG]       - Volo.Abp.Emailing.AbpEmailingModule
+2026-05-02 09:17:42.871 +07:00 [DBG]         - Volo.Abp.BackgroundJobs.AbpBackgroundJobsAbstractionsModule
+2026-05-02 09:17:42.871 +07:00 [DBG]         - Volo.Abp.TextTemplating.AbpTextTemplatingModule
+2026-05-02 09:17:42.871 +07:00 [DBG]           - Volo.Abp.TextTemplating.Scriban.AbpTextTemplatingScribanModule
+2026-05-02 09:17:42.871 +07:00 [DBG]             - Volo.Abp.TextTemplating.AbpTextTemplatingCoreModule
+2026-05-02 09:17:42.871 +07:00 [DBG]       - Volo.Abp.TenantManagement.AbpTenantManagementDomainModule
+2026-05-02 09:17:42.871 +07:00 [DBG]         - Volo.Abp.TenantManagement.AbpTenantManagementDomainSharedModule
+2026-05-02 09:17:42.871 +07:00 [DBG]         - Volo.Abp.Domain.AbpDddDomainModule
+2026-05-02 09:17:42.871 +07:00 [DBG]           - Volo.Abp.EventBus.AbpEventBusModule
+2026-05-02 09:17:42.871 +07:00 [DBG]             - Volo.Abp.Guids.AbpGuidsModule
+2026-05-02 09:17:42.871 +07:00 [DBG]             - Volo.Abp.BackgroundWorkers.AbpBackgroundWorkersModule
+2026-05-02 09:17:42.871 +07:00 [DBG]             - Volo.Abp.DistributedLocking.AbpDistributedLockingAbstractionsModule
+2026-05-02 09:17:42.871 +07:00 [DBG]           - Volo.Abp.ObjectMapping.AbpObjectMappingModule
+2026-05-02 09:17:42.871 +07:00 [DBG]           - Volo.Abp.Specifications.AbpSpecificationsModule
+2026-05-02 09:17:42.871 +07:00 [DBG]           - Volo.Abp.Caching.AbpCachingModule
+2026-05-02 09:17:42.871 +07:00 [DBG]             - Volo.Abp.Serialization.AbpSerializationModule
+2026-05-02 09:17:42.871 +07:00 [DBG]           - Volo.Abp.Domain.AbpDddDomainSharedModule
+2026-05-02 09:17:42.871 +07:00 [DBG]         - Volo.Abp.Mapperly.AbpMapperlyModule
+2026-05-02 09:17:42.871 +07:00 [DBG]       - Volo.Abp.Identity.AbpIdentityDomainModule
+2026-05-02 09:17:42.871 +07:00 [DBG]         - Volo.Abp.Identity.AbpIdentityDomainSharedModule
+2026-05-02 09:17:42.871 +07:00 [DBG]           - Volo.Abp.Users.AbpUsersDomainSharedModule
+2026-05-02 09:17:42.871 +07:00 [DBG]           - Volo.Abp.Features.AbpFeaturesModule
+2026-05-02 09:17:42.871 +07:00 [DBG]         - Volo.Abp.Users.AbpUsersDomainModule
+2026-05-02 09:17:42.871 +07:00 [DBG]           - Volo.Abp.Users.AbpUsersAbstractionModule
+2026-05-02 09:17:42.871 +07:00 [DBG]   - LTC.ProductService.EntityFrameworkCore.ProductServiceEntityFrameworkCoreModule
+2026-05-02 09:17:42.871 +07:00 [DBG]     - Volo.Abp.EntityFrameworkCore.SqlServer.AbpEntityFrameworkCoreSqlServerModule
+2026-05-02 09:17:42.871 +07:00 [DBG]       - Volo.Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule
+2026-05-02 09:17:42.871 +07:00 [DBG]     - Volo.Abp.TenantManagement.EntityFrameworkCore.AbpTenantManagementEntityFrameworkCoreModule
+2026-05-02 09:17:42.871 +07:00 [DBG]   - Volo.Abp.Swashbuckle.AbpSwashbuckleModule
+2026-05-02 09:17:42.871 +07:00 [DBG]     - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcModule
+2026-05-02 09:17:42.871 +07:00 [DBG]       - Volo.Abp.ApiVersioning.AbpApiVersioningAbstractionsModule
+2026-05-02 09:17:42.871 +07:00 [DBG]       - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcContractsModule
+2026-05-02 09:17:42.871 +07:00 [DBG]         - Volo.Abp.Application.AbpDddApplicationContractsModule
+2026-05-02 09:17:42.871 +07:00 [DBG]       - Volo.Abp.UI.Navigation.AbpUiNavigationModule
+2026-05-02 09:17:42.871 +07:00 [DBG]         - Volo.Abp.UI.AbpUiModule
+2026-05-02 09:17:42.871 +07:00 [DBG]       - Volo.Abp.GlobalFeatures.AbpGlobalFeaturesModule
+2026-05-02 09:17:42.871 +07:00 [DBG]       - Volo.Abp.Application.AbpDddApplicationModule
+2026-05-02 09:17:42.871 +07:00 [DBG]   - Volo.Abp.AspNetCore.Serilog.AbpAspNetCoreSerilogModule
+2026-05-02 09:17:42.871 +07:00 [DBG]   - LTC.Shared.Hosting.Microservices.LTCSharedHostingMicroservicesModule
+2026-05-02 09:17:42.871 +07:00 [DBG]     - Volo.Abp.AspNetCore.Authentication.JwtBearer.AbpAspNetCoreAuthenticationJwtBearerModule
+2026-05-02 09:17:42.871 +07:00 [DBG]     - Volo.Abp.Caching.StackExchangeRedis.AbpCachingStackExchangeRedisModule
+2026-05-02 09:17:42.871 +07:00 [DBG]     - Volo.Abp.DistributedLocking.AbpDistributedLockingModule
+2026-05-02 09:17:43.540 +07:00 [INF] Initialized all ABP modules.
+2026-05-02 09:17:43.864 +07:00 [INF] Now listening on: https://localhost:44367
+2026-05-02 09:17:43.865 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-05-02 09:17:43.865 +07:00 [INF] Hosting environment: Development
+2026-05-02 09:17:43.865 +07:00 [INF] Content root path: D:\LTT\ltc\BE\ltt-ltc-product-api\LTC.ProductService.HttpApi.Host

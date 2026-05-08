@@ -28,7 +28,7 @@ namespace LTC.ProductService.Controllers.Customer
 
         [AllowAnonymous]
         [HttpGet("product/{id}")]
-        public Task<ProductDetailOutputDto> GetProductAsync(Guid id)
+        public Task<ProductOutputDto> GetProductAsync(Guid id)
         {
             return _appService.GetProductAsync(id);
         }

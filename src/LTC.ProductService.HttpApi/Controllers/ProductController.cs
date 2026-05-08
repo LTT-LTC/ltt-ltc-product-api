@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Volo.Abp.AspNetCore.Mvc;
@@ -22,8 +21,6 @@ namespace LTC.ProductService.Controllers
         public async Task<PagedResultDto<ProductOutputDto>> GetProductListAsync([FromQuery] GetProductListInputDto input) { return await _appService.GetProductListAsync(input); }
 
         [HttpGet("product/{id}")]
-        public async Task<ProductDetailOutputDto> GetProductAsync(Guid id) { return await _appService.GetProductAsync(id); }
-
+        public async Task<ProductOutputDto> GetProductAsync(Guid id) { return await _appService.GetProductAsync(id); }
     }
 }
-

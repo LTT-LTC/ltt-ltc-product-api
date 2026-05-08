@@ -8,16 +8,10 @@ namespace LTC.ProductService;
 [Mapper]
 public partial class ProductServiceApplicationMappers
 {
-    public partial ProductCategory MapToCategoryOutputDto(ProductCategory source);
-    public partial CategoryOutputDto MapToCategoryOutputDto1(ProductCategory source);
-    
+    public partial CategoryOutputDto MapToCategoryOutputDto(ProductCategory source);
+
     public partial ProductOutputDto MapToProductOutputDto(Product source);
-    public partial ProductDetailOutputDto MapToProductDetailOutputDto(Product source);
-    
-    public partial ProductVariantOutputDto MapToProductVariantOutputDto(ProductVariant source);
-    
+
+    [MapperIgnoreSource(nameof(Combo.ProductIds))]
     public partial ComboOutputDto MapToComboOutputDto(Combo source);
-    public partial ComboDetailOutputDto MapToComboDetailOutputDto(Combo source);
-    
-    public partial ComboItemOutputDto MapToComboItemOutputDto(ComboItem source);
 }
