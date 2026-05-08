@@ -28,7 +28,7 @@ namespace LTC.ProductService.Controllers.Customer
 
         [AllowAnonymous]
         [HttpGet("combo/{id}")]
-        public Task<ComboDetailOutputDto> GetComboAsync(Guid id)
+        public Task<ComboOutputDto> GetComboAsync(Guid id)
         {
             return _appService.GetComboAsync(id);
         }

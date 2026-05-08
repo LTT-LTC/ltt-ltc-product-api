@@ -5,23 +5,24 @@ using System.Threading.Tasks;
 using LTC.ProductService.Dtos.Input;
 using LTC.ProductService.Dtos.Output;
 using LTC.ProductService.Entities;
+using LTC.ProductService.Media;
+using Volo.Abp;
 using Volo.Abp.Application.Dtos;
 using Volo.Abp.Domain.Repositories;
-using Microsoft.EntityFrameworkCore;
 
 namespace LTC.ProductService
 {
     public class ProductAppService : ProductServiceAppService, IProductAppService
     {
         private readonly IRepository<Product, Guid> _repository;
-        private readonly IRepository<ProductVariant, Guid> _variantRepository;
+        private readonly IProductMediaUploader _mediaUploader;
 
         public ProductAppService(
             IRepository<Product, Guid> repository,
-            IRepository<ProductVariant, Guid> variantRepository)
+            IProductMediaUploader mediaUploader)
         {
             _repository = repository;
-            _variantRepository = variantRepository;
+            _mediaUploader = mediaUploader;
         }
 
         public async Task<PagedResultDto<ProductOutputDto>> GetProductListAsync(GetProductListInputDto input)
@@ -47,30 +48,25 @@ namespace LTC.ProductService
             );
         }
 
-        public async Task<ProductDetailOutputDto> GetProductAsync(Guid id)
+        public async Task<ProductOutputDto> GetProductAsync(Guid id)
         {
-            var query = await _repository.WithDetailsAsync(x => x.ProductVariants);
-            var entity = await AsyncExecuter.FirstOrDefaultAsync(query.Where(x => x.Id == id));
-            
-            if (entity == null)
-            {
-                throw new Volo.Abp.UserFriendlyException("Product not found");
-            }
-            
-            return MapProductDetail(entity);
+            var entity = await _repository.GetAsync(id);
+            return MapProduct(entity);
         }
 
         public async Task<ProductOutputDto> CreateProductAsync(CreateProductInputDto input)
         {
+            var imageUrl = await ResolveImageUrlAsync(input.ImageFile, input.ImageUrl);
+
             var entity = new Product
             {
                 ProductCategoryId = input.ProductCategoryId,
                 Name = input.Name,
                 Description = input.Description,
                 BasePrice = input.BasePrice,
-                ImageUrl = input.ImageUrl,
+                ImageUrl = imageUrl,
                 IsActive = input.IsActive,
-                ProductType = input.ProductType
+                CreatedAt = DateTime.UtcNow
             };
 
             await _repository.InsertAsync(entity);
@@ -81,13 +77,15 @@ namespace LTC.ProductService
         {
             var entity = await _repository.GetAsync(id);
 
+            var imageUrl = await ResolveImageUrlAsync(input.ImageFile, input.ImageUrl ?? entity.ImageUrl);
+
             entity.ProductCategoryId = input.ProductCategoryId;
             entity.Name = input.Name;
             entity.Description = input.Description;
             entity.BasePrice = input.BasePrice;
-            entity.ImageUrl = input.ImageUrl;
+            entity.ImageUrl = imageUrl;
             entity.IsActive = input.IsActive;
-            entity.ProductType = input.ProductType;
+            entity.UpdatedAt = DateTime.UtcNow;
 
             await _repository.UpdateAsync(entity);
             return MapProduct(entity);
@@ -103,44 +101,15 @@ namespace LTC.ProductService
             await _repository.DeleteManyAsync(ids);
         }
 
-        public async Task<ProductVariantOutputDto> CreateVariantAsync(Guid id, CreateProductVariantInputDto input)
+        private async Task<string?> ResolveImageUrlAsync(Microsoft.AspNetCore.Http.IFormFile? file, string? fallbackUrl)
         {
-            var variant = new ProductVariant
+            if (file != null && file.Length > 0)
             {
-                ProductId = id,
-                Name = input.Name,
-                AdditionalPrice = input.AdditionalPrice,
-                IsActive = input.IsActive
-            };
-
-            await _variantRepository.InsertAsync(variant);
-            return MapVariant(variant);
-        }
-
-        public async Task<ProductVariantOutputDto> UpdateVariantAsync(Guid id, Guid variantId, UpdateProductVariantInputDto input)
-        {
-            var variant = await _variantRepository.GetAsync(variantId);
-            
-            if (variant.ProductId != id)
-            {
-                throw new Volo.Abp.UserFriendlyException("Variant doesn't belong to product");
+                var uploaded = await _mediaUploader.UploadImageAsync(file);
+                return uploaded?.Url ?? fallbackUrl;
             }
 
-            variant.Name = input.Name;
-            variant.AdditionalPrice = input.AdditionalPrice;
-            variant.IsActive = input.IsActive;
-
-            await _variantRepository.UpdateAsync(variant);
-            return MapVariant(variant);
-        }
-
-        public async Task DeleteVariantAsync(Guid id, Guid variantId)
-        {
-            var variant = await _variantRepository.GetAsync(variantId);
-            if (variant.ProductId == id)
-            {
-                await _variantRepository.DeleteAsync(variantId);
-            }
+            return fallbackUrl;
         }
 
         private static ProductOutputDto MapProduct(Product source)
@@ -148,13 +117,15 @@ namespace LTC.ProductService
             return new ProductOutputDto
             {
                 Id = source.Id,
+                TenantId = source.TenantId,
                 ProductCategoryId = source.ProductCategoryId,
                 Name = source.Name,
                 Description = source.Description,
                 BasePrice = source.BasePrice,
                 ImageUrl = source.ImageUrl,
                 IsActive = source.IsActive,
-                ProductType = source.ProductType,
+                CreatedAt = source.CreatedAt,
+                UpdatedAt = source.UpdatedAt,
                 CreationTime = source.CreationTime,
                 CreatorId = source.CreatorId,
                 LastModificationTime = source.LastModificationTime,
@@ -162,41 +133,6 @@ namespace LTC.ProductService
                 IsDeleted = source.IsDeleted,
                 DeleterId = source.DeleterId,
                 DeletionTime = source.DeletionTime
-            };
-        }
-
-        private static ProductVariantOutputDto MapVariant(ProductVariant source)
-        {
-            return new ProductVariantOutputDto
-            {
-                Id = source.Id,
-                ProductId = source.ProductId,
-                Name = source.Name,
-                AdditionalPrice = source.AdditionalPrice,
-                IsActive = source.IsActive
-            };
-        }
-
-        private static ProductDetailOutputDto MapProductDetail(Product source)
-        {
-            return new ProductDetailOutputDto
-            {
-                Id = source.Id,
-                ProductCategoryId = source.ProductCategoryId,
-                Name = source.Name,
-                Description = source.Description,
-                BasePrice = source.BasePrice,
-                ImageUrl = source.ImageUrl,
-                IsActive = source.IsActive,
-                ProductType = source.ProductType,
-                CreationTime = source.CreationTime,
-                CreatorId = source.CreatorId,
-                LastModificationTime = source.LastModificationTime,
-                LastModifierId = source.LastModifierId,
-                IsDeleted = source.IsDeleted,
-                DeleterId = source.DeleterId,
-                DeletionTime = source.DeletionTime,
-                ProductVariants = source.ProductVariants?.Select(MapVariant).ToList() ?? new List<ProductVariantOutputDto>()
             };
         }
     }

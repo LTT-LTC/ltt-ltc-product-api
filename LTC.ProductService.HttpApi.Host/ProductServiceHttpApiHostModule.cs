@@ -1,3 +1,4 @@
+using CloudinaryDotNet;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Cors;
@@ -148,6 +149,24 @@ public class ProductServiceHttpApiHostModule : AbpModule
         {
             options.Filters.Add(typeof(LTC.Shared.Hosting.Microservices.ApplicationExceptionFilterAttribute));
             options.Filters.Add(typeof(TenantValidationFilter));
+        });
+
+        ConfigureCloudinary(context);
+    }
+
+    private void ConfigureCloudinary(ServiceConfigurationContext context)
+    {
+        context.Services.AddSingleton<Cloudinary>(provider =>
+        {
+            var configuration = context.Services.GetConfiguration();
+            var cloudName = configuration["CloudinarySettings:CloudName"];
+            var apiKey = configuration["CloudinarySettings:ApiKey"];
+            var apiSecret = configuration["CloudinarySettings:ApiSecret"];
+
+            var account = new Account(cloudName, apiKey, apiSecret);
+            var cloudinary = new Cloudinary(account);
+            cloudinary.Api.Secure = true;
+            return cloudinary;
         });
     }
 
