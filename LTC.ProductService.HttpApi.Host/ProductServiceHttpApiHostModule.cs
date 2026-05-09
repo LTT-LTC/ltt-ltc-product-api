@@ -192,6 +192,9 @@ public class ProductServiceHttpApiHostModule : AbpModule
         app.MapAbpStaticAssets();
         app.UseRouting();
         app.UseCors();
+        // Swagger must run before auth/authorization so gateway/UI can fetch swagger.json anonymously (same idea as Administration host).
+        string swaggerRoutePrefix = "ltc/product-service/swagger";
+        app.UseConfiguredSwagger("LTC Product Service", swaggerRoutePrefix);
         app.UseAuthentication();
         if (MultiTenancyConsts.IsEnabled)
         {
@@ -199,8 +202,6 @@ public class ProductServiceHttpApiHostModule : AbpModule
         }
         app.UseAbpRequestLocalization();
         app.UseAuthorization();
-        string swaggerRoutePrefix = "ltc/product-service/swagger";
-        app.UseConfiguredSwagger("LTC Product Service", swaggerRoutePrefix);
         app.UseAuditing();
         app.UseAbpSerilogEnrichers();
         app.UseConfiguredEndpoints();
