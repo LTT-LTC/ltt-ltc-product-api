@@ -32761,3 +32761,211 @@ StackExchange.Redis.RedisConnectionException: The message timed out in the backl
 2026-05-02 09:17:43.865 +07:00 [INF] Application started. Press Ctrl+C to shut down.
 2026-05-02 09:17:43.865 +07:00 [INF] Hosting environment: Development
 2026-05-02 09:17:43.865 +07:00 [INF] Content root path: D:\LTT\ltc\BE\ltt-ltc-product-api\LTC.ProductService.HttpApi.Host
+2026-05-09 19:24:19.714 +07:00 [INF] Starting LTC.ProductService.HttpApi.Host.
+2026-05-09 19:24:31.871 +07:00 [DBG] Loaded ABP modules:
+2026-05-09 19:24:31.872 +07:00 [DBG] - LTC.ProductService.ProductServiceHttpApiHostModule
+2026-05-09 19:24:31.872 +07:00 [DBG]   - LTC.ProductService.ProductServiceHttpApiModule
+2026-05-09 19:24:31.872 +07:00 [DBG]     - LTC.ProductService.ProductServiceApplicationContractsModule
+2026-05-09 19:24:31.872 +07:00 [DBG]       - LTC.ProductService.ProductServiceDomainSharedModule
+2026-05-09 19:24:31.872 +07:00 [DBG]       - Volo.Abp.ObjectExtending.AbpObjectExtendingModule
+2026-05-09 19:24:31.872 +07:00 [DBG]         - Volo.Abp.Localization.AbpLocalizationAbstractionsModule
+2026-05-09 19:24:31.872 +07:00 [DBG]         - Volo.Abp.Validation.AbpValidationAbstractionsModule
+2026-05-09 19:24:31.872 +07:00 [DBG]   - Volo.Abp.Autofac.AbpAutofacModule
+2026-05-09 19:24:31.872 +07:00 [DBG]     - Volo.Abp.Castle.AbpCastleCoreModule
+2026-05-09 19:24:31.872 +07:00 [DBG]   - Volo.Abp.AspNetCore.MultiTenancy.AbpAspNetCoreMultiTenancyModule
+2026-05-09 19:24:31.872 +07:00 [DBG]     - Volo.Abp.MultiTenancy.AbpMultiTenancyModule
+2026-05-09 19:24:31.872 +07:00 [DBG]       - Volo.Abp.Data.AbpDataModule
+2026-05-09 19:24:31.872 +07:00 [DBG]         - Volo.Abp.Uow.AbpUnitOfWorkModule
+2026-05-09 19:24:31.872 +07:00 [DBG]         - Volo.Abp.EventBus.Abstractions.AbpEventBusAbstractionsModule
+2026-05-09 19:24:31.872 +07:00 [DBG]       - Volo.Abp.Security.AbpSecurityModule
+2026-05-09 19:24:31.872 +07:00 [DBG]       - Volo.Abp.Settings.AbpSettingsModule
+2026-05-09 19:24:31.872 +07:00 [DBG]       - Volo.Abp.MultiTenancy.AbpMultiTenancyAbstractionsModule
+2026-05-09 19:24:31.872 +07:00 [DBG]         - Volo.Abp.VirtualFileSystem.AbpVirtualFileSystemModule
+2026-05-09 19:24:31.872 +07:00 [DBG]         - Volo.Abp.Localization.AbpLocalizationModule
+2026-05-09 19:24:31.872 +07:00 [DBG]           - Volo.Abp.Threading.AbpThreadingModule
+2026-05-09 19:24:31.872 +07:00 [DBG]     - Volo.Abp.AspNetCore.AbpAspNetCoreModule
+2026-05-09 19:24:31.872 +07:00 [DBG]       - Volo.Abp.Auditing.AbpAuditingModule
+2026-05-09 19:24:31.872 +07:00 [DBG]         - Volo.Abp.Json.AbpJsonModule
+2026-05-09 19:24:31.872 +07:00 [DBG]           - Volo.Abp.Json.SystemTextJson.AbpJsonSystemTextJsonModule
+2026-05-09 19:24:31.872 +07:00 [DBG]             - Volo.Abp.Json.AbpJsonAbstractionsModule
+2026-05-09 19:24:31.872 +07:00 [DBG]             - Volo.Abp.Timing.AbpTimingModule
+2026-05-09 19:24:31.872 +07:00 [DBG]         - Volo.Abp.Auditing.AbpAuditingContractsModule
+2026-05-09 19:24:31.872 +07:00 [DBG]       - Volo.Abp.Http.AbpHttpModule
+2026-05-09 19:24:31.872 +07:00 [DBG]         - Volo.Abp.Http.AbpHttpAbstractionsModule
+2026-05-09 19:24:31.872 +07:00 [DBG]         - Volo.Abp.Minify.AbpMinifyModule
+2026-05-09 19:24:31.872 +07:00 [DBG]       - Volo.Abp.Authorization.AbpAuthorizationModule
+2026-05-09 19:24:31.872 +07:00 [DBG]         - Volo.Abp.Authorization.AbpAuthorizationAbstractionsModule
+2026-05-09 19:24:31.872 +07:00 [DBG]       - Volo.Abp.Validation.AbpValidationModule
+2026-05-09 19:24:31.872 +07:00 [DBG]       - Volo.Abp.ExceptionHandling.AbpExceptionHandlingModule
+2026-05-09 19:24:31.872 +07:00 [DBG]       - Volo.Abp.AspNetCore.AbpAspNetCoreAbstractionsModule
+2026-05-09 19:24:31.872 +07:00 [DBG]   - LTC.ProductService.ProductServiceApplicationModule
+2026-05-09 19:24:31.872 +07:00 [DBG]     - LTC.ProductService.ProductServiceDomainModule
+2026-05-09 19:24:31.872 +07:00 [DBG]       - Volo.Abp.Emailing.AbpEmailingModule
+2026-05-09 19:24:31.872 +07:00 [DBG]         - Volo.Abp.BackgroundJobs.AbpBackgroundJobsAbstractionsModule
+2026-05-09 19:24:31.872 +07:00 [DBG]         - Volo.Abp.TextTemplating.AbpTextTemplatingModule
+2026-05-09 19:24:31.872 +07:00 [DBG]           - Volo.Abp.TextTemplating.Scriban.AbpTextTemplatingScribanModule
+2026-05-09 19:24:31.872 +07:00 [DBG]             - Volo.Abp.TextTemplating.AbpTextTemplatingCoreModule
+2026-05-09 19:24:31.872 +07:00 [DBG]       - Volo.Abp.TenantManagement.AbpTenantManagementDomainModule
+2026-05-09 19:24:31.872 +07:00 [DBG]         - Volo.Abp.TenantManagement.AbpTenantManagementDomainSharedModule
+2026-05-09 19:24:31.872 +07:00 [DBG]         - Volo.Abp.Domain.AbpDddDomainModule
+2026-05-09 19:24:31.872 +07:00 [DBG]           - Volo.Abp.EventBus.AbpEventBusModule
+2026-05-09 19:24:31.872 +07:00 [DBG]             - Volo.Abp.Guids.AbpGuidsModule
+2026-05-09 19:24:31.872 +07:00 [DBG]             - Volo.Abp.BackgroundWorkers.AbpBackgroundWorkersModule
+2026-05-09 19:24:31.872 +07:00 [DBG]             - Volo.Abp.DistributedLocking.AbpDistributedLockingAbstractionsModule
+2026-05-09 19:24:31.872 +07:00 [DBG]           - Volo.Abp.ObjectMapping.AbpObjectMappingModule
+2026-05-09 19:24:31.872 +07:00 [DBG]           - Volo.Abp.Specifications.AbpSpecificationsModule
+2026-05-09 19:24:31.872 +07:00 [DBG]           - Volo.Abp.Caching.AbpCachingModule
+2026-05-09 19:24:31.872 +07:00 [DBG]             - Volo.Abp.Serialization.AbpSerializationModule
+2026-05-09 19:24:31.872 +07:00 [DBG]           - Volo.Abp.Domain.AbpDddDomainSharedModule
+2026-05-09 19:24:31.872 +07:00 [DBG]         - Volo.Abp.Mapperly.AbpMapperlyModule
+2026-05-09 19:24:31.872 +07:00 [DBG]       - Volo.Abp.Identity.AbpIdentityDomainModule
+2026-05-09 19:24:31.872 +07:00 [DBG]         - Volo.Abp.Identity.AbpIdentityDomainSharedModule
+2026-05-09 19:24:31.872 +07:00 [DBG]           - Volo.Abp.Users.AbpUsersDomainSharedModule
+2026-05-09 19:24:31.872 +07:00 [DBG]           - Volo.Abp.Features.AbpFeaturesModule
+2026-05-09 19:24:31.872 +07:00 [DBG]         - Volo.Abp.Users.AbpUsersDomainModule
+2026-05-09 19:24:31.872 +07:00 [DBG]           - Volo.Abp.Users.AbpUsersAbstractionModule
+2026-05-09 19:24:31.872 +07:00 [DBG]   - LTC.ProductService.EntityFrameworkCore.ProductServiceEntityFrameworkCoreModule
+2026-05-09 19:24:31.872 +07:00 [DBG]     - Volo.Abp.EntityFrameworkCore.SqlServer.AbpEntityFrameworkCoreSqlServerModule
+2026-05-09 19:24:31.872 +07:00 [DBG]       - Volo.Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule
+2026-05-09 19:24:31.872 +07:00 [DBG]     - Volo.Abp.TenantManagement.EntityFrameworkCore.AbpTenantManagementEntityFrameworkCoreModule
+2026-05-09 19:24:31.872 +07:00 [DBG]   - Volo.Abp.Swashbuckle.AbpSwashbuckleModule
+2026-05-09 19:24:31.872 +07:00 [DBG]     - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcModule
+2026-05-09 19:24:31.872 +07:00 [DBG]       - Volo.Abp.ApiVersioning.AbpApiVersioningAbstractionsModule
+2026-05-09 19:24:31.872 +07:00 [DBG]       - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcContractsModule
+2026-05-09 19:24:31.872 +07:00 [DBG]         - Volo.Abp.Application.AbpDddApplicationContractsModule
+2026-05-09 19:24:31.872 +07:00 [DBG]       - Volo.Abp.UI.Navigation.AbpUiNavigationModule
+2026-05-09 19:24:31.872 +07:00 [DBG]         - Volo.Abp.UI.AbpUiModule
+2026-05-09 19:24:31.872 +07:00 [DBG]       - Volo.Abp.GlobalFeatures.AbpGlobalFeaturesModule
+2026-05-09 19:24:31.872 +07:00 [DBG]       - Volo.Abp.Application.AbpDddApplicationModule
+2026-05-09 19:24:31.872 +07:00 [DBG]   - Volo.Abp.AspNetCore.Serilog.AbpAspNetCoreSerilogModule
+2026-05-09 19:24:31.872 +07:00 [DBG]   - LTC.Shared.Hosting.Microservices.LTCSharedHostingMicroservicesModule
+2026-05-09 19:24:31.872 +07:00 [DBG]     - Volo.Abp.AspNetCore.Authentication.JwtBearer.AbpAspNetCoreAuthenticationJwtBearerModule
+2026-05-09 19:24:31.872 +07:00 [DBG]     - Volo.Abp.Caching.StackExchangeRedis.AbpCachingStackExchangeRedisModule
+2026-05-09 19:24:31.872 +07:00 [DBG]     - Volo.Abp.DistributedLocking.AbpDistributedLockingModule
+2026-05-09 19:24:32.541 +07:00 [INF] Initialized all ABP modules.
+2026-05-09 19:24:32.910 +07:00 [INF] Now listening on: https://localhost:44367
+2026-05-09 19:24:32.910 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-05-09 19:24:32.910 +07:00 [INF] Hosting environment: Development
+2026-05-09 19:24:32.910 +07:00 [INF] Content root path: D:\LTT\ltc\BE\ltt-ltc-product-api\LTC.ProductService.HttpApi.Host
+2026-05-09 19:33:01.962 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44367/ltc/product-service/swagger/v1/swagger.json?urls.primaryName=product-service - null null
+2026-05-09 19:33:03.296 +07:00 [DBG] Starting resolving tenant...
+2026-05-09 19:33:03.296 +07:00 [DBG] Trying to resolve tenant through 'QueryString'...
+2026-05-09 19:33:03.301 +07:00 [DBG] Trying to resolve tenant through 'Route'...
+2026-05-09 19:33:03.302 +07:00 [DBG] Trying to resolve tenant through 'Header'...
+2026-05-09 19:33:03.302 +07:00 [DBG] Trying to resolve tenant through 'Cookie'...
+2026-05-09 19:33:03.303 +07:00 [DBG] Tenant resolved by 'Cookie' as 'LTC'.
+2026-05-09 19:33:06.104 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Failed to generate Operation for action - LTC.ProductService.Controllers.Admin.MediaFileAdminController.UploadAsync (LTC.ProductService.HttpApi). See inner exception
+ ---> Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Error reading parameter(s) for action LTC.ProductService.Controllers.Admin.MediaFileAdminController.UploadAsync (LTC.ProductService.HttpApi) as [FromForm] attribute used with IFormFile. Please refer to https://github.com/domaindrivendev/Swashbuckle.AspNetCore/tree/master/docs/configure-and-customize-swaggergen.md#handle-forms-and-file-uploads for more information
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateParametersAsync(ApiDescription apiDescription, SchemaRepository schemaRepository, OpenApiDocument document, Func`4 parameterGenerator)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateParametersAsync(ApiDescription apiDescription, SchemaRepository schemaRepository, OpenApiDocument document)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperationAsync(OpenApiDocument document, ApiDescription apiDescription, SchemaRepository schemaRepository, Func`4 parametersGenerator, Func`4 bodyGenerator, Func`3 applyFilters)
+   --- End of inner exception stack trace ---
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperationAsync(OpenApiDocument document, ApiDescription apiDescription, SchemaRepository schemaRepository, Func`4 parametersGenerator, Func`4 bodyGenerator, Func`3 applyFilters)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperationAsync(OpenApiDocument document, ApiDescription apiDescription, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperationsAsync(OpenApiDocument document, IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(OpenApiDocument document, IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository, Func`4 operationsGenerator)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(OpenApiDocument document, IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.RequestLocalization.AbpRequestLocalizationMiddleware.InvokeAsync(HttpContext context, RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.InterfaceMiddlewareBinder.<>c__DisplayClass2_0.<<CreateMiddleware>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Volo.Abp.AspNetCore.MultiTenancy.MultiTenancyMiddleware.InvokeAsync(HttpContext context, RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.InterfaceMiddlewareBinder.<>c__DisplayClass2_0.<<CreateMiddleware>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Volo.Abp.AspNetCore.Tracing.AbpCorrelationIdMiddleware.InvokeAsync(HttpContext context, RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.InterfaceMiddlewareBinder.<>c__DisplayClass2_0.<<CreateMiddleware>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-05-09 19:33:06.126 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44367/ltc/product-service/swagger/v1/swagger.json?urls.primaryName=product-service - 500 null text/plain; charset=utf-8 4164.047ms
+2026-05-09 19:33:10.505 +07:00 [INF] Application is shutting down...
+2026-05-09 19:33:32.593 +07:00 [INF] Starting LTC.ProductService.HttpApi.Host.
+2026-05-09 19:33:34.290 +07:00 [DBG] Loaded ABP modules:
+2026-05-09 19:33:34.291 +07:00 [DBG] - LTC.ProductService.ProductServiceHttpApiHostModule
+2026-05-09 19:33:34.291 +07:00 [DBG]   - LTC.ProductService.ProductServiceHttpApiModule
+2026-05-09 19:33:34.291 +07:00 [DBG]     - LTC.ProductService.ProductServiceApplicationContractsModule
+2026-05-09 19:33:34.291 +07:00 [DBG]       - LTC.ProductService.ProductServiceDomainSharedModule
+2026-05-09 19:33:34.291 +07:00 [DBG]       - Volo.Abp.ObjectExtending.AbpObjectExtendingModule
+2026-05-09 19:33:34.291 +07:00 [DBG]         - Volo.Abp.Localization.AbpLocalizationAbstractionsModule
+2026-05-09 19:33:34.291 +07:00 [DBG]         - Volo.Abp.Validation.AbpValidationAbstractionsModule
+2026-05-09 19:33:34.291 +07:00 [DBG]   - Volo.Abp.Autofac.AbpAutofacModule
+2026-05-09 19:33:34.291 +07:00 [DBG]     - Volo.Abp.Castle.AbpCastleCoreModule
+2026-05-09 19:33:34.291 +07:00 [DBG]   - Volo.Abp.AspNetCore.MultiTenancy.AbpAspNetCoreMultiTenancyModule
+2026-05-09 19:33:34.291 +07:00 [DBG]     - Volo.Abp.MultiTenancy.AbpMultiTenancyModule
+2026-05-09 19:33:34.291 +07:00 [DBG]       - Volo.Abp.Data.AbpDataModule
+2026-05-09 19:33:34.291 +07:00 [DBG]         - Volo.Abp.Uow.AbpUnitOfWorkModule
+2026-05-09 19:33:34.291 +07:00 [DBG]         - Volo.Abp.EventBus.Abstractions.AbpEventBusAbstractionsModule
+2026-05-09 19:33:34.291 +07:00 [DBG]       - Volo.Abp.Security.AbpSecurityModule
+2026-05-09 19:33:34.291 +07:00 [DBG]       - Volo.Abp.Settings.AbpSettingsModule
+2026-05-09 19:33:34.291 +07:00 [DBG]       - Volo.Abp.MultiTenancy.AbpMultiTenancyAbstractionsModule
+2026-05-09 19:33:34.291 +07:00 [DBG]         - Volo.Abp.VirtualFileSystem.AbpVirtualFileSystemModule
+2026-05-09 19:33:34.291 +07:00 [DBG]         - Volo.Abp.Localization.AbpLocalizationModule
+2026-05-09 19:33:34.291 +07:00 [DBG]           - Volo.Abp.Threading.AbpThreadingModule
+2026-05-09 19:33:34.291 +07:00 [DBG]     - Volo.Abp.AspNetCore.AbpAspNetCoreModule
+2026-05-09 19:33:34.291 +07:00 [DBG]       - Volo.Abp.Auditing.AbpAuditingModule
+2026-05-09 19:33:34.291 +07:00 [DBG]         - Volo.Abp.Json.AbpJsonModule
+2026-05-09 19:33:34.291 +07:00 [DBG]           - Volo.Abp.Json.SystemTextJson.AbpJsonSystemTextJsonModule
+2026-05-09 19:33:34.291 +07:00 [DBG]             - Volo.Abp.Json.AbpJsonAbstractionsModule
+2026-05-09 19:33:34.291 +07:00 [DBG]             - Volo.Abp.Timing.AbpTimingModule
+2026-05-09 19:33:34.291 +07:00 [DBG]         - Volo.Abp.Auditing.AbpAuditingContractsModule
+2026-05-09 19:33:34.291 +07:00 [DBG]       - Volo.Abp.Http.AbpHttpModule
+2026-05-09 19:33:34.291 +07:00 [DBG]         - Volo.Abp.Http.AbpHttpAbstractionsModule
+2026-05-09 19:33:34.291 +07:00 [DBG]         - Volo.Abp.Minify.AbpMinifyModule
+2026-05-09 19:33:34.291 +07:00 [DBG]       - Volo.Abp.Authorization.AbpAuthorizationModule
+2026-05-09 19:33:34.291 +07:00 [DBG]         - Volo.Abp.Authorization.AbpAuthorizationAbstractionsModule
+2026-05-09 19:33:34.291 +07:00 [DBG]       - Volo.Abp.Validation.AbpValidationModule
+2026-05-09 19:33:34.291 +07:00 [DBG]       - Volo.Abp.ExceptionHandling.AbpExceptionHandlingModule
+2026-05-09 19:33:34.291 +07:00 [DBG]       - Volo.Abp.AspNetCore.AbpAspNetCoreAbstractionsModule
+2026-05-09 19:33:34.291 +07:00 [DBG]   - LTC.ProductService.ProductServiceApplicationModule
+2026-05-09 19:33:34.291 +07:00 [DBG]     - LTC.ProductService.ProductServiceDomainModule
+2026-05-09 19:33:34.291 +07:00 [DBG]       - Volo.Abp.Emailing.AbpEmailingModule
+2026-05-09 19:33:34.291 +07:00 [DBG]         - Volo.Abp.BackgroundJobs.AbpBackgroundJobsAbstractionsModule
+2026-05-09 19:33:34.291 +07:00 [DBG]         - Volo.Abp.TextTemplating.AbpTextTemplatingModule
+2026-05-09 19:33:34.291 +07:00 [DBG]           - Volo.Abp.TextTemplating.Scriban.AbpTextTemplatingScribanModule
+2026-05-09 19:33:34.291 +07:00 [DBG]             - Volo.Abp.TextTemplating.AbpTextTemplatingCoreModule
+2026-05-09 19:33:34.291 +07:00 [DBG]       - Volo.Abp.TenantManagement.AbpTenantManagementDomainModule
+2026-05-09 19:33:34.291 +07:00 [DBG]         - Volo.Abp.TenantManagement.AbpTenantManagementDomainSharedModule
+2026-05-09 19:33:34.291 +07:00 [DBG]         - Volo.Abp.Domain.AbpDddDomainModule
+2026-05-09 19:33:34.291 +07:00 [DBG]           - Volo.Abp.EventBus.AbpEventBusModule
+2026-05-09 19:33:34.291 +07:00 [DBG]             - Volo.Abp.Guids.AbpGuidsModule
+2026-05-09 19:33:34.291 +07:00 [DBG]             - Volo.Abp.BackgroundWorkers.AbpBackgroundWorkersModule
+2026-05-09 19:33:34.291 +07:00 [DBG]             - Volo.Abp.DistributedLocking.AbpDistributedLockingAbstractionsModule
+2026-05-09 19:33:34.291 +07:00 [DBG]           - Volo.Abp.ObjectMapping.AbpObjectMappingModule
+2026-05-09 19:33:34.291 +07:00 [DBG]           - Volo.Abp.Specifications.AbpSpecificationsModule
+2026-05-09 19:33:34.291 +07:00 [DBG]           - Volo.Abp.Caching.AbpCachingModule
+2026-05-09 19:33:34.291 +07:00 [DBG]             - Volo.Abp.Serialization.AbpSerializationModule
+2026-05-09 19:33:34.291 +07:00 [DBG]           - Volo.Abp.Domain.AbpDddDomainSharedModule
+2026-05-09 19:33:34.291 +07:00 [DBG]         - Volo.Abp.Mapperly.AbpMapperlyModule
+2026-05-09 19:33:34.291 +07:00 [DBG]       - Volo.Abp.Identity.AbpIdentityDomainModule
+2026-05-09 19:33:34.291 +07:00 [DBG]         - Volo.Abp.Identity.AbpIdentityDomainSharedModule
+2026-05-09 19:33:34.291 +07:00 [DBG]           - Volo.Abp.Users.AbpUsersDomainSharedModule
+2026-05-09 19:33:34.291 +07:00 [DBG]           - Volo.Abp.Features.AbpFeaturesModule
+2026-05-09 19:33:34.291 +07:00 [DBG]         - Volo.Abp.Users.AbpUsersDomainModule
+2026-05-09 19:33:34.291 +07:00 [DBG]           - Volo.Abp.Users.AbpUsersAbstractionModule
+2026-05-09 19:33:34.291 +07:00 [DBG]   - LTC.ProductService.EntityFrameworkCore.ProductServiceEntityFrameworkCoreModule
+2026-05-09 19:33:34.291 +07:00 [DBG]     - Volo.Abp.EntityFrameworkCore.SqlServer.AbpEntityFrameworkCoreSqlServerModule
+2026-05-09 19:33:34.291 +07:00 [DBG]       - Volo.Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule
+2026-05-09 19:33:34.291 +07:00 [DBG]     - Volo.Abp.TenantManagement.EntityFrameworkCore.AbpTenantManagementEntityFrameworkCoreModule
+2026-05-09 19:33:34.291 +07:00 [DBG]   - Volo.Abp.Swashbuckle.AbpSwashbuckleModule
+2026-05-09 19:33:34.291 +07:00 [DBG]     - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcModule
+2026-05-09 19:33:34.291 +07:00 [DBG]       - Volo.Abp.ApiVersioning.AbpApiVersioningAbstractionsModule
+2026-05-09 19:33:34.291 +07:00 [DBG]       - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcContractsModule
+2026-05-09 19:33:34.291 +07:00 [DBG]         - Volo.Abp.Application.AbpDddApplicationContractsModule
+2026-05-09 19:33:34.291 +07:00 [DBG]       - Volo.Abp.UI.Navigation.AbpUiNavigationModule
+2026-05-09 19:33:34.291 +07:00 [DBG]         - Volo.Abp.UI.AbpUiModule
+2026-05-09 19:33:34.291 +07:00 [DBG]       - Volo.Abp.GlobalFeatures.AbpGlobalFeaturesModule
+2026-05-09 19:33:34.291 +07:00 [DBG]       - Volo.Abp.Application.AbpDddApplicationModule
+2026-05-09 19:33:34.291 +07:00 [DBG]   - Volo.Abp.AspNetCore.Serilog.AbpAspNetCoreSerilogModule
+2026-05-09 19:33:34.291 +07:00 [DBG]   - LTC.Shared.Hosting.Microservices.LTCSharedHostingMicroservicesModule
+2026-05-09 19:33:34.291 +07:00 [DBG]     - Volo.Abp.AspNetCore.Authentication.JwtBearer.AbpAspNetCoreAuthenticationJwtBearerModule
+2026-05-09 19:33:34.291 +07:00 [DBG]     - Volo.Abp.Caching.StackExchangeRedis.AbpCachingStackExchangeRedisModule
+2026-05-09 19:33:34.291 +07:00 [DBG]     - Volo.Abp.DistributedLocking.AbpDistributedLockingModule
+2026-05-09 19:33:34.768 +07:00 [INF] Initialized all ABP modules.
+2026-05-09 19:33:35.066 +07:00 [INF] Now listening on: https://localhost:44367
+2026-05-09 19:33:35.066 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-05-09 19:33:35.066 +07:00 [INF] Hosting environment: Development
+2026-05-09 19:33:35.066 +07:00 [INF] Content root path: D:\LTT\ltc\BE\ltt-ltc-product-api\LTC.ProductService.HttpApi.Host
