@@ -1,16 +1,22 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Volo.Abp.MultiTenancy;
 
 namespace LTC.ProductService.EntityFrameworkCore;
 
+/// <summary>
+/// Same pattern as <c>LTC.CustomerService.EntityFrameworkCore.TenantModelCacheKeyFactory</c>:
+/// the cached EF model must include the resolved SQL schema (<see cref="ProductServiceDbContext.GetCurrentSchema"/>),
+/// otherwise queries target the wrong schema (e.g. design-time <c>dbo</c> vs runtime <c>LTC</c>).
+/// </summary>
 public class TenantModelCacheKeyFactory : IModelCacheKeyFactory
 {
     public object Create(DbContext context, bool designTime)
     {
-        var currentTenant = context.GetService<ICurrentTenant>();
-        var tenantId = currentTenant?.Id;
+        if (context is ProductServiceDbContext tenantContext)
+        {
+            return (context.GetType(), tenantContext.GetCurrentSchema(), designTime);
+        }
 
-        return new { Type = context.GetType(), DesignTime = designTime, TenantId = tenantId };
+        return (context.GetType(), designTime);
     }
 }

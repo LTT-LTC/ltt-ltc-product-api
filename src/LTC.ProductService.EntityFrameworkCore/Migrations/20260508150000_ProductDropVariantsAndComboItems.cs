@@ -14,33 +14,50 @@ namespace LTC.ProductService.Migrations
             // its bundled products as a JSON array in Combos.ProductIds and exposes
             // its image via Combos.ImageUrl. Products.ProductType has been retired in
             // favour of ProductCategoryId being the sole categorisation hook.
+            //
+            // Idempotent + schema-per-tenant: tables may live under LTC or dbo; some DBs
+            // never had ComboItems / ProductVariants in a given schema.
 
-            migrationBuilder.DropTable(
-                name: "ComboItems",
-                schema: "dbo");
+            foreach (var schema in new[] { "LTC", "dbo" })
+            {
+                migrationBuilder.Sql($@"
+IF OBJECT_ID(N'[{schema}].[ComboItems]', N'U') IS NOT NULL
+    DROP TABLE [{schema}].[ComboItems];
+IF OBJECT_ID(N'[{schema}].[ProductVariants]', N'U') IS NOT NULL
+    DROP TABLE [{schema}].[ProductVariants];
+");
 
-            migrationBuilder.DropTable(
-                name: "ProductVariants",
-                schema: "dbo");
+                migrationBuilder.Sql($@"
+IF OBJECT_ID(N'[{schema}].[Products]', N'U') IS NOT NULL
+   AND COL_LENGTH(N'{schema}.Products', N'ProductType') IS NOT NULL
+BEGIN
+  DECLARE @dc sysname;
+  SELECT @dc = dc.name
+  FROM sys.tables t
+  INNER JOIN sys.schemas s ON t.schema_id = s.schema_id
+  INNER JOIN sys.columns c ON c.object_id = t.object_id AND c.name = N'ProductType'
+  INNER JOIN sys.default_constraints dc ON dc.parent_object_id = c.object_id AND dc.parent_column_id = c.column_id
+  WHERE s.name = N'{schema}' AND t.name = N'Products';
 
-            migrationBuilder.DropColumn(
-                name: "ProductType",
-                schema: "dbo",
-                table: "Products");
+  IF @dc IS NOT NULL
+  BEGIN
+    DECLARE @drop nvarchar(max) = N'ALTER TABLE [{schema}].[Products] DROP CONSTRAINT ' + QUOTENAME(@dc);
+    EXEC sp_executesql @drop;
+  END
 
-            migrationBuilder.AddColumn<string>(
-                name: "ImageUrl",
-                schema: "dbo",
-                table: "Combos",
-                type: "nvarchar(max)",
-                nullable: true);
+  ALTER TABLE [{schema}].[Products] DROP COLUMN [ProductType];
+END
+");
 
-            migrationBuilder.AddColumn<string>(
-                name: "ProductIds",
-                schema: "dbo",
-                table: "Combos",
-                type: "nvarchar(max)",
-                nullable: true);
+                migrationBuilder.Sql($@"
+IF OBJECT_ID(N'[{schema}].[Combos]', N'U') IS NOT NULL
+   AND COL_LENGTH(N'{schema}.Combos', N'ImageUrl') IS NULL
+    ALTER TABLE [{schema}].[Combos] ADD [ImageUrl] nvarchar(max) NULL;
+IF OBJECT_ID(N'[{schema}].[Combos]', N'U') IS NOT NULL
+   AND COL_LENGTH(N'{schema}.Combos', N'ProductIds') IS NULL
+    ALTER TABLE [{schema}].[Combos] ADD [ProductIds] nvarchar(max) NULL;
+");
+            }
         }
 
         /// <inheritdoc />
