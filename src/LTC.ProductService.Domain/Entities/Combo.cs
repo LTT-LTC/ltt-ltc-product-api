@@ -1,10 +1,11 @@
 using System;
-using Volo.Abp.Domain.Entities.Auditing;
+using Volo.Abp.Domain.Entities;
 using Volo.Abp.MultiTenancy;
 
 namespace LTC.ProductService.Entities
 {
-    public class Combo : AuditedAggregateRoot<Guid>, IMultiTenant
+    /// <summary>Maps to <c>Combos</c> — schema-aligned; no ABP audit columns in DB.</summary>
+    public class Combo : Entity<Guid>, IMultiTenant
     {
         public Guid? TenantId { get; set; }
         public string Name { get; set; }

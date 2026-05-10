@@ -4,7 +4,7 @@ using Volo.Abp.Application.Dtos;
 
 namespace LTC.ProductService.Dtos.Output
 {
-    public class ComboOutputDto : AuditedEntityDto<Guid>
+    public class ComboOutputDto : EntityDto<Guid>
     {
         public Guid? TenantId { get; set; }
         public string Name { get; set; }

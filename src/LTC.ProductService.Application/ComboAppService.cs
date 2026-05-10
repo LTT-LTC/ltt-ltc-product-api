@@ -231,10 +231,6 @@ namespace LTC.ProductService
                 IsActive = source.IsActive,
                 CreatedAt = source.CreatedAt,
                 UpdatedAt = source.UpdatedAt,
-                CreationTime = source.CreationTime,
-                CreatorId = source.CreatorId,
-                LastModificationTime = source.LastModificationTime,
-                LastModifierId = source.LastModifierId,
                 Products = lines
             };
         }

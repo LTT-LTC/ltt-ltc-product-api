@@ -78,13 +78,10 @@ namespace LTC.ProductService
             return new CategoryOutputDto
             {
                 Id = source.Id,
+                TenantId = source.TenantId,
                 Name = source.Name,
                 Description = source.Description,
                 IsActive = source.IsActive,
-                CreationTime = source.CreationTime,
-                CreatorId = source.CreatorId,
-                LastModificationTime = source.LastModificationTime,
-                LastModifierId = source.LastModifierId
             };
         }
     }
