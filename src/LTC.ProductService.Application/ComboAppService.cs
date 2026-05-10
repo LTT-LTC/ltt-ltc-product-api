@@ -65,10 +65,10 @@ namespace LTC.ProductService
             var entity = new Combo
             {
                 Name = input.Name,
-                Description = input.Description,
+                Description = input.Description ?? string.Empty,
                 TotalPrice = input.TotalPrice,
                 IsActive = input.IsActive,
-                ImageUrl = imageUrl,
+                ImageUrl = imageUrl ?? string.Empty,
                 ProductIds = SerializeLines(input.Products),
                 CreatedAt = DateTime.UtcNow
             };
@@ -86,10 +86,10 @@ namespace LTC.ProductService
             var imageUrl = await ResolveImageUrlAsync(input.ImageFile, input.ImageUrl ?? entity.ImageUrl);
 
             entity.Name = input.Name;
-            entity.Description = input.Description;
+            entity.Description = input.Description ?? string.Empty;
             entity.TotalPrice = input.TotalPrice;
             entity.IsActive = input.IsActive;
-            entity.ImageUrl = imageUrl;
+            entity.ImageUrl = imageUrl ?? string.Empty;
             entity.ProductIds = SerializeLines(input.Products);
             entity.UpdatedAt = DateTime.UtcNow;
 
@@ -152,11 +152,14 @@ namespace LTC.ProductService
             return fallbackUrl;
         }
 
-        private static string? SerializeLines(List<ComboProductLineDto>? lines)
+        /// <summary>
+        /// Persisted in <c>Combos.ProductIds</c> (NOT NULL). Empty list → <c>[]</c>.
+        /// </summary>
+        private static string SerializeLines(List<ComboProductLineDto>? lines)
         {
             if (lines == null || lines.Count == 0)
             {
-                return null;
+                return "[]";
             }
 
             var payload = lines
