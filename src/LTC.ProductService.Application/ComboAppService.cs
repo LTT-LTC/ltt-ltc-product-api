@@ -235,9 +235,6 @@ namespace LTC.ProductService
                 CreatorId = source.CreatorId,
                 LastModificationTime = source.LastModificationTime,
                 LastModifierId = source.LastModifierId,
-                IsDeleted = source.IsDeleted,
-                DeleterId = source.DeleterId,
-                DeletionTime = source.DeletionTime,
                 Products = lines
             };
         }

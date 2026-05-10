@@ -4,7 +4,7 @@ using Volo.Abp.MultiTenancy;
 
 namespace LTC.ProductService.Entities
 {
-    public class Product : FullAuditedAggregateRoot<Guid>, IMultiTenant
+    public class Product : AuditedAggregateRoot<Guid>, IMultiTenant
     {
         public Guid? TenantId { get; set; }
         public Guid ProductCategoryId { get; set; }
