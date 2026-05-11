@@ -122,7 +122,7 @@ namespace LTC.ProductService
 
             var priceMap = products.ToDictionary(x => x.Id, x => x.BasePrice);
             return lines.Sum(line =>
-                priceMap.TryGetValue(line.ProductId, out var p) ? p * line.Quantity : 0m
+                priceMap.TryGetValue(line.ProductId, out var p) ? (p ?? 0m) * line.Quantity : 0m
             );
         }
 
@@ -236,8 +236,8 @@ namespace LTC.ProductService
                             ProductCategoryId = product.ProductCategoryId,
                             Name = product.Name,
                             Description = product.Description,
-                            BasePrice = product.BasePrice,
-                            SellPrice = product.SellPrice,
+                            BasePrice = product.BasePrice ?? 0m,
+                            SellPrice = product.SellPrice ?? 0m,
                             ImageUrl = product.ImageUrl,
                             IsActive = product.IsActive,
                             CreatedAt = product.CreatedAt,
