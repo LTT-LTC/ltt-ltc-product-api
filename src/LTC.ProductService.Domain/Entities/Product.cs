@@ -12,6 +12,7 @@ namespace LTC.ProductService.Entities
         public string Name { get; set; }
         public string Description { get; set; }
         public decimal BasePrice { get; set; }
+        public decimal SellPrice { get; set; }
         public string ImageUrl { get; set; }
         public bool IsActive { get; set; }
         public DateTime? CreatedAt { get; set; }

@@ -61,12 +61,14 @@ namespace LTC.ProductService
         {
             await ValidateProductLinesAsync(input.Products);
             var imageUrl = await ResolveImageUrlAsync(input.ImageFile, input.ImageUrl);
+            var basePrice = await CalculateBasePriceAsync(input.Products);
 
             var entity = new Combo
             {
                 Name = input.Name,
                 Description = input.Description ?? string.Empty,
                 TotalPrice = input.TotalPrice,
+                BasePrice = basePrice,
                 IsActive = input.IsActive,
                 ImageUrl = imageUrl ?? string.Empty,
                 ProductIds = SerializeLines(input.Products),
@@ -84,10 +86,12 @@ namespace LTC.ProductService
             var entity = await _repository.GetAsync(id);
 
             var imageUrl = await ResolveImageUrlAsync(input.ImageFile, input.ImageUrl ?? entity.ImageUrl);
+            var basePrice = await CalculateBasePriceAsync(input.Products);
 
             entity.Name = input.Name;
             entity.Description = input.Description ?? string.Empty;
             entity.TotalPrice = input.TotalPrice;
+            entity.BasePrice = basePrice;
             entity.IsActive = input.IsActive;
             entity.ImageUrl = imageUrl ?? string.Empty;
             entity.ProductIds = SerializeLines(input.Products);
@@ -101,6 +105,25 @@ namespace LTC.ProductService
         public async Task DeleteComboAsync(Guid id)
         {
             await _repository.DeleteAsync(id);
+        }
+
+        private async Task<decimal> CalculateBasePriceAsync(List<ComboProductLineDto>? lines)
+        {
+            if (lines == null || lines.Count == 0)
+            {
+                return 0m;
+            }
+
+            var distinctIds = lines.Select(x => x.ProductId).Distinct().ToList();
+            var query = await _productRepository.GetQueryableAsync();
+            var products = await AsyncExecuter.ToListAsync(
+                query.Where(x => distinctIds.Contains(x.Id)).Select(x => new { x.Id, x.BasePrice })
+            );
+
+            var priceMap = products.ToDictionary(x => x.Id, x => x.BasePrice);
+            return lines.Sum(line =>
+                priceMap.TryGetValue(line.ProductId, out var p) ? p * line.Quantity : 0m
+            );
         }
 
         private async Task ValidateProductLinesAsync(List<ComboProductLineDto>? lines)
@@ -214,6 +237,7 @@ namespace LTC.ProductService
                             Name = product.Name,
                             Description = product.Description,
                             BasePrice = product.BasePrice,
+                            SellPrice = product.SellPrice,
                             ImageUrl = product.ImageUrl,
                             IsActive = product.IsActive,
                             CreatedAt = product.CreatedAt,
@@ -231,6 +255,7 @@ namespace LTC.ProductService
                 Description = source.Description,
                 ImageUrl = source.ImageUrl,
                 TotalPrice = source.TotalPrice,
+                BasePrice = source.BasePrice,
                 IsActive = source.IsActive,
                 CreatedAt = source.CreatedAt,
                 UpdatedAt = source.UpdatedAt,
