@@ -10,8 +10,8 @@ namespace LTC.ProductService.Entities
         public Guid? TenantId { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
-        public decimal TotalPrice { get; set; }
-        public decimal BasePrice { get; set; }
+        public decimal? TotalPrice { get; set; }
+        public decimal? BasePrice { get; set; }
         public bool IsActive { get; set; }
         public string ImageUrl { get; set; }
         /// <summary>
