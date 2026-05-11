@@ -20,6 +20,9 @@ namespace LTC.Shared.Hosting.Microservices.OpenApi.Swagger
                 // Adds X-Tenant input box on every endpoint — guaranteed to be sent in curl
                 options.OperationFilter<TenantHeaderOperationFilter>();
 
+                // Required for IFormFile / multipart file-upload endpoints
+                options.OperationFilter<FileUploadOperationFilter>();
+
                 // Bearer token global security
                 options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
                 {
