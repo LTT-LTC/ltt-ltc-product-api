@@ -64,6 +64,7 @@ namespace LTC.ProductService
                 Name = input.Name,
                 Description = input.Description,
                 BasePrice = input.BasePrice,
+                SellPrice = input.SellPrice,
                 ImageUrl = imageUrl,
                 IsActive = input.IsActive,
                 CreatedAt = DateTime.UtcNow
@@ -83,6 +84,7 @@ namespace LTC.ProductService
             entity.Name = input.Name;
             entity.Description = input.Description;
             entity.BasePrice = input.BasePrice;
+            entity.SellPrice = input.SellPrice;
             entity.ImageUrl = imageUrl;
             entity.IsActive = input.IsActive;
             entity.UpdatedAt = DateTime.UtcNow;
@@ -122,6 +124,7 @@ namespace LTC.ProductService
                 Name = source.Name,
                 Description = source.Description,
                 BasePrice = source.BasePrice,
+                SellPrice = source.SellPrice,
                 ImageUrl = source.ImageUrl,
                 IsActive = source.IsActive,
                 CreatedAt = source.CreatedAt,

@@ -60463,3 +60463,217 @@ aud: ZS
 2026-05-10 19:31:00.692 +07:00 [INF] Application started. Press Ctrl+C to shut down.
 2026-05-10 19:31:00.692 +07:00 [INF] Hosting environment: Development
 2026-05-10 19:31:00.692 +07:00 [INF] Content root path: D:\LTT\ltc\BE\ltt-ltc-product-api\LTC.ProductService.HttpApi.Host
+2026-05-10 21:24:59.574 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44367/ltc/product-service/combo-all?page=1&pageSize=100 - null null
+2026-05-10 21:24:59.574 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44367/ltc/product-service/product-all?page=1&pageSize=100 - null null
+2026-05-10 21:25:00.148 +07:00 [INF] CORS policy execution successful.
+2026-05-10 21:25:00.148 +07:00 [INF] CORS policy execution successful.
+2026-05-10 21:25:00.158 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44367/ltc/product-service/combo-all?page=1&pageSize=100 - 204 null null 591.6414ms
+2026-05-10 21:25:00.158 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44367/ltc/product-service/product-all?page=1&pageSize=100 - 204 null null 591.6059ms
+2026-05-10 21:25:00.160 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44367/ltc/product-service/product-all?page=1&pageSize=100 - null null
+2026-05-10 21:25:00.160 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44367/ltc/product-service/combo-all?page=1&pageSize=100 - null null
+2026-05-10 21:25:00.185 +07:00 [INF] CORS policy execution successful.
+2026-05-10 21:25:00.185 +07:00 [INF] CORS policy execution successful.
+2026-05-10 21:25:01.331 +07:00 [INF] [JWT DEBUG] Token Validated Successfully for 1338f0a7-2268-43e6-89f5-0fd388e63010
+2026-05-10 21:25:01.331 +07:00 [INF] [JWT DEBUG] Token Validated Successfully for 1338f0a7-2268-43e6-89f5-0fd388e63010
+2026-05-10 21:25:01.332 +07:00 [INF] [JWT DEBUG] All Claims Found: 
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier: 1338f0a7-2268-43e6-89f5-0fd388e63010
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name: manager
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress: manager@ltt.com
+AspNet.Identity.SecurityStamp: 26BC05DA-2691-4529-B793-632CB2949FA1
+tenantid: 5b44b9ed-8fcf-4689-8694-1dee07259757
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname: System
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname: Manager
+phone_number_verified: False
+email_verified: True
+http://schemas.microsoft.com/ws/2008/06/identity/claims/role: manager
+cinemaId: 800d72f4-0e3d-e957-bea3-3a20b8bf1873
+sessionId: 019e121a-6bd4-7fa1-867d-67d38f7b7173
+nbf: 1778420181
+exp: 1778423781
+iss: ZS
+aud: ZS
+2026-05-10 21:25:01.332 +07:00 [INF] [JWT DEBUG] All Claims Found: 
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier: 1338f0a7-2268-43e6-89f5-0fd388e63010
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name: manager
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress: manager@ltt.com
+AspNet.Identity.SecurityStamp: 26BC05DA-2691-4529-B793-632CB2949FA1
+tenantid: 5b44b9ed-8fcf-4689-8694-1dee07259757
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname: System
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname: Manager
+phone_number_verified: False
+email_verified: True
+http://schemas.microsoft.com/ws/2008/06/identity/claims/role: manager
+cinemaId: 800d72f4-0e3d-e957-bea3-3a20b8bf1873
+sessionId: 019e121a-6bd4-7fa1-867d-67d38f7b7173
+nbf: 1778420181
+exp: 1778423781
+iss: ZS
+aud: ZS
+2026-05-10 21:25:01.333 +07:00 [INF] [JWT DEBUG] Authorization Check - IsInRole('Admin'): false, HasAdminRoleClaim: false
+2026-05-10 21:25:01.333 +07:00 [INF] [JWT DEBUG] Authorization Check - IsInRole('Admin'): false, HasAdminRoleClaim: false
+2026-05-10 21:25:01.755 +07:00 [DBG] Starting resolving tenant...
+2026-05-10 21:25:01.755 +07:00 [DBG] Starting resolving tenant...
+2026-05-10 21:25:01.756 +07:00 [DBG] Trying to resolve tenant through 'QueryString'...
+2026-05-10 21:25:01.756 +07:00 [DBG] Trying to resolve tenant through 'QueryString'...
+2026-05-10 21:25:01.764 +07:00 [DBG] Trying to resolve tenant through 'Route'...
+2026-05-10 21:25:01.764 +07:00 [DBG] Trying to resolve tenant through 'Route'...
+2026-05-10 21:25:01.765 +07:00 [DBG] Trying to resolve tenant through 'Header'...
+2026-05-10 21:25:01.765 +07:00 [DBG] Trying to resolve tenant through 'Header'...
+2026-05-10 21:25:01.765 +07:00 [DBG] Tenant resolved by 'Header' as 'LTC'.
+2026-05-10 21:25:01.765 +07:00 [DBG] Tenant resolved by 'Header' as 'LTC'.
+2026-05-10 21:25:02.363 +07:00 [INF] Executing endpoint 'LTC.ProductService.Controllers.Customer.ProductCustomerController.GetProductListAsync (LTC.ProductService.HttpApi)'
+2026-05-10 21:25:02.363 +07:00 [INF] Executing endpoint 'LTC.ProductService.Controllers.Customer.ComboCustomerController.GetComboListAsync (LTC.ProductService.HttpApi)'
+2026-05-10 21:25:02.404 +07:00 [INF] Route matched with {action = "GetComboList", controller = "ComboCustomer", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Volo.Abp.Application.Dtos.PagedResultDto`1[LTC.ProductService.Dtos.Output.ComboOutputDto]] GetComboListAsync(LTC.ProductService.Dtos.Input.PaginationInputDto) on controller LTC.ProductService.Controllers.Customer.ComboCustomerController (LTC.ProductService.HttpApi).
+2026-05-10 21:25:02.404 +07:00 [INF] Route matched with {action = "GetProductList", controller = "ProductCustomer", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Volo.Abp.Application.Dtos.PagedResultDto`1[LTC.ProductService.Dtos.Output.ProductOutputDto]] GetProductListAsync(LTC.ProductService.Dtos.Input.GetProductListInputDto) on controller LTC.ProductService.Controllers.Customer.ProductCustomerController (LTC.ProductService.HttpApi).
+2026-05-10 21:25:06.087 +07:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-05-10 21:25:06.087 +07:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-05-10 21:25:06.491 +07:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-05-10 21:25:06.491 +07:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-05-10 21:25:06.711 +07:00 [INF] Executing ObjectResult, writing value of type 'Volo.Abp.Application.Dtos.PagedResultDto`1[[LTC.ProductService.Dtos.Output.ProductOutputDto, LTC.ProductService.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-05-10 21:25:06.711 +07:00 [INF] Executing ObjectResult, writing value of type 'Volo.Abp.Application.Dtos.PagedResultDto`1[[LTC.ProductService.Dtos.Output.ComboOutputDto, LTC.ProductService.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-05-10 21:25:06.736 +07:00 [INF] Executed action LTC.ProductService.Controllers.Customer.ComboCustomerController.GetComboListAsync (LTC.ProductService.HttpApi) in 4327.2232ms
+2026-05-10 21:25:06.736 +07:00 [INF] Executed action LTC.ProductService.Controllers.Customer.ProductCustomerController.GetProductListAsync (LTC.ProductService.HttpApi) in 4327.223ms
+2026-05-10 21:25:06.736 +07:00 [INF] Executed endpoint 'LTC.ProductService.Controllers.Customer.ComboCustomerController.GetComboListAsync (LTC.ProductService.HttpApi)'
+2026-05-10 21:25:06.736 +07:00 [INF] Executed endpoint 'LTC.ProductService.Controllers.Customer.ProductCustomerController.GetProductListAsync (LTC.ProductService.HttpApi)'
+2026-05-10 21:25:06.742 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44367/ltc/product-service/combo-all?page=1&pageSize=100 - 200 null application/json; charset=utf-8 6581.9449ms
+2026-05-10 21:25:06.742 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44367/ltc/product-service/product-all?page=1&pageSize=100 - 200 null application/json; charset=utf-8 6581.9379ms
+2026-05-10 21:25:13.723 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44367/ltc/product-service/product-all?page=1&pageSize=100 - null null
+2026-05-10 21:25:13.723 +07:00 [INF] CORS policy execution successful.
+2026-05-10 21:25:13.724 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44367/ltc/product-service/combo-all?page=1&pageSize=100 - null null
+2026-05-10 21:25:13.725 +07:00 [INF] CORS policy execution successful.
+2026-05-10 21:25:13.725 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44367/ltc/product-service/combo-all?page=1&pageSize=100 - 204 null null 1.191ms
+2026-05-10 21:25:13.725 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44367/ltc/product-service/product-all?page=1&pageSize=100 - 204 null null 2.5103ms
+2026-05-10 21:25:13.732 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44367/ltc/product-service/product-all?page=1&pageSize=100 - null null
+2026-05-10 21:25:13.732 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44367/ltc/product-service/combo-all?page=1&pageSize=100 - null null
+2026-05-10 21:25:13.733 +07:00 [INF] CORS policy execution successful.
+2026-05-10 21:25:13.733 +07:00 [INF] CORS policy execution successful.
+2026-05-10 21:25:13.738 +07:00 [INF] [JWT DEBUG] Token Validated Successfully for 1338f0a7-2268-43e6-89f5-0fd388e63010
+2026-05-10 21:25:13.738 +07:00 [INF] [JWT DEBUG] All Claims Found: 
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier: 1338f0a7-2268-43e6-89f5-0fd388e63010
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name: manager
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress: manager@ltt.com
+AspNet.Identity.SecurityStamp: 26BC05DA-2691-4529-B793-632CB2949FA1
+tenantid: 5b44b9ed-8fcf-4689-8694-1dee07259757
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname: System
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname: Manager
+phone_number_verified: False
+email_verified: True
+http://schemas.microsoft.com/ws/2008/06/identity/claims/role: manager
+cinemaId: 800d72f4-0e3d-e957-bea3-3a20b8bf1873
+sessionId: 019e121a-6bd4-7fa1-867d-67d38f7b7173
+nbf: 1778420181
+exp: 1778423781
+iss: ZS
+aud: ZS
+2026-05-10 21:25:13.738 +07:00 [INF] [JWT DEBUG] Authorization Check - IsInRole('Admin'): false, HasAdminRoleClaim: false
+2026-05-10 21:25:13.738 +07:00 [INF] [JWT DEBUG] Token Validated Successfully for 1338f0a7-2268-43e6-89f5-0fd388e63010
+2026-05-10 21:25:13.738 +07:00 [INF] [JWT DEBUG] All Claims Found: 
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier: 1338f0a7-2268-43e6-89f5-0fd388e63010
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name: manager
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress: manager@ltt.com
+AspNet.Identity.SecurityStamp: 26BC05DA-2691-4529-B793-632CB2949FA1
+tenantid: 5b44b9ed-8fcf-4689-8694-1dee07259757
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname: System
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname: Manager
+phone_number_verified: False
+email_verified: True
+http://schemas.microsoft.com/ws/2008/06/identity/claims/role: manager
+cinemaId: 800d72f4-0e3d-e957-bea3-3a20b8bf1873
+sessionId: 019e121a-6bd4-7fa1-867d-67d38f7b7173
+nbf: 1778420181
+exp: 1778423781
+iss: ZS
+aud: ZS
+2026-05-10 21:25:13.738 +07:00 [INF] [JWT DEBUG] Authorization Check - IsInRole('Admin'): false, HasAdminRoleClaim: false
+2026-05-10 21:25:13.740 +07:00 [DBG] Starting resolving tenant...
+2026-05-10 21:25:13.740 +07:00 [DBG] Trying to resolve tenant through 'QueryString'...
+2026-05-10 21:25:13.740 +07:00 [DBG] Starting resolving tenant...
+2026-05-10 21:25:13.740 +07:00 [DBG] Trying to resolve tenant through 'QueryString'...
+2026-05-10 21:25:13.740 +07:00 [DBG] Trying to resolve tenant through 'Route'...
+2026-05-10 21:25:13.740 +07:00 [DBG] Trying to resolve tenant through 'Route'...
+2026-05-10 21:25:13.740 +07:00 [DBG] Trying to resolve tenant through 'Header'...
+2026-05-10 21:25:13.740 +07:00 [DBG] Trying to resolve tenant through 'Header'...
+2026-05-10 21:25:13.741 +07:00 [DBG] Tenant resolved by 'Header' as 'LTC'.
+2026-05-10 21:25:13.741 +07:00 [DBG] Tenant resolved by 'Header' as 'LTC'.
+2026-05-10 21:25:13.937 +07:00 [INF] Executing endpoint 'LTC.ProductService.Controllers.Customer.ProductCustomerController.GetProductListAsync (LTC.ProductService.HttpApi)'
+2026-05-10 21:25:13.938 +07:00 [INF] Route matched with {action = "GetProductList", controller = "ProductCustomer", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Volo.Abp.Application.Dtos.PagedResultDto`1[LTC.ProductService.Dtos.Output.ProductOutputDto]] GetProductListAsync(LTC.ProductService.Dtos.Input.GetProductListInputDto) on controller LTC.ProductService.Controllers.Customer.ProductCustomerController (LTC.ProductService.HttpApi).
+2026-05-10 21:25:13.952 +07:00 [INF] Executing endpoint 'LTC.ProductService.Controllers.Customer.ComboCustomerController.GetComboListAsync (LTC.ProductService.HttpApi)'
+2026-05-10 21:25:13.952 +07:00 [INF] Route matched with {action = "GetComboList", controller = "ComboCustomer", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Volo.Abp.Application.Dtos.PagedResultDto`1[LTC.ProductService.Dtos.Output.ComboOutputDto]] GetComboListAsync(LTC.ProductService.Dtos.Input.PaginationInputDto) on controller LTC.ProductService.Controllers.Customer.ComboCustomerController (LTC.ProductService.HttpApi).
+2026-05-10 21:25:14.625 +07:00 [INF] Executing ObjectResult, writing value of type 'Volo.Abp.Application.Dtos.PagedResultDto`1[[LTC.ProductService.Dtos.Output.ProductOutputDto, LTC.ProductService.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-05-10 21:25:14.625 +07:00 [INF] Executed action LTC.ProductService.Controllers.Customer.ProductCustomerController.GetProductListAsync (LTC.ProductService.HttpApi) in 687.0987ms
+2026-05-10 21:25:14.625 +07:00 [INF] Executed endpoint 'LTC.ProductService.Controllers.Customer.ProductCustomerController.GetProductListAsync (LTC.ProductService.HttpApi)'
+2026-05-10 21:25:14.625 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44367/ltc/product-service/product-all?page=1&pageSize=100 - 200 null application/json; charset=utf-8 893.5265ms
+2026-05-10 21:25:14.940 +07:00 [INF] Executing ObjectResult, writing value of type 'Volo.Abp.Application.Dtos.PagedResultDto`1[[LTC.ProductService.Dtos.Output.ComboOutputDto, LTC.ProductService.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-05-10 21:25:14.941 +07:00 [INF] Executed action LTC.ProductService.Controllers.Customer.ComboCustomerController.GetComboListAsync (LTC.ProductService.HttpApi) in 988.4297ms
+2026-05-10 21:25:14.941 +07:00 [INF] Executed endpoint 'LTC.ProductService.Controllers.Customer.ComboCustomerController.GetComboListAsync (LTC.ProductService.HttpApi)'
+2026-05-10 21:25:14.941 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44367/ltc/product-service/combo-all?page=1&pageSize=100 - 200 null application/json; charset=utf-8 1209.0422ms
+2026-05-10 21:25:27.560 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44367/ltc/product-service/product-all?page=1&pageSize=100 - null null
+2026-05-10 21:25:27.561 +07:00 [INF] CORS policy execution successful.
+2026-05-10 21:25:27.561 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44367/ltc/product-service/product-all?page=1&pageSize=100 - 204 null null 0.5067ms
+2026-05-10 21:25:27.562 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44367/ltc/product-service/combo-all?page=1&pageSize=100 - null null
+2026-05-10 21:25:27.563 +07:00 [INF] CORS policy execution successful.
+2026-05-10 21:25:27.564 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44367/ltc/product-service/combo-all?page=1&pageSize=100 - 204 null null 1.1037ms
+2026-05-10 21:25:27.568 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44367/ltc/product-service/product-all?page=1&pageSize=100 - null null
+2026-05-10 21:25:27.570 +07:00 [INF] CORS policy execution successful.
+2026-05-10 21:25:27.573 +07:00 [INF] [JWT DEBUG] Token Validated Successfully for 1338f0a7-2268-43e6-89f5-0fd388e63010
+2026-05-10 21:25:27.573 +07:00 [INF] [JWT DEBUG] All Claims Found: 
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier: 1338f0a7-2268-43e6-89f5-0fd388e63010
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name: manager
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress: manager@ltt.com
+AspNet.Identity.SecurityStamp: 26BC05DA-2691-4529-B793-632CB2949FA1
+tenantid: 5b44b9ed-8fcf-4689-8694-1dee07259757
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname: System
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname: Manager
+phone_number_verified: False
+email_verified: True
+http://schemas.microsoft.com/ws/2008/06/identity/claims/role: manager
+cinemaId: 800d72f4-0e3d-e957-bea3-3a20b8bf1873
+sessionId: 019e121a-6bd4-7fa1-867d-67d38f7b7173
+nbf: 1778420181
+exp: 1778423781
+iss: ZS
+aud: ZS
+2026-05-10 21:25:27.574 +07:00 [INF] [JWT DEBUG] Authorization Check - IsInRole('Admin'): false, HasAdminRoleClaim: false
+2026-05-10 21:25:27.574 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44367/ltc/product-service/combo-all?page=1&pageSize=100 - null null
+2026-05-10 21:25:27.575 +07:00 [INF] CORS policy execution successful.
+2026-05-10 21:25:27.575 +07:00 [DBG] Starting resolving tenant...
+2026-05-10 21:25:27.575 +07:00 [DBG] Trying to resolve tenant through 'QueryString'...
+2026-05-10 21:25:27.576 +07:00 [DBG] Trying to resolve tenant through 'Route'...
+2026-05-10 21:25:27.576 +07:00 [DBG] Trying to resolve tenant through 'Header'...
+2026-05-10 21:25:27.576 +07:00 [DBG] Tenant resolved by 'Header' as 'LTC'.
+2026-05-10 21:25:27.577 +07:00 [INF] [JWT DEBUG] Token Validated Successfully for 1338f0a7-2268-43e6-89f5-0fd388e63010
+2026-05-10 21:25:27.577 +07:00 [INF] [JWT DEBUG] All Claims Found: 
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier: 1338f0a7-2268-43e6-89f5-0fd388e63010
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name: manager
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress: manager@ltt.com
+AspNet.Identity.SecurityStamp: 26BC05DA-2691-4529-B793-632CB2949FA1
+tenantid: 5b44b9ed-8fcf-4689-8694-1dee07259757
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname: System
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname: Manager
+phone_number_verified: False
+email_verified: True
+http://schemas.microsoft.com/ws/2008/06/identity/claims/role: manager
+cinemaId: 800d72f4-0e3d-e957-bea3-3a20b8bf1873
+sessionId: 019e121a-6bd4-7fa1-867d-67d38f7b7173
+nbf: 1778420181
+exp: 1778423781
+iss: ZS
+aud: ZS
+2026-05-10 21:25:27.577 +07:00 [INF] [JWT DEBUG] Authorization Check - IsInRole('Admin'): false, HasAdminRoleClaim: false
+2026-05-10 21:25:27.580 +07:00 [DBG] Starting resolving tenant...
+2026-05-10 21:25:27.580 +07:00 [DBG] Trying to resolve tenant through 'QueryString'...
+2026-05-10 21:25:27.580 +07:00 [DBG] Trying to resolve tenant through 'Route'...
+2026-05-10 21:25:27.580 +07:00 [DBG] Trying to resolve tenant through 'Header'...
+2026-05-10 21:25:27.580 +07:00 [DBG] Tenant resolved by 'Header' as 'LTC'.
+2026-05-10 21:25:27.776 +07:00 [INF] Executing endpoint 'LTC.ProductService.Controllers.Customer.ProductCustomerController.GetProductListAsync (LTC.ProductService.HttpApi)'
+2026-05-10 21:25:27.776 +07:00 [INF] Route matched with {action = "GetProductList", controller = "ProductCustomer", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Volo.Abp.Application.Dtos.PagedResultDto`1[LTC.ProductService.Dtos.Output.ProductOutputDto]] GetProductListAsync(LTC.ProductService.Dtos.Input.GetProductListInputDto) on controller LTC.ProductService.Controllers.Customer.ProductCustomerController (LTC.ProductService.HttpApi).
+2026-05-10 21:25:27.787 +07:00 [INF] Executing endpoint 'LTC.ProductService.Controllers.Customer.ComboCustomerController.GetComboListAsync (LTC.ProductService.HttpApi)'
+2026-05-10 21:25:27.788 +07:00 [INF] Route matched with {action = "GetComboList", controller = "ComboCustomer", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Volo.Abp.Application.Dtos.PagedResultDto`1[LTC.ProductService.Dtos.Output.ComboOutputDto]] GetComboListAsync(LTC.ProductService.Dtos.Input.PaginationInputDto) on controller LTC.ProductService.Controllers.Customer.ComboCustomerController (LTC.ProductService.HttpApi).
+2026-05-10 21:25:28.421 +07:00 [INF] Executing ObjectResult, writing value of type 'Volo.Abp.Application.Dtos.PagedResultDto`1[[LTC.ProductService.Dtos.Output.ProductOutputDto, LTC.ProductService.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-05-10 21:25:28.421 +07:00 [INF] Executed action LTC.ProductService.Controllers.Customer.ProductCustomerController.GetProductListAsync (LTC.ProductService.HttpApi) in 645.2067ms
+2026-05-10 21:25:28.421 +07:00 [INF] Executed endpoint 'LTC.ProductService.Controllers.Customer.ProductCustomerController.GetProductListAsync (LTC.ProductService.HttpApi)'
+2026-05-10 21:25:28.422 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44367/ltc/product-service/product-all?page=1&pageSize=100 - 200 null application/json; charset=utf-8 853.8469ms
+2026-05-10 21:25:28.786 +07:00 [INF] Executing ObjectResult, writing value of type 'Volo.Abp.Application.Dtos.PagedResultDto`1[[LTC.ProductService.Dtos.Output.ComboOutputDto, LTC.ProductService.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-05-10 21:25:28.786 +07:00 [INF] Executed action LTC.ProductService.Controllers.Customer.ComboCustomerController.GetComboListAsync (LTC.ProductService.HttpApi) in 998.2731ms
+2026-05-10 21:25:28.786 +07:00 [INF] Executed endpoint 'LTC.ProductService.Controllers.Customer.ComboCustomerController.GetComboListAsync (LTC.ProductService.HttpApi)'
+2026-05-10 21:25:28.787 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44367/ltc/product-service/combo-all?page=1&pageSize=100 - 200 null application/json; charset=utf-8 1213.0414ms

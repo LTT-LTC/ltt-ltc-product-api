@@ -19,6 +19,9 @@ namespace LTC.ProductService.Dtos.Input
         [Required]
         public decimal BasePrice { get; set; }
 
+        [Required]
+        public decimal SellPrice { get; set; }
+
         public bool IsActive { get; set; }
 
         /// <summary>

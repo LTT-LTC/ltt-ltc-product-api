@@ -46,6 +46,7 @@ public class ProductServiceDbContext : AbpDbContext<ProductServiceDbContext>
             b.ConfigureByConvention();
             b.Property(x => x.Name).IsRequired().HasMaxLength(256);
             b.Property(x => x.BasePrice).HasColumnType("decimal(18,2)");
+            b.Property(x => x.SellPrice).HasColumnType("decimal(18,2)");
             b.Property(x => x.ImageUrl).HasColumnType("nvarchar(max)");
             b.HasOne(x => x.ProductCategory).WithMany().HasForeignKey(x => x.ProductCategoryId);
         });
@@ -56,6 +57,7 @@ public class ProductServiceDbContext : AbpDbContext<ProductServiceDbContext>
             b.ConfigureByConvention();
             b.Property(x => x.Name).IsRequired().HasMaxLength(256);
             b.Property(x => x.TotalPrice).HasColumnType("decimal(18,2)");
+            b.Property(x => x.BasePrice).HasColumnType("decimal(18,2)");
             b.Property(x => x.ImageUrl).HasColumnType("nvarchar(max)");
             b.Property(x => x.ProductIds).HasColumnType("nvarchar(max)");
         });
